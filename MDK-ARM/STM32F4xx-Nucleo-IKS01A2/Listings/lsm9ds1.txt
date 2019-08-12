@@ -139,14 +139,14 @@
 ;;;36     	data[0] = 0x04;
 0000fa  2004              MOVS     r0,#4
 0000fc  9003              STR      r0,[sp,#0xc]
-;;;37     	status = HAL_I2C_Mem_Write(&hi2c3, ADDR, 0x20, I2C_MEMADD_SIZE_8BIT, data, 0x01, 100);//CTRL_REG2_M RESET 
+;;;37     	status = HAL_I2C_Mem_Write(&hi2c3, ADDR, 0x21, I2C_MEMADD_SIZE_8BIT, data, 0x01, 100);//CTRL_REG2_M RESET 
 0000fe  2064              MOVS     r0,#0x64
 000100  2101              MOVS     r1,#1
 000102  aa03              ADD      r2,sp,#0xc
 000104  460b              MOV      r3,r1
 000106  e9cd2100          STRD     r2,r1,[sp,#0]
 00010a  9002              STR      r0,[sp,#8]
-00010c  2220              MOVS     r2,#0x20
+00010c  2221              MOVS     r2,#0x21
 00010e  213d              MOVS     r1,#0x3d
 000110  4832              LDR      r0,|L1.476|
 000112  f7fffffe          BL       HAL_I2C_Mem_Write

@@ -4549,217 +4549,217 @@ Image Symbol Table
     i.MX_TIM_ALGO_Init                       0x0800ad2c   Section        0  main.o(i.MX_TIM_ALGO_Init)
     MX_TIM_ALGO_Init                         0x0800ad2d   Thumb Code    70  main.o(i.MX_TIM_ALGO_Init)
     i.Magneto_Sensor_Handler                 0x0800ad7c   Section        0  main.o(i.Magneto_Sensor_Handler)
-    Magneto_Sensor_Handler                   0x0800ad7d   Thumb Code   194  main.o(i.Magneto_Sensor_Handler)
-    i.MotionEC_manager_get_version           0x0800ae4c   Section        0  motionec_manager.o(i.MotionEC_manager_get_version)
-    i.MotionEC_manager_init                  0x0800ae5c   Section        0  motionec_manager.o(i.MotionEC_manager_init)
-    i.MotionEC_manager_run                   0x0800ae84   Section        0  motionec_manager.o(i.MotionEC_manager_run)
-    i.MotionMC_LoadCalFromNVM                0x0800b084   Section        0  motionmc_manager.o(i.MotionMC_LoadCalFromNVM)
-    i.MotionMC_SaveCalInNVM                  0x0800b08a   Section        0  motionmc_manager.o(i.MotionMC_SaveCalInNVM)
-    i.MotionMC_manager_compensate            0x0800b090   Section        0  motionmc_manager.o(i.MotionMC_manager_compensate)
-    i.MotionMC_manager_get_params            0x0800b18c   Section        0  motionmc_manager.o(i.MotionMC_manager_get_params)
-    i.MotionMC_manager_init                  0x0800b198   Section        0  motionmc_manager.o(i.MotionMC_manager_init)
-    i.MotionMC_manager_run                   0x0800b1a8   Section        0  motionmc_manager.o(i.MotionMC_manager_run)
-    i.MotionMC_manager_update                0x0800b248   Section        0  motionmc_manager.o(i.MotionMC_manager_update)
-    i.NMI_Handler                            0x0800b254   Section        0  stm32f4xx_it.o(i.NMI_Handler)
-    i.NVIC_GetPriorityGrouping               0x0800b258   Section        0  stm32f4xx_hal_cortex.o(i.NVIC_GetPriorityGrouping)
-    NVIC_GetPriorityGrouping                 0x0800b259   Thumb Code    10  stm32f4xx_hal_cortex.o(i.NVIC_GetPriorityGrouping)
-    i.NVIC_SetPriority                       0x0800b268   Section        0  stm32f4xx_hal_cortex.o(i.NVIC_SetPriority)
-    NVIC_SetPriority                         0x0800b269   Thumb Code    32  stm32f4xx_hal_cortex.o(i.NVIC_SetPriority)
-    i.Pressure_Sensor_Handler                0x0800b290   Section        0  main.o(i.Pressure_Sensor_Handler)
-    Pressure_Sensor_Handler                  0x0800b291   Thumb Code    34  main.o(i.Pressure_Sensor_Handler)
-    i.RTC_Bcd2ToByte                         0x0800b2b8   Section        0  stm32f4xx_hal_rtc.o(i.RTC_Bcd2ToByte)
-    i.RTC_ByteToBcd2                         0x0800b2ce   Section        0  stm32f4xx_hal_rtc.o(i.RTC_ByteToBcd2)
-    i.RTC_Config                             0x0800b2e8   Section        0  main.o(i.RTC_Config)
-    RTC_Config                               0x0800b2e9   Thumb Code   108  main.o(i.RTC_Config)
-    i.RTC_DateRegulate                       0x0800b364   Section        0  main.o(i.RTC_DateRegulate)
-    i.RTC_EnterInitMode                      0x0800b394   Section        0  stm32f4xx_hal_rtc.o(i.RTC_EnterInitMode)
-    i.RTC_Handler                            0x0800b3d4   Section        0  main.o(i.RTC_Handler)
-    RTC_Handler                              0x0800b3d5   Thumb Code    78  main.o(i.RTC_Handler)
-    i.RTC_TimeRegulate                       0x0800b42c   Section        0  main.o(i.RTC_TimeRegulate)
-    i.RTC_TimeStampConfig                    0x0800b468   Section        0  main.o(i.RTC_TimeStampConfig)
-    RTC_TimeStampConfig                      0x0800b469   Thumb Code    80  main.o(i.RTC_TimeStampConfig)
-    i.ReadAccRegWrap                         0x0800b4bc   Section        0  lsm303agr.o(i.ReadAccRegWrap)
-    ReadAccRegWrap                           0x0800b4bd   Thumb Code    56  lsm303agr.o(i.ReadAccRegWrap)
-    i.ReadMagRegWrap                         0x0800b4f4   Section        0  lsm303agr.o(i.ReadMagRegWrap)
-    ReadMagRegWrap                           0x0800b4f5   Thumb Code    56  lsm303agr.o(i.ReadMagRegWrap)
-    i.ReadRegWrap                            0x0800b52c   Section        0  hts221.o(i.ReadRegWrap)
-    ReadRegWrap                              0x0800b52d   Thumb Code    56  hts221.o(i.ReadRegWrap)
-    i.ReadRegWrap                            0x0800b564   Section        0  lps22hb.o(i.ReadRegWrap)
-    ReadRegWrap                              0x0800b565   Thumb Code    88  lps22hb.o(i.ReadRegWrap)
-    i.ReadRegWrap                            0x0800b5bc   Section        0  lsm6dsl.o(i.ReadRegWrap)
-    ReadRegWrap                              0x0800b5bd   Thumb Code    32  lsm6dsl.o(i.ReadRegWrap)
-    i.ReverseByteStuffCopyByte2              0x0800b5dc   Section        0  serial_protocol.o(i.ReverseByteStuffCopyByte2)
-    i.Serialize_s32                          0x0800b602   Section        0  serial_protocol.o(i.Serialize_s32)
-    i.SysTick_Handler                        0x0800b61c   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x0800b624   Section        0  cube_hal_f4.o(i.SystemClock_Config)
-    i.SystemInit                             0x0800b6e0   Section        0  system_stm32f4xx.o(i.SystemInit)
-    i.TIM3_IRQHandler                        0x0800b744   Section        0  stm32f4xx_it.o(i.TIM3_IRQHandler)
-    i.TIM_Base_SetConfig                     0x0800b754   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    i.TIM_ETR_SetConfig                      0x0800b7f8   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    i.TIM_ITRx_SetConfig                     0x0800b80e   Section        0  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
-    TIM_ITRx_SetConfig                       0x0800b80f   Thumb Code    18  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
-    i.TIM_TI1_ConfigInputStage               0x0800b820   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
-    TIM_TI1_ConfigInputStage                 0x0800b821   Thumb Code    38  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
-    i.TIM_TI2_ConfigInputStage               0x0800b846   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
-    TIM_TI2_ConfigInputStage                 0x0800b847   Thumb Code    40  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
-    i.Temperature_Sensor_Handler             0x0800b870   Section        0  main.o(i.Temperature_Sensor_Handler)
-    Temperature_Sensor_Handler               0x0800b871   Thumb Code    36  main.o(i.Temperature_Sensor_Handler)
-    i.UART_DMAError                          0x0800b898   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAError)
-    UART_DMAError                            0x0800b899   Thumb Code    80  stm32f4xx_hal_uart.o(i.UART_DMAError)
-    i.UART_DMAReceiveCplt                    0x0800b8e8   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
-    UART_DMAReceiveCplt                      0x0800b8e9   Thumb Code    70  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
-    i.UART_DMARxHalfCplt                     0x0800b92e   Section        0  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
-    UART_DMARxHalfCplt                       0x0800b92f   Thumb Code    14  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
-    i.UART_EndRxTransfer                     0x0800b93c   Section        0  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
-    UART_EndRxTransfer                       0x0800b93d   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
-    i.UART_EndTxTransfer                     0x0800b95c   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
-    UART_EndTxTransfer                       0x0800b95d   Thumb Code    20  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
-    i.UART_ReceivedMSG                       0x0800b970   Section        0  com.o(i.UART_ReceivedMSG)
-    i.UART_SendMsg                           0x0800ba7c   Section        0  com.o(i.UART_SendMsg)
-    i.UART_SetConfig                         0x0800baa8   Section        0  stm32f4xx_hal_uart.o(i.UART_SetConfig)
-    UART_SetConfig                           0x0800baa9   Thumb Code   864  stm32f4xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_WaitOnFlagUntilTimeout            0x0800be10   Section        0  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    UART_WaitOnFlagUntilTimeout              0x0800be11   Thumb Code   108  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.USARTConfig                            0x0800be7c   Section        0  com.o(i.USARTConfig)
-    i.USART_DMA_Configuration                0x0800bf90   Section        0  com.o(i.USART_DMA_Configuration)
-    i.WriteAccRegWrap                        0x0800bfb8   Section        0  lsm303agr.o(i.WriteAccRegWrap)
-    WriteAccRegWrap                          0x0800bfb9   Thumb Code    56  lsm303agr.o(i.WriteAccRegWrap)
-    i.WriteMagRegWrap                        0x0800bff0   Section        0  lsm303agr.o(i.WriteMagRegWrap)
-    WriteMagRegWrap                          0x0800bff1   Thumb Code    56  lsm303agr.o(i.WriteMagRegWrap)
-    i.WriteRegWrap                           0x0800c028   Section        0  hts221.o(i.WriteRegWrap)
-    WriteRegWrap                             0x0800c029   Thumb Code    56  hts221.o(i.WriteRegWrap)
-    i.WriteRegWrap                           0x0800c060   Section        0  lps22hb.o(i.WriteRegWrap)
-    WriteRegWrap                             0x0800c061   Thumb Code    88  lps22hb.o(i.WriteRegWrap)
-    i.WriteRegWrap                           0x0800c0b8   Section        0  lsm6dsl.o(i.WriteRegWrap)
-    WriteRegWrap                             0x0800c0b9   Thumb Code    32  lsm6dsl.o(i.WriteRegWrap)
-    i.__ARM_fpclassify                       0x0800c0d8   Section        0  fpclassify.o(i.__ARM_fpclassify)
-    i.__ARM_fpclassifyf                      0x0800c108   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
-    i.__hardfp_acosf                         0x0800c130   Section        0  acosf.o(i.__hardfp_acosf)
-    i.__hardfp_asin                          0x0800c248   Section        0  asin.o(i.__hardfp_asin)
-    i.__hardfp_atan                          0x0800c5a8   Section        0  atan.o(i.__hardfp_atan)
-    i.__hardfp_atan2                         0x0800c880   Section        0  atan2.o(i.__hardfp_atan2)
-    i.__hardfp_atan2f                        0x0800ca70   Section        0  atan2f.o(i.__hardfp_atan2f)
-    i.__hardfp_cosf                          0x0800ccc0   Section        0  cosf.o(i.__hardfp_cosf)
-    i.__hardfp_floorf                        0x0800ce10   Section        0  floorf.o(i.__hardfp_floorf)
-    i.__hardfp_roundf                        0x0800ce80   Section        0  roundf.o(i.__hardfp_roundf)
-    i.__hardfp_sinf                          0x0800cf1c   Section        0  sinf.o(i.__hardfp_sinf)
-    i.__kernel_poly                          0x0800d0ac   Section        0  poly.o(i.__kernel_poly)
-    i.__mathlib_dbl_infnan                   0x0800d1a4   Section        0  dunder.o(i.__mathlib_dbl_infnan)
-    i.__mathlib_dbl_infnan2                  0x0800d1b8   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
-    i.__mathlib_dbl_invalid                  0x0800d1d0   Section        0  dunder.o(i.__mathlib_dbl_invalid)
-    i.__mathlib_dbl_underflow                0x0800d1f0   Section        0  dunder.o(i.__mathlib_dbl_underflow)
-    i.__mathlib_flt_infnan                   0x0800d210   Section        0  funder.o(i.__mathlib_flt_infnan)
-    i.__mathlib_flt_infnan2                  0x0800d216   Section        0  funder.o(i.__mathlib_flt_infnan2)
-    i.__mathlib_flt_invalid                  0x0800d21c   Section        0  funder.o(i.__mathlib_flt_invalid)
-    i.__mathlib_flt_underflow                0x0800d22c   Section        0  funder.o(i.__mathlib_flt_underflow)
-    i.__mathlib_rredf2                       0x0800d23c   Section        0  rredf.o(i.__mathlib_rredf2)
-    i.__scatterload_copy                     0x0800d390   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x0800d39e   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800d3a0   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.__set_errno                            0x0800d3b0   Section        0  errno.o(i.__set_errno)
-    i.acosf                                  0x0800d3bc   Section        0  acosf.o(i.acosf)
-    i.asin                                   0x0800d3cc   Section        0  asin.o(i.asin)
-    i.atan                                   0x0800d3dc   Section        0  atan.o(i.atan)
-    i.atan2                                  0x0800d3ec   Section        0  atan2.o(i.atan2)
-    i.calc_heading                           0x0800d400   Section        0  motionec_manager.o(i.calc_heading)
-    calc_heading                             0x0800d401   Thumb Code   234  motionec_manager.o(i.calc_heading)
-    i.cosf                                   0x0800d504   Section        0  cosf.o(i.cosf)
-    i.fabs                                   0x0800d514   Section        0  fabs.o(i.fabs)
-    i.hts221_block_data_update_set           0x0800d52c   Section        0  hts221_reg.o(i.hts221_block_data_update_set)
-    i.hts221_data_rate_get                   0x0800d55e   Section        0  hts221_reg.o(i.hts221_data_rate_get)
-    i.hts221_data_rate_set                   0x0800d5ae   Section        0  hts221_reg.o(i.hts221_data_rate_set)
-    i.hts221_device_id_get                   0x0800d5e0   Section        0  hts221_reg.o(i.hts221_device_id_get)
-    i.hts221_hum_adc_point_0_get             0x0800d5f8   Section        0  hts221_reg.o(i.hts221_hum_adc_point_0_get)
-    i.hts221_hum_adc_point_1_get             0x0800d610   Section        0  hts221_reg.o(i.hts221_hum_adc_point_1_get)
-    i.hts221_hum_rh_point_0_get              0x0800d628   Section        0  hts221_reg.o(i.hts221_hum_rh_point_0_get)
-    i.hts221_hum_rh_point_1_get              0x0800d646   Section        0  hts221_reg.o(i.hts221_hum_rh_point_1_get)
-    i.hts221_humidity_raw_get                0x0800d664   Section        0  hts221_reg.o(i.hts221_humidity_raw_get)
-    i.hts221_power_on_set                    0x0800d67c   Section        0  hts221_reg.o(i.hts221_power_on_set)
-    i.hts221_read_reg                        0x0800d6ae   Section        0  hts221_reg.o(i.hts221_read_reg)
-    i.hts221_temp_adc_point_0_get            0x0800d6ce   Section        0  hts221_reg.o(i.hts221_temp_adc_point_0_get)
-    i.hts221_temp_adc_point_1_get            0x0800d6e6   Section        0  hts221_reg.o(i.hts221_temp_adc_point_1_get)
-    i.hts221_temp_deg_point_0_get            0x0800d6fe   Section        0  hts221_reg.o(i.hts221_temp_deg_point_0_get)
-    i.hts221_temp_deg_point_1_get            0x0800d73e   Section        0  hts221_reg.o(i.hts221_temp_deg_point_1_get)
-    i.hts221_temperature_raw_get             0x0800d77e   Section        0  hts221_reg.o(i.hts221_temperature_raw_get)
-    i.hts221_write_reg                       0x0800d796   Section        0  hts221_reg.o(i.hts221_write_reg)
-    i.init_LSM9DS1_I2C                       0x0800d7b8   Section        0  lsm9ds1.o(i.init_LSM9DS1_I2C)
-    i.lps22hb_auto_add_inc_set               0x0800d99c   Section        0  lps22hb_reg.o(i.lps22hb_auto_add_inc_set)
-    i.lps22hb_block_data_update_set          0x0800d9ce   Section        0  lps22hb_reg.o(i.lps22hb_block_data_update_set)
-    i.lps22hb_data_rate_get                  0x0800da00   Section        0  lps22hb_reg.o(i.lps22hb_data_rate_get)
-    i.lps22hb_data_rate_set                  0x0800da5a   Section        0  lps22hb_reg.o(i.lps22hb_data_rate_set)
-    i.lps22hb_device_id_get                  0x0800da8c   Section        0  lps22hb_reg.o(i.lps22hb_device_id_get)
-    i.lps22hb_from_lsb_to_degc               0x0800daa4   Section        0  lps22hb_reg.o(i.lps22hb_from_lsb_to_degc)
-    i.lps22hb_from_lsb_to_hpa                0x0800dabc   Section        0  lps22hb_reg.o(i.lps22hb_from_lsb_to_hpa)
-    i.lps22hb_low_pass_filter_mode_set       0x0800dad4   Section        0  lps22hb_reg.o(i.lps22hb_low_pass_filter_mode_set)
-    i.lps22hb_low_power_set                  0x0800db06   Section        0  lps22hb_reg.o(i.lps22hb_low_power_set)
-    i.lps22hb_pressure_raw_get               0x0800db38   Section        0  lps22hb_reg.o(i.lps22hb_pressure_raw_get)
-    i.lps22hb_read_reg                       0x0800db50   Section        0  lps22hb_reg.o(i.lps22hb_read_reg)
-    i.lps22hb_temperature_raw_get            0x0800db70   Section        0  lps22hb_reg.o(i.lps22hb_temperature_raw_get)
-    i.lps22hb_write_reg                      0x0800db88   Section        0  lps22hb_reg.o(i.lps22hb_write_reg)
-    i.lsm303agr_acceleration_raw_get         0x0800dbaa   Section        0  lsm303agr_reg.o(i.lsm303agr_acceleration_raw_get)
-    i.lsm303agr_mag_block_data_update_set    0x0800dbc2   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_block_data_update_set)
-    i.lsm303agr_mag_data_rate_get            0x0800dbf4   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_get)
-    i.lsm303agr_mag_data_rate_set            0x0800dc44   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_set)
-    i.lsm303agr_mag_device_id_get            0x0800dc76   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_device_id_get)
-    i.lsm303agr_mag_i2c_interface_set        0x0800dc8e   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_i2c_interface_set)
-    i.lsm303agr_mag_operating_mode_set       0x0800dcc0   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_operating_mode_set)
-    i.lsm303agr_mag_self_test_set            0x0800dcf2   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_self_test_set)
-    i.lsm303agr_magnetic_raw_get             0x0800dd24   Section        0  lsm303agr_reg.o(i.lsm303agr_magnetic_raw_get)
-    i.lsm303agr_read_reg                     0x0800dd3c   Section        0  lsm303agr_reg.o(i.lsm303agr_read_reg)
-    i.lsm303agr_write_reg                    0x0800dd5c   Section        0  lsm303agr_reg.o(i.lsm303agr_write_reg)
-    i.lsm303agr_xl_block_data_update_set     0x0800dd7e   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_block_data_update_set)
-    i.lsm303agr_xl_data_rate_get             0x0800ddb0   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_get)
-    i.lsm303agr_xl_data_rate_set             0x0800de24   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_set)
-    i.lsm303agr_xl_device_id_get             0x0800de56   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_device_id_get)
-    i.lsm303agr_xl_fifo_mode_set             0x0800de6e   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_fifo_mode_set)
-    i.lsm303agr_xl_full_scale_get            0x0800dea0   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_get)
-    i.lsm303agr_xl_full_scale_set            0x0800def0   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_set)
-    i.lsm303agr_xl_operating_mode_get        0x0800df22   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_operating_mode_get)
-    i.lsm6dsl_acceleration_raw_get           0x0800df6e   Section        0  lsm6dsl_reg.o(i.lsm6dsl_acceleration_raw_get)
-    i.lsm6dsl_angular_rate_raw_get           0x0800df86   Section        0  lsm6dsl_reg.o(i.lsm6dsl_angular_rate_raw_get)
-    i.lsm6dsl_auto_increment_set             0x0800df9e   Section        0  lsm6dsl_reg.o(i.lsm6dsl_auto_increment_set)
-    i.lsm6dsl_block_data_update_set          0x0800dfd0   Section        0  lsm6dsl_reg.o(i.lsm6dsl_block_data_update_set)
-    i.lsm6dsl_device_id_get                  0x0800e002   Section        0  lsm6dsl_reg.o(i.lsm6dsl_device_id_get)
-    i.lsm6dsl_fifo_mode_set                  0x0800e01a   Section        0  lsm6dsl_reg.o(i.lsm6dsl_fifo_mode_set)
-    i.lsm6dsl_gy_data_rate_get               0x0800e04c   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_get)
-    i.lsm6dsl_gy_data_rate_set               0x0800e0c8   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_set)
-    i.lsm6dsl_gy_full_scale_get              0x0800e0fa   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_get)
-    i.lsm6dsl_gy_full_scale_set              0x0800e150   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_set)
-    i.lsm6dsl_read_reg                       0x0800e182   Section        0  lsm6dsl_reg.o(i.lsm6dsl_read_reg)
-    i.lsm6dsl_write_reg                      0x0800e1a2   Section        0  lsm6dsl_reg.o(i.lsm6dsl_write_reg)
-    i.lsm6dsl_xl_data_rate_get               0x0800e1c4   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_get)
-    i.lsm6dsl_xl_data_rate_set               0x0800e246   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_set)
-    i.lsm6dsl_xl_full_scale_get              0x0800e278   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_get)
-    i.lsm6dsl_xl_full_scale_set              0x0800e2c8   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_set)
-    i.main                                   0x0800e2fc   Section        0  main.o(i.main)
-    i.q_conjug                               0x0800e3f0   Section        0  motionec_manager.o(i.q_conjug)
-    q_conjug                                 0x0800e3f1   Thumb Code    58  motionec_manager.o(i.q_conjug)
-    i.q_multiply                             0x0800e42a   Section        0  motionec_manager.o(i.q_multiply)
-    q_multiply                               0x0800e42b   Thumb Code   210  motionec_manager.o(i.q_multiply)
-    i.roundf                                 0x0800e4fc   Section        0  roundf.o(i.roundf)
-    i.sqrt                                   0x0800e50c   Section        0  sqrt.o(i.sqrt)
-    i.sqrtf                                  0x0800e57a   Section        0  sqrtf.o(i.sqrtf)
-    i.transform_xyz_to_enu                   0x0800e5b8   Section        0  motionec_manager.o(i.transform_xyz_to_enu)
-    transform_xyz_to_enu                     0x0800e5b9   Thumb Code   158  motionec_manager.o(i.transform_xyz_to_enu)
-    i.v_rotate                               0x0800e658   Section        0  motionec_manager.o(i.v_rotate)
-    v_rotate                                 0x0800e659   Thumb Code    98  motionec_manager.o(i.v_rotate)
-    .constdata                               0x0800e6c0   Section        5  stm32f4xx_nucleo.o(.constdata)
-    .constdata                               0x0800e6c5   Section       24  system_stm32f4xx.o(.constdata)
-    .constdata                               0x0800e6dd   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x0800e6dd   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x0800e6e8   Section       12  motionec_manager.o(.constdata)
-    .constdata                               0x0800e6f8   Section       80  asin.o(.constdata)
-    pS                                       0x0800e6f8   Data          48  asin.o(.constdata)
-    qS                                       0x0800e728   Data          32  asin.o(.constdata)
-    .constdata                               0x0800e748   Section      152  atan.o(.constdata)
-    atanhi                                   0x0800e748   Data          32  atan.o(.constdata)
-    atanlo                                   0x0800e768   Data          32  atan.o(.constdata)
-    aTodd                                    0x0800e788   Data          40  atan.o(.constdata)
-    aTeven                                   0x0800e7b0   Data          48  atan.o(.constdata)
-    .constdata                               0x0800e7e0   Section        8  qnan.o(.constdata)
-    .constdata                               0x0800e7e8   Section       32  rredf.o(.constdata)
-    twooverpi                                0x0800e7e8   Data          32  rredf.o(.constdata)
-    [Anonymous Symbol]                       0x0800e808   Section        0  motion_ec.o(.rodata)
+    Magneto_Sensor_Handler                   0x0800ad7d   Thumb Code   212  main.o(i.Magneto_Sensor_Handler)
+    i.MotionEC_manager_get_version           0x0800ae5c   Section        0  motionec_manager.o(i.MotionEC_manager_get_version)
+    i.MotionEC_manager_init                  0x0800ae6c   Section        0  motionec_manager.o(i.MotionEC_manager_init)
+    i.MotionEC_manager_run                   0x0800ae94   Section        0  motionec_manager.o(i.MotionEC_manager_run)
+    i.MotionMC_LoadCalFromNVM                0x0800b094   Section        0  motionmc_manager.o(i.MotionMC_LoadCalFromNVM)
+    i.MotionMC_SaveCalInNVM                  0x0800b09a   Section        0  motionmc_manager.o(i.MotionMC_SaveCalInNVM)
+    i.MotionMC_manager_compensate            0x0800b0a0   Section        0  motionmc_manager.o(i.MotionMC_manager_compensate)
+    i.MotionMC_manager_get_params            0x0800b19c   Section        0  motionmc_manager.o(i.MotionMC_manager_get_params)
+    i.MotionMC_manager_init                  0x0800b1a8   Section        0  motionmc_manager.o(i.MotionMC_manager_init)
+    i.MotionMC_manager_run                   0x0800b1b8   Section        0  motionmc_manager.o(i.MotionMC_manager_run)
+    i.MotionMC_manager_update                0x0800b258   Section        0  motionmc_manager.o(i.MotionMC_manager_update)
+    i.NMI_Handler                            0x0800b264   Section        0  stm32f4xx_it.o(i.NMI_Handler)
+    i.NVIC_GetPriorityGrouping               0x0800b268   Section        0  stm32f4xx_hal_cortex.o(i.NVIC_GetPriorityGrouping)
+    NVIC_GetPriorityGrouping                 0x0800b269   Thumb Code    10  stm32f4xx_hal_cortex.o(i.NVIC_GetPriorityGrouping)
+    i.NVIC_SetPriority                       0x0800b278   Section        0  stm32f4xx_hal_cortex.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x0800b279   Thumb Code    32  stm32f4xx_hal_cortex.o(i.NVIC_SetPriority)
+    i.Pressure_Sensor_Handler                0x0800b2a0   Section        0  main.o(i.Pressure_Sensor_Handler)
+    Pressure_Sensor_Handler                  0x0800b2a1   Thumb Code    34  main.o(i.Pressure_Sensor_Handler)
+    i.RTC_Bcd2ToByte                         0x0800b2c8   Section        0  stm32f4xx_hal_rtc.o(i.RTC_Bcd2ToByte)
+    i.RTC_ByteToBcd2                         0x0800b2de   Section        0  stm32f4xx_hal_rtc.o(i.RTC_ByteToBcd2)
+    i.RTC_Config                             0x0800b2f8   Section        0  main.o(i.RTC_Config)
+    RTC_Config                               0x0800b2f9   Thumb Code   108  main.o(i.RTC_Config)
+    i.RTC_DateRegulate                       0x0800b374   Section        0  main.o(i.RTC_DateRegulate)
+    i.RTC_EnterInitMode                      0x0800b3a4   Section        0  stm32f4xx_hal_rtc.o(i.RTC_EnterInitMode)
+    i.RTC_Handler                            0x0800b3e4   Section        0  main.o(i.RTC_Handler)
+    RTC_Handler                              0x0800b3e5   Thumb Code    78  main.o(i.RTC_Handler)
+    i.RTC_TimeRegulate                       0x0800b43c   Section        0  main.o(i.RTC_TimeRegulate)
+    i.RTC_TimeStampConfig                    0x0800b478   Section        0  main.o(i.RTC_TimeStampConfig)
+    RTC_TimeStampConfig                      0x0800b479   Thumb Code    80  main.o(i.RTC_TimeStampConfig)
+    i.ReadAccRegWrap                         0x0800b4cc   Section        0  lsm303agr.o(i.ReadAccRegWrap)
+    ReadAccRegWrap                           0x0800b4cd   Thumb Code    56  lsm303agr.o(i.ReadAccRegWrap)
+    i.ReadMagRegWrap                         0x0800b504   Section        0  lsm303agr.o(i.ReadMagRegWrap)
+    ReadMagRegWrap                           0x0800b505   Thumb Code    56  lsm303agr.o(i.ReadMagRegWrap)
+    i.ReadRegWrap                            0x0800b53c   Section        0  hts221.o(i.ReadRegWrap)
+    ReadRegWrap                              0x0800b53d   Thumb Code    56  hts221.o(i.ReadRegWrap)
+    i.ReadRegWrap                            0x0800b574   Section        0  lps22hb.o(i.ReadRegWrap)
+    ReadRegWrap                              0x0800b575   Thumb Code    88  lps22hb.o(i.ReadRegWrap)
+    i.ReadRegWrap                            0x0800b5cc   Section        0  lsm6dsl.o(i.ReadRegWrap)
+    ReadRegWrap                              0x0800b5cd   Thumb Code    32  lsm6dsl.o(i.ReadRegWrap)
+    i.ReverseByteStuffCopyByte2              0x0800b5ec   Section        0  serial_protocol.o(i.ReverseByteStuffCopyByte2)
+    i.Serialize_s32                          0x0800b612   Section        0  serial_protocol.o(i.Serialize_s32)
+    i.SysTick_Handler                        0x0800b62c   Section        0  stm32f4xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x0800b634   Section        0  cube_hal_f4.o(i.SystemClock_Config)
+    i.SystemInit                             0x0800b6f0   Section        0  system_stm32f4xx.o(i.SystemInit)
+    i.TIM3_IRQHandler                        0x0800b754   Section        0  stm32f4xx_it.o(i.TIM3_IRQHandler)
+    i.TIM_Base_SetConfig                     0x0800b764   Section        0  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    i.TIM_ETR_SetConfig                      0x0800b808   Section        0  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    i.TIM_ITRx_SetConfig                     0x0800b81e   Section        0  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
+    TIM_ITRx_SetConfig                       0x0800b81f   Thumb Code    18  stm32f4xx_hal_tim.o(i.TIM_ITRx_SetConfig)
+    i.TIM_TI1_ConfigInputStage               0x0800b830   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
+    TIM_TI1_ConfigInputStage                 0x0800b831   Thumb Code    38  stm32f4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage)
+    i.TIM_TI2_ConfigInputStage               0x0800b856   Section        0  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
+    TIM_TI2_ConfigInputStage                 0x0800b857   Thumb Code    40  stm32f4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage)
+    i.Temperature_Sensor_Handler             0x0800b880   Section        0  main.o(i.Temperature_Sensor_Handler)
+    Temperature_Sensor_Handler               0x0800b881   Thumb Code    36  main.o(i.Temperature_Sensor_Handler)
+    i.UART_DMAError                          0x0800b8a8   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAError)
+    UART_DMAError                            0x0800b8a9   Thumb Code    80  stm32f4xx_hal_uart.o(i.UART_DMAError)
+    i.UART_DMAReceiveCplt                    0x0800b8f8   Section        0  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
+    UART_DMAReceiveCplt                      0x0800b8f9   Thumb Code    70  stm32f4xx_hal_uart.o(i.UART_DMAReceiveCplt)
+    i.UART_DMARxHalfCplt                     0x0800b93e   Section        0  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
+    UART_DMARxHalfCplt                       0x0800b93f   Thumb Code    14  stm32f4xx_hal_uart.o(i.UART_DMARxHalfCplt)
+    i.UART_EndRxTransfer                     0x0800b94c   Section        0  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
+    UART_EndRxTransfer                       0x0800b94d   Thumb Code    32  stm32f4xx_hal_uart.o(i.UART_EndRxTransfer)
+    i.UART_EndTxTransfer                     0x0800b96c   Section        0  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
+    UART_EndTxTransfer                       0x0800b96d   Thumb Code    20  stm32f4xx_hal_uart.o(i.UART_EndTxTransfer)
+    i.UART_ReceivedMSG                       0x0800b980   Section        0  com.o(i.UART_ReceivedMSG)
+    i.UART_SendMsg                           0x0800ba8c   Section        0  com.o(i.UART_SendMsg)
+    i.UART_SetConfig                         0x0800bab8   Section        0  stm32f4xx_hal_uart.o(i.UART_SetConfig)
+    UART_SetConfig                           0x0800bab9   Thumb Code   864  stm32f4xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_WaitOnFlagUntilTimeout            0x0800be20   Section        0  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    UART_WaitOnFlagUntilTimeout              0x0800be21   Thumb Code   108  stm32f4xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    i.USARTConfig                            0x0800be8c   Section        0  com.o(i.USARTConfig)
+    i.USART_DMA_Configuration                0x0800bfa0   Section        0  com.o(i.USART_DMA_Configuration)
+    i.WriteAccRegWrap                        0x0800bfc8   Section        0  lsm303agr.o(i.WriteAccRegWrap)
+    WriteAccRegWrap                          0x0800bfc9   Thumb Code    56  lsm303agr.o(i.WriteAccRegWrap)
+    i.WriteMagRegWrap                        0x0800c000   Section        0  lsm303agr.o(i.WriteMagRegWrap)
+    WriteMagRegWrap                          0x0800c001   Thumb Code    56  lsm303agr.o(i.WriteMagRegWrap)
+    i.WriteRegWrap                           0x0800c038   Section        0  hts221.o(i.WriteRegWrap)
+    WriteRegWrap                             0x0800c039   Thumb Code    56  hts221.o(i.WriteRegWrap)
+    i.WriteRegWrap                           0x0800c070   Section        0  lps22hb.o(i.WriteRegWrap)
+    WriteRegWrap                             0x0800c071   Thumb Code    88  lps22hb.o(i.WriteRegWrap)
+    i.WriteRegWrap                           0x0800c0c8   Section        0  lsm6dsl.o(i.WriteRegWrap)
+    WriteRegWrap                             0x0800c0c9   Thumb Code    32  lsm6dsl.o(i.WriteRegWrap)
+    i.__ARM_fpclassify                       0x0800c0e8   Section        0  fpclassify.o(i.__ARM_fpclassify)
+    i.__ARM_fpclassifyf                      0x0800c118   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__hardfp_acosf                         0x0800c140   Section        0  acosf.o(i.__hardfp_acosf)
+    i.__hardfp_asin                          0x0800c258   Section        0  asin.o(i.__hardfp_asin)
+    i.__hardfp_atan                          0x0800c5b8   Section        0  atan.o(i.__hardfp_atan)
+    i.__hardfp_atan2                         0x0800c890   Section        0  atan2.o(i.__hardfp_atan2)
+    i.__hardfp_atan2f                        0x0800ca80   Section        0  atan2f.o(i.__hardfp_atan2f)
+    i.__hardfp_cosf                          0x0800ccd0   Section        0  cosf.o(i.__hardfp_cosf)
+    i.__hardfp_floorf                        0x0800ce20   Section        0  floorf.o(i.__hardfp_floorf)
+    i.__hardfp_roundf                        0x0800ce90   Section        0  roundf.o(i.__hardfp_roundf)
+    i.__hardfp_sinf                          0x0800cf2c   Section        0  sinf.o(i.__hardfp_sinf)
+    i.__kernel_poly                          0x0800d0bc   Section        0  poly.o(i.__kernel_poly)
+    i.__mathlib_dbl_infnan                   0x0800d1b4   Section        0  dunder.o(i.__mathlib_dbl_infnan)
+    i.__mathlib_dbl_infnan2                  0x0800d1c8   Section        0  dunder.o(i.__mathlib_dbl_infnan2)
+    i.__mathlib_dbl_invalid                  0x0800d1e0   Section        0  dunder.o(i.__mathlib_dbl_invalid)
+    i.__mathlib_dbl_underflow                0x0800d200   Section        0  dunder.o(i.__mathlib_dbl_underflow)
+    i.__mathlib_flt_infnan                   0x0800d220   Section        0  funder.o(i.__mathlib_flt_infnan)
+    i.__mathlib_flt_infnan2                  0x0800d226   Section        0  funder.o(i.__mathlib_flt_infnan2)
+    i.__mathlib_flt_invalid                  0x0800d22c   Section        0  funder.o(i.__mathlib_flt_invalid)
+    i.__mathlib_flt_underflow                0x0800d23c   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__mathlib_rredf2                       0x0800d24c   Section        0  rredf.o(i.__mathlib_rredf2)
+    i.__scatterload_copy                     0x0800d3a0   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0800d3ae   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0800d3b0   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x0800d3c0   Section        0  errno.o(i.__set_errno)
+    i.acosf                                  0x0800d3cc   Section        0  acosf.o(i.acosf)
+    i.asin                                   0x0800d3dc   Section        0  asin.o(i.asin)
+    i.atan                                   0x0800d3ec   Section        0  atan.o(i.atan)
+    i.atan2                                  0x0800d3fc   Section        0  atan2.o(i.atan2)
+    i.calc_heading                           0x0800d410   Section        0  motionec_manager.o(i.calc_heading)
+    calc_heading                             0x0800d411   Thumb Code   234  motionec_manager.o(i.calc_heading)
+    i.cosf                                   0x0800d514   Section        0  cosf.o(i.cosf)
+    i.fabs                                   0x0800d524   Section        0  fabs.o(i.fabs)
+    i.hts221_block_data_update_set           0x0800d53c   Section        0  hts221_reg.o(i.hts221_block_data_update_set)
+    i.hts221_data_rate_get                   0x0800d56e   Section        0  hts221_reg.o(i.hts221_data_rate_get)
+    i.hts221_data_rate_set                   0x0800d5be   Section        0  hts221_reg.o(i.hts221_data_rate_set)
+    i.hts221_device_id_get                   0x0800d5f0   Section        0  hts221_reg.o(i.hts221_device_id_get)
+    i.hts221_hum_adc_point_0_get             0x0800d608   Section        0  hts221_reg.o(i.hts221_hum_adc_point_0_get)
+    i.hts221_hum_adc_point_1_get             0x0800d620   Section        0  hts221_reg.o(i.hts221_hum_adc_point_1_get)
+    i.hts221_hum_rh_point_0_get              0x0800d638   Section        0  hts221_reg.o(i.hts221_hum_rh_point_0_get)
+    i.hts221_hum_rh_point_1_get              0x0800d656   Section        0  hts221_reg.o(i.hts221_hum_rh_point_1_get)
+    i.hts221_humidity_raw_get                0x0800d674   Section        0  hts221_reg.o(i.hts221_humidity_raw_get)
+    i.hts221_power_on_set                    0x0800d68c   Section        0  hts221_reg.o(i.hts221_power_on_set)
+    i.hts221_read_reg                        0x0800d6be   Section        0  hts221_reg.o(i.hts221_read_reg)
+    i.hts221_temp_adc_point_0_get            0x0800d6de   Section        0  hts221_reg.o(i.hts221_temp_adc_point_0_get)
+    i.hts221_temp_adc_point_1_get            0x0800d6f6   Section        0  hts221_reg.o(i.hts221_temp_adc_point_1_get)
+    i.hts221_temp_deg_point_0_get            0x0800d70e   Section        0  hts221_reg.o(i.hts221_temp_deg_point_0_get)
+    i.hts221_temp_deg_point_1_get            0x0800d74e   Section        0  hts221_reg.o(i.hts221_temp_deg_point_1_get)
+    i.hts221_temperature_raw_get             0x0800d78e   Section        0  hts221_reg.o(i.hts221_temperature_raw_get)
+    i.hts221_write_reg                       0x0800d7a6   Section        0  hts221_reg.o(i.hts221_write_reg)
+    i.init_LSM9DS1_I2C                       0x0800d7c8   Section        0  lsm9ds1.o(i.init_LSM9DS1_I2C)
+    i.lps22hb_auto_add_inc_set               0x0800d9ac   Section        0  lps22hb_reg.o(i.lps22hb_auto_add_inc_set)
+    i.lps22hb_block_data_update_set          0x0800d9de   Section        0  lps22hb_reg.o(i.lps22hb_block_data_update_set)
+    i.lps22hb_data_rate_get                  0x0800da10   Section        0  lps22hb_reg.o(i.lps22hb_data_rate_get)
+    i.lps22hb_data_rate_set                  0x0800da6a   Section        0  lps22hb_reg.o(i.lps22hb_data_rate_set)
+    i.lps22hb_device_id_get                  0x0800da9c   Section        0  lps22hb_reg.o(i.lps22hb_device_id_get)
+    i.lps22hb_from_lsb_to_degc               0x0800dab4   Section        0  lps22hb_reg.o(i.lps22hb_from_lsb_to_degc)
+    i.lps22hb_from_lsb_to_hpa                0x0800dacc   Section        0  lps22hb_reg.o(i.lps22hb_from_lsb_to_hpa)
+    i.lps22hb_low_pass_filter_mode_set       0x0800dae4   Section        0  lps22hb_reg.o(i.lps22hb_low_pass_filter_mode_set)
+    i.lps22hb_low_power_set                  0x0800db16   Section        0  lps22hb_reg.o(i.lps22hb_low_power_set)
+    i.lps22hb_pressure_raw_get               0x0800db48   Section        0  lps22hb_reg.o(i.lps22hb_pressure_raw_get)
+    i.lps22hb_read_reg                       0x0800db60   Section        0  lps22hb_reg.o(i.lps22hb_read_reg)
+    i.lps22hb_temperature_raw_get            0x0800db80   Section        0  lps22hb_reg.o(i.lps22hb_temperature_raw_get)
+    i.lps22hb_write_reg                      0x0800db98   Section        0  lps22hb_reg.o(i.lps22hb_write_reg)
+    i.lsm303agr_acceleration_raw_get         0x0800dbba   Section        0  lsm303agr_reg.o(i.lsm303agr_acceleration_raw_get)
+    i.lsm303agr_mag_block_data_update_set    0x0800dbd2   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_block_data_update_set)
+    i.lsm303agr_mag_data_rate_get            0x0800dc04   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_get)
+    i.lsm303agr_mag_data_rate_set            0x0800dc54   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_set)
+    i.lsm303agr_mag_device_id_get            0x0800dc86   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_device_id_get)
+    i.lsm303agr_mag_i2c_interface_set        0x0800dc9e   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_i2c_interface_set)
+    i.lsm303agr_mag_operating_mode_set       0x0800dcd0   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_operating_mode_set)
+    i.lsm303agr_mag_self_test_set            0x0800dd02   Section        0  lsm303agr_reg.o(i.lsm303agr_mag_self_test_set)
+    i.lsm303agr_magnetic_raw_get             0x0800dd34   Section        0  lsm303agr_reg.o(i.lsm303agr_magnetic_raw_get)
+    i.lsm303agr_read_reg                     0x0800dd4c   Section        0  lsm303agr_reg.o(i.lsm303agr_read_reg)
+    i.lsm303agr_write_reg                    0x0800dd6c   Section        0  lsm303agr_reg.o(i.lsm303agr_write_reg)
+    i.lsm303agr_xl_block_data_update_set     0x0800dd8e   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_block_data_update_set)
+    i.lsm303agr_xl_data_rate_get             0x0800ddc0   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_get)
+    i.lsm303agr_xl_data_rate_set             0x0800de34   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_set)
+    i.lsm303agr_xl_device_id_get             0x0800de66   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_device_id_get)
+    i.lsm303agr_xl_fifo_mode_set             0x0800de7e   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_fifo_mode_set)
+    i.lsm303agr_xl_full_scale_get            0x0800deb0   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_get)
+    i.lsm303agr_xl_full_scale_set            0x0800df00   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_set)
+    i.lsm303agr_xl_operating_mode_get        0x0800df32   Section        0  lsm303agr_reg.o(i.lsm303agr_xl_operating_mode_get)
+    i.lsm6dsl_acceleration_raw_get           0x0800df7e   Section        0  lsm6dsl_reg.o(i.lsm6dsl_acceleration_raw_get)
+    i.lsm6dsl_angular_rate_raw_get           0x0800df96   Section        0  lsm6dsl_reg.o(i.lsm6dsl_angular_rate_raw_get)
+    i.lsm6dsl_auto_increment_set             0x0800dfae   Section        0  lsm6dsl_reg.o(i.lsm6dsl_auto_increment_set)
+    i.lsm6dsl_block_data_update_set          0x0800dfe0   Section        0  lsm6dsl_reg.o(i.lsm6dsl_block_data_update_set)
+    i.lsm6dsl_device_id_get                  0x0800e012   Section        0  lsm6dsl_reg.o(i.lsm6dsl_device_id_get)
+    i.lsm6dsl_fifo_mode_set                  0x0800e02a   Section        0  lsm6dsl_reg.o(i.lsm6dsl_fifo_mode_set)
+    i.lsm6dsl_gy_data_rate_get               0x0800e05c   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_get)
+    i.lsm6dsl_gy_data_rate_set               0x0800e0d8   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_set)
+    i.lsm6dsl_gy_full_scale_get              0x0800e10a   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_get)
+    i.lsm6dsl_gy_full_scale_set              0x0800e160   Section        0  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_set)
+    i.lsm6dsl_read_reg                       0x0800e192   Section        0  lsm6dsl_reg.o(i.lsm6dsl_read_reg)
+    i.lsm6dsl_write_reg                      0x0800e1b2   Section        0  lsm6dsl_reg.o(i.lsm6dsl_write_reg)
+    i.lsm6dsl_xl_data_rate_get               0x0800e1d4   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_get)
+    i.lsm6dsl_xl_data_rate_set               0x0800e256   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_set)
+    i.lsm6dsl_xl_full_scale_get              0x0800e288   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_get)
+    i.lsm6dsl_xl_full_scale_set              0x0800e2d8   Section        0  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_set)
+    i.main                                   0x0800e30c   Section        0  main.o(i.main)
+    i.q_conjug                               0x0800e400   Section        0  motionec_manager.o(i.q_conjug)
+    q_conjug                                 0x0800e401   Thumb Code    58  motionec_manager.o(i.q_conjug)
+    i.q_multiply                             0x0800e43a   Section        0  motionec_manager.o(i.q_multiply)
+    q_multiply                               0x0800e43b   Thumb Code   210  motionec_manager.o(i.q_multiply)
+    i.roundf                                 0x0800e50c   Section        0  roundf.o(i.roundf)
+    i.sqrt                                   0x0800e51c   Section        0  sqrt.o(i.sqrt)
+    i.sqrtf                                  0x0800e58a   Section        0  sqrtf.o(i.sqrtf)
+    i.transform_xyz_to_enu                   0x0800e5c8   Section        0  motionec_manager.o(i.transform_xyz_to_enu)
+    transform_xyz_to_enu                     0x0800e5c9   Thumb Code   158  motionec_manager.o(i.transform_xyz_to_enu)
+    i.v_rotate                               0x0800e668   Section        0  motionec_manager.o(i.v_rotate)
+    v_rotate                                 0x0800e669   Thumb Code    98  motionec_manager.o(i.v_rotate)
+    .constdata                               0x0800e6d0   Section        5  stm32f4xx_nucleo.o(.constdata)
+    .constdata                               0x0800e6d5   Section       24  system_stm32f4xx.o(.constdata)
+    .constdata                               0x0800e6ed   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x0800e6ed   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x0800e6f8   Section       12  motionec_manager.o(.constdata)
+    .constdata                               0x0800e708   Section       80  asin.o(.constdata)
+    pS                                       0x0800e708   Data          48  asin.o(.constdata)
+    qS                                       0x0800e738   Data          32  asin.o(.constdata)
+    .constdata                               0x0800e758   Section      152  atan.o(.constdata)
+    atanhi                                   0x0800e758   Data          32  atan.o(.constdata)
+    atanlo                                   0x0800e778   Data          32  atan.o(.constdata)
+    aTodd                                    0x0800e798   Data          40  atan.o(.constdata)
+    aTeven                                   0x0800e7c0   Data          48  atan.o(.constdata)
+    .constdata                               0x0800e7f0   Section        8  qnan.o(.constdata)
+    .constdata                               0x0800e7f8   Section       32  rredf.o(.constdata)
+    twooverpi                                0x0800e7f8   Data          32  rredf.o(.constdata)
+    [Anonymous Symbol]                       0x0800e818   Section        0  motion_ec.o(.rodata)
     .data                                    0x20000000   Section       56  hts221.o(.data)
     .data                                    0x20000038   Section       56  lps22hb.o(.data)
     .data                                    0x20000070   Section       88  lsm6dsl.o(.data)
@@ -5140,143 +5140,143 @@ Image Symbol Table
     LSM6DSL_Write_Reg                        0x0800ac15   Thumb Code    32  lsm6dsl.o(i.LSM6DSL_Write_Reg)
     MX_I2C1_Init                             0x0800acb5   Thumb Code    50  nucleo_f401re_bus.o(i.MX_I2C1_Init)
     MX_I2C2_Init                             0x0800acf1   Thumb Code    48  i2c.o(i.MX_I2C2_Init)
-    MotionEC_manager_get_version             0x0800ae4d   Thumb Code    16  motionec_manager.o(i.MotionEC_manager_get_version)
-    MotionEC_manager_init                    0x0800ae5d   Thumb Code    38  motionec_manager.o(i.MotionEC_manager_init)
-    MotionEC_manager_run                     0x0800ae85   Thumb Code   484  motionec_manager.o(i.MotionEC_manager_run)
-    MotionMC_LoadCalFromNVM                  0x0800b085   Thumb Code     6  motionmc_manager.o(i.MotionMC_LoadCalFromNVM)
-    MotionMC_SaveCalInNVM                    0x0800b08b   Thumb Code     6  motionmc_manager.o(i.MotionMC_SaveCalInNVM)
-    MotionMC_manager_compensate              0x0800b091   Thumb Code   248  motionmc_manager.o(i.MotionMC_manager_compensate)
-    MotionMC_manager_get_params              0x0800b18d   Thumb Code    12  motionmc_manager.o(i.MotionMC_manager_get_params)
-    MotionMC_manager_init                    0x0800b199   Thumb Code    16  motionmc_manager.o(i.MotionMC_manager_init)
-    MotionMC_manager_run                     0x0800b1a9   Thumb Code   148  motionmc_manager.o(i.MotionMC_manager_run)
-    MotionMC_manager_update                  0x0800b249   Thumb Code    12  motionmc_manager.o(i.MotionMC_manager_update)
-    NMI_Handler                              0x0800b255   Thumb Code     2  stm32f4xx_it.o(i.NMI_Handler)
-    RTC_Bcd2ToByte                           0x0800b2b9   Thumb Code    22  stm32f4xx_hal_rtc.o(i.RTC_Bcd2ToByte)
-    RTC_ByteToBcd2                           0x0800b2cf   Thumb Code    26  stm32f4xx_hal_rtc.o(i.RTC_ByteToBcd2)
-    RTC_DateRegulate                         0x0800b365   Thumb Code    44  main.o(i.RTC_DateRegulate)
-    RTC_EnterInitMode                        0x0800b395   Thumb Code    62  stm32f4xx_hal_rtc.o(i.RTC_EnterInitMode)
-    RTC_TimeRegulate                         0x0800b42d   Thumb Code    54  main.o(i.RTC_TimeRegulate)
-    ReverseByteStuffCopyByte2                0x0800b5dd   Thumb Code    38  serial_protocol.o(i.ReverseByteStuffCopyByte2)
-    Serialize_s32                            0x0800b603   Thumb Code    26  serial_protocol.o(i.Serialize_s32)
-    SysTick_Handler                          0x0800b61d   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x0800b625   Thumb Code   178  cube_hal_f4.o(i.SystemClock_Config)
-    SystemInit                               0x0800b6e1   Thumb Code    82  system_stm32f4xx.o(i.SystemInit)
-    TIM3_IRQHandler                          0x0800b745   Thumb Code    10  stm32f4xx_it.o(i.TIM3_IRQHandler)
-    TIM_Base_SetConfig                       0x0800b755   Thumb Code   134  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
-    TIM_ETR_SetConfig                        0x0800b7f9   Thumb Code    22  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
-    UART_ReceivedMSG                         0x0800b971   Thumb Code   256  com.o(i.UART_ReceivedMSG)
-    UART_SendMsg                             0x0800ba7d   Thumb Code    36  com.o(i.UART_SendMsg)
-    USARTConfig                              0x0800be7d   Thumb Code   252  com.o(i.USARTConfig)
-    USART_DMA_Configuration                  0x0800bf91   Thumb Code    32  com.o(i.USART_DMA_Configuration)
-    __ARM_fpclassify                         0x0800c0d9   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
-    __ARM_fpclassifyf                        0x0800c109   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
-    __hardfp_acosf                           0x0800c131   Thumb Code   234  acosf.o(i.__hardfp_acosf)
-    __hardfp_asin                            0x0800c249   Thumb Code   770  asin.o(i.__hardfp_asin)
-    __hardfp_atan                            0x0800c5a9   Thumb Code   622  atan.o(i.__hardfp_atan)
-    __hardfp_atan2                           0x0800c881   Thumb Code   432  atan2.o(i.__hardfp_atan2)
-    __hardfp_atan2f                          0x0800ca71   Thumb Code   502  atan2f.o(i.__hardfp_atan2f)
-    __hardfp_cosf                            0x0800ccc1   Thumb Code   280  cosf.o(i.__hardfp_cosf)
-    __hardfp_floorf                          0x0800ce11   Thumb Code    98  floorf.o(i.__hardfp_floorf)
-    __hardfp_roundf                          0x0800ce81   Thumb Code   154  roundf.o(i.__hardfp_roundf)
-    __hardfp_sinf                            0x0800cf1d   Thumb Code   344  sinf.o(i.__hardfp_sinf)
-    __kernel_poly                            0x0800d0ad   Thumb Code   248  poly.o(i.__kernel_poly)
-    __mathlib_dbl_infnan                     0x0800d1a5   Thumb Code    20  dunder.o(i.__mathlib_dbl_infnan)
-    __mathlib_dbl_infnan2                    0x0800d1b9   Thumb Code    20  dunder.o(i.__mathlib_dbl_infnan2)
-    __mathlib_dbl_invalid                    0x0800d1d1   Thumb Code    24  dunder.o(i.__mathlib_dbl_invalid)
-    __mathlib_dbl_underflow                  0x0800d1f1   Thumb Code    24  dunder.o(i.__mathlib_dbl_underflow)
-    __mathlib_flt_infnan                     0x0800d211   Thumb Code     6  funder.o(i.__mathlib_flt_infnan)
-    __mathlib_flt_infnan2                    0x0800d217   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
-    __mathlib_flt_invalid                    0x0800d21d   Thumb Code    10  funder.o(i.__mathlib_flt_invalid)
-    __mathlib_flt_underflow                  0x0800d22d   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
-    __mathlib_rredf2                         0x0800d23d   Thumb Code   316  rredf.o(i.__mathlib_rredf2)
-    __scatterload_copy                       0x0800d391   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x0800d39f   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800d3a1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    __set_errno                              0x0800d3b1   Thumb Code     6  errno.o(i.__set_errno)
-    acosf                                    0x0800d3bd   Thumb Code    16  acosf.o(i.acosf)
-    asin                                     0x0800d3cd   Thumb Code    16  asin.o(i.asin)
-    atan                                     0x0800d3dd   Thumb Code    16  atan.o(i.atan)
-    atan2                                    0x0800d3ed   Thumb Code    20  atan2.o(i.atan2)
-    cosf                                     0x0800d505   Thumb Code    16  cosf.o(i.cosf)
-    fabs                                     0x0800d515   Thumb Code    24  fabs.o(i.fabs)
-    hts221_block_data_update_set             0x0800d52d   Thumb Code    50  hts221_reg.o(i.hts221_block_data_update_set)
-    hts221_data_rate_get                     0x0800d55f   Thumb Code    80  hts221_reg.o(i.hts221_data_rate_get)
-    hts221_data_rate_set                     0x0800d5af   Thumb Code    50  hts221_reg.o(i.hts221_data_rate_set)
-    hts221_device_id_get                     0x0800d5e1   Thumb Code    24  hts221_reg.o(i.hts221_device_id_get)
-    hts221_hum_adc_point_0_get               0x0800d5f9   Thumb Code    24  hts221_reg.o(i.hts221_hum_adc_point_0_get)
-    hts221_hum_adc_point_1_get               0x0800d611   Thumb Code    24  hts221_reg.o(i.hts221_hum_adc_point_1_get)
-    hts221_hum_rh_point_0_get                0x0800d629   Thumb Code    30  hts221_reg.o(i.hts221_hum_rh_point_0_get)
-    hts221_hum_rh_point_1_get                0x0800d647   Thumb Code    30  hts221_reg.o(i.hts221_hum_rh_point_1_get)
-    hts221_humidity_raw_get                  0x0800d665   Thumb Code    24  hts221_reg.o(i.hts221_humidity_raw_get)
-    hts221_power_on_set                      0x0800d67d   Thumb Code    50  hts221_reg.o(i.hts221_power_on_set)
-    hts221_read_reg                          0x0800d6af   Thumb Code    32  hts221_reg.o(i.hts221_read_reg)
-    hts221_temp_adc_point_0_get              0x0800d6cf   Thumb Code    24  hts221_reg.o(i.hts221_temp_adc_point_0_get)
-    hts221_temp_adc_point_1_get              0x0800d6e7   Thumb Code    24  hts221_reg.o(i.hts221_temp_adc_point_1_get)
-    hts221_temp_deg_point_0_get              0x0800d6ff   Thumb Code    64  hts221_reg.o(i.hts221_temp_deg_point_0_get)
-    hts221_temp_deg_point_1_get              0x0800d73f   Thumb Code    64  hts221_reg.o(i.hts221_temp_deg_point_1_get)
-    hts221_temperature_raw_get               0x0800d77f   Thumb Code    24  hts221_reg.o(i.hts221_temperature_raw_get)
-    hts221_write_reg                         0x0800d797   Thumb Code    34  hts221_reg.o(i.hts221_write_reg)
-    init_LSM9DS1_I2C                         0x0800d7b9   Thumb Code   476  lsm9ds1.o(i.init_LSM9DS1_I2C)
-    lps22hb_auto_add_inc_set                 0x0800d99d   Thumb Code    50  lps22hb_reg.o(i.lps22hb_auto_add_inc_set)
-    lps22hb_block_data_update_set            0x0800d9cf   Thumb Code    50  lps22hb_reg.o(i.lps22hb_block_data_update_set)
-    lps22hb_data_rate_get                    0x0800da01   Thumb Code    90  lps22hb_reg.o(i.lps22hb_data_rate_get)
-    lps22hb_data_rate_set                    0x0800da5b   Thumb Code    50  lps22hb_reg.o(i.lps22hb_data_rate_set)
-    lps22hb_device_id_get                    0x0800da8d   Thumb Code    24  lps22hb_reg.o(i.lps22hb_device_id_get)
-    lps22hb_from_lsb_to_degc                 0x0800daa5   Thumb Code    18  lps22hb_reg.o(i.lps22hb_from_lsb_to_degc)
-    lps22hb_from_lsb_to_hpa                  0x0800dabd   Thumb Code    18  lps22hb_reg.o(i.lps22hb_from_lsb_to_hpa)
-    lps22hb_low_pass_filter_mode_set         0x0800dad5   Thumb Code    50  lps22hb_reg.o(i.lps22hb_low_pass_filter_mode_set)
-    lps22hb_low_power_set                    0x0800db07   Thumb Code    50  lps22hb_reg.o(i.lps22hb_low_power_set)
-    lps22hb_pressure_raw_get                 0x0800db39   Thumb Code    24  lps22hb_reg.o(i.lps22hb_pressure_raw_get)
-    lps22hb_read_reg                         0x0800db51   Thumb Code    32  lps22hb_reg.o(i.lps22hb_read_reg)
-    lps22hb_temperature_raw_get              0x0800db71   Thumb Code    24  lps22hb_reg.o(i.lps22hb_temperature_raw_get)
-    lps22hb_write_reg                        0x0800db89   Thumb Code    34  lps22hb_reg.o(i.lps22hb_write_reg)
-    lsm303agr_acceleration_raw_get           0x0800dbab   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_acceleration_raw_get)
-    lsm303agr_mag_block_data_update_set      0x0800dbc3   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_block_data_update_set)
-    lsm303agr_mag_data_rate_get              0x0800dbf5   Thumb Code    80  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_get)
-    lsm303agr_mag_data_rate_set              0x0800dc45   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_set)
-    lsm303agr_mag_device_id_get              0x0800dc77   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_mag_device_id_get)
-    lsm303agr_mag_i2c_interface_set          0x0800dc8f   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_i2c_interface_set)
-    lsm303agr_mag_operating_mode_set         0x0800dcc1   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_operating_mode_set)
-    lsm303agr_mag_self_test_set              0x0800dcf3   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_self_test_set)
-    lsm303agr_magnetic_raw_get               0x0800dd25   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_magnetic_raw_get)
-    lsm303agr_read_reg                       0x0800dd3d   Thumb Code    32  lsm303agr_reg.o(i.lsm303agr_read_reg)
-    lsm303agr_write_reg                      0x0800dd5d   Thumb Code    34  lsm303agr_reg.o(i.lsm303agr_write_reg)
-    lsm303agr_xl_block_data_update_set       0x0800dd7f   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_block_data_update_set)
-    lsm303agr_xl_data_rate_get               0x0800ddb1   Thumb Code   116  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_get)
-    lsm303agr_xl_data_rate_set               0x0800de25   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_set)
-    lsm303agr_xl_device_id_get               0x0800de57   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_xl_device_id_get)
-    lsm303agr_xl_fifo_mode_set               0x0800de6f   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_fifo_mode_set)
-    lsm303agr_xl_full_scale_get              0x0800dea1   Thumb Code    80  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_get)
-    lsm303agr_xl_full_scale_set              0x0800def1   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_set)
-    lsm303agr_xl_operating_mode_get          0x0800df23   Thumb Code    76  lsm303agr_reg.o(i.lsm303agr_xl_operating_mode_get)
-    lsm6dsl_acceleration_raw_get             0x0800df6f   Thumb Code    24  lsm6dsl_reg.o(i.lsm6dsl_acceleration_raw_get)
-    lsm6dsl_angular_rate_raw_get             0x0800df87   Thumb Code    24  lsm6dsl_reg.o(i.lsm6dsl_angular_rate_raw_get)
-    lsm6dsl_auto_increment_set               0x0800df9f   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_auto_increment_set)
-    lsm6dsl_block_data_update_set            0x0800dfd1   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_block_data_update_set)
-    lsm6dsl_device_id_get                    0x0800e003   Thumb Code    24  lsm6dsl_reg.o(i.lsm6dsl_device_id_get)
-    lsm6dsl_fifo_mode_set                    0x0800e01b   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_fifo_mode_set)
-    lsm6dsl_gy_data_rate_get                 0x0800e04d   Thumb Code   124  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_get)
-    lsm6dsl_gy_data_rate_set                 0x0800e0c9   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_set)
-    lsm6dsl_gy_full_scale_get                0x0800e0fb   Thumb Code    86  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_get)
-    lsm6dsl_gy_full_scale_set                0x0800e151   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_set)
-    lsm6dsl_read_reg                         0x0800e183   Thumb Code    32  lsm6dsl_reg.o(i.lsm6dsl_read_reg)
-    lsm6dsl_write_reg                        0x0800e1a3   Thumb Code    34  lsm6dsl_reg.o(i.lsm6dsl_write_reg)
-    lsm6dsl_xl_data_rate_get                 0x0800e1c5   Thumb Code   130  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_get)
-    lsm6dsl_xl_data_rate_set                 0x0800e247   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_set)
-    lsm6dsl_xl_full_scale_get                0x0800e279   Thumb Code    80  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_get)
-    lsm6dsl_xl_full_scale_set                0x0800e2c9   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_set)
-    main                                     0x0800e2fd   Thumb Code   232  main.o(i.main)
-    roundf                                   0x0800e4fd   Thumb Code    16  roundf.o(i.roundf)
-    sqrt                                     0x0800e50d   Thumb Code   110  sqrt.o(i.sqrt)
-    sqrtf                                    0x0800e57b   Thumb Code    62  sqrtf.o(i.sqrtf)
-    GPIO_PIN                                 0x0800e6c0   Data           2  stm32f4xx_nucleo.o(.constdata)
-    BUTTON_PIN                               0x0800e6c2   Data           2  stm32f4xx_nucleo.o(.constdata)
-    BUTTON_IRQn                              0x0800e6c4   Data           1  stm32f4xx_nucleo.o(.constdata)
-    AHBPrescTable                            0x0800e6c5   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x0800e6d5   Data           8  system_stm32f4xx.o(.constdata)
-    __mathlib_zero                           0x0800e7e0   Data           8  qnan.o(.constdata)
-    Region$$Table$$Base                      0x0800e82c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800e84c   Number         0  anon$$obj.o(Region$$Table)
+    MotionEC_manager_get_version             0x0800ae5d   Thumb Code    16  motionec_manager.o(i.MotionEC_manager_get_version)
+    MotionEC_manager_init                    0x0800ae6d   Thumb Code    38  motionec_manager.o(i.MotionEC_manager_init)
+    MotionEC_manager_run                     0x0800ae95   Thumb Code   484  motionec_manager.o(i.MotionEC_manager_run)
+    MotionMC_LoadCalFromNVM                  0x0800b095   Thumb Code     6  motionmc_manager.o(i.MotionMC_LoadCalFromNVM)
+    MotionMC_SaveCalInNVM                    0x0800b09b   Thumb Code     6  motionmc_manager.o(i.MotionMC_SaveCalInNVM)
+    MotionMC_manager_compensate              0x0800b0a1   Thumb Code   248  motionmc_manager.o(i.MotionMC_manager_compensate)
+    MotionMC_manager_get_params              0x0800b19d   Thumb Code    12  motionmc_manager.o(i.MotionMC_manager_get_params)
+    MotionMC_manager_init                    0x0800b1a9   Thumb Code    16  motionmc_manager.o(i.MotionMC_manager_init)
+    MotionMC_manager_run                     0x0800b1b9   Thumb Code   148  motionmc_manager.o(i.MotionMC_manager_run)
+    MotionMC_manager_update                  0x0800b259   Thumb Code    12  motionmc_manager.o(i.MotionMC_manager_update)
+    NMI_Handler                              0x0800b265   Thumb Code     2  stm32f4xx_it.o(i.NMI_Handler)
+    RTC_Bcd2ToByte                           0x0800b2c9   Thumb Code    22  stm32f4xx_hal_rtc.o(i.RTC_Bcd2ToByte)
+    RTC_ByteToBcd2                           0x0800b2df   Thumb Code    26  stm32f4xx_hal_rtc.o(i.RTC_ByteToBcd2)
+    RTC_DateRegulate                         0x0800b375   Thumb Code    44  main.o(i.RTC_DateRegulate)
+    RTC_EnterInitMode                        0x0800b3a5   Thumb Code    62  stm32f4xx_hal_rtc.o(i.RTC_EnterInitMode)
+    RTC_TimeRegulate                         0x0800b43d   Thumb Code    54  main.o(i.RTC_TimeRegulate)
+    ReverseByteStuffCopyByte2                0x0800b5ed   Thumb Code    38  serial_protocol.o(i.ReverseByteStuffCopyByte2)
+    Serialize_s32                            0x0800b613   Thumb Code    26  serial_protocol.o(i.Serialize_s32)
+    SysTick_Handler                          0x0800b62d   Thumb Code     8  stm32f4xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x0800b635   Thumb Code   178  cube_hal_f4.o(i.SystemClock_Config)
+    SystemInit                               0x0800b6f1   Thumb Code    82  system_stm32f4xx.o(i.SystemInit)
+    TIM3_IRQHandler                          0x0800b755   Thumb Code    10  stm32f4xx_it.o(i.TIM3_IRQHandler)
+    TIM_Base_SetConfig                       0x0800b765   Thumb Code   134  stm32f4xx_hal_tim.o(i.TIM_Base_SetConfig)
+    TIM_ETR_SetConfig                        0x0800b809   Thumb Code    22  stm32f4xx_hal_tim.o(i.TIM_ETR_SetConfig)
+    UART_ReceivedMSG                         0x0800b981   Thumb Code   256  com.o(i.UART_ReceivedMSG)
+    UART_SendMsg                             0x0800ba8d   Thumb Code    36  com.o(i.UART_SendMsg)
+    USARTConfig                              0x0800be8d   Thumb Code   252  com.o(i.USARTConfig)
+    USART_DMA_Configuration                  0x0800bfa1   Thumb Code    32  com.o(i.USART_DMA_Configuration)
+    __ARM_fpclassify                         0x0800c0e9   Thumb Code    48  fpclassify.o(i.__ARM_fpclassify)
+    __ARM_fpclassifyf                        0x0800c119   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __hardfp_acosf                           0x0800c141   Thumb Code   234  acosf.o(i.__hardfp_acosf)
+    __hardfp_asin                            0x0800c259   Thumb Code   770  asin.o(i.__hardfp_asin)
+    __hardfp_atan                            0x0800c5b9   Thumb Code   622  atan.o(i.__hardfp_atan)
+    __hardfp_atan2                           0x0800c891   Thumb Code   432  atan2.o(i.__hardfp_atan2)
+    __hardfp_atan2f                          0x0800ca81   Thumb Code   502  atan2f.o(i.__hardfp_atan2f)
+    __hardfp_cosf                            0x0800ccd1   Thumb Code   280  cosf.o(i.__hardfp_cosf)
+    __hardfp_floorf                          0x0800ce21   Thumb Code    98  floorf.o(i.__hardfp_floorf)
+    __hardfp_roundf                          0x0800ce91   Thumb Code   154  roundf.o(i.__hardfp_roundf)
+    __hardfp_sinf                            0x0800cf2d   Thumb Code   344  sinf.o(i.__hardfp_sinf)
+    __kernel_poly                            0x0800d0bd   Thumb Code   248  poly.o(i.__kernel_poly)
+    __mathlib_dbl_infnan                     0x0800d1b5   Thumb Code    20  dunder.o(i.__mathlib_dbl_infnan)
+    __mathlib_dbl_infnan2                    0x0800d1c9   Thumb Code    20  dunder.o(i.__mathlib_dbl_infnan2)
+    __mathlib_dbl_invalid                    0x0800d1e1   Thumb Code    24  dunder.o(i.__mathlib_dbl_invalid)
+    __mathlib_dbl_underflow                  0x0800d201   Thumb Code    24  dunder.o(i.__mathlib_dbl_underflow)
+    __mathlib_flt_infnan                     0x0800d221   Thumb Code     6  funder.o(i.__mathlib_flt_infnan)
+    __mathlib_flt_infnan2                    0x0800d227   Thumb Code     6  funder.o(i.__mathlib_flt_infnan2)
+    __mathlib_flt_invalid                    0x0800d22d   Thumb Code    10  funder.o(i.__mathlib_flt_invalid)
+    __mathlib_flt_underflow                  0x0800d23d   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    __mathlib_rredf2                         0x0800d24d   Thumb Code   316  rredf.o(i.__mathlib_rredf2)
+    __scatterload_copy                       0x0800d3a1   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0800d3af   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0800d3b1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x0800d3c1   Thumb Code     6  errno.o(i.__set_errno)
+    acosf                                    0x0800d3cd   Thumb Code    16  acosf.o(i.acosf)
+    asin                                     0x0800d3dd   Thumb Code    16  asin.o(i.asin)
+    atan                                     0x0800d3ed   Thumb Code    16  atan.o(i.atan)
+    atan2                                    0x0800d3fd   Thumb Code    20  atan2.o(i.atan2)
+    cosf                                     0x0800d515   Thumb Code    16  cosf.o(i.cosf)
+    fabs                                     0x0800d525   Thumb Code    24  fabs.o(i.fabs)
+    hts221_block_data_update_set             0x0800d53d   Thumb Code    50  hts221_reg.o(i.hts221_block_data_update_set)
+    hts221_data_rate_get                     0x0800d56f   Thumb Code    80  hts221_reg.o(i.hts221_data_rate_get)
+    hts221_data_rate_set                     0x0800d5bf   Thumb Code    50  hts221_reg.o(i.hts221_data_rate_set)
+    hts221_device_id_get                     0x0800d5f1   Thumb Code    24  hts221_reg.o(i.hts221_device_id_get)
+    hts221_hum_adc_point_0_get               0x0800d609   Thumb Code    24  hts221_reg.o(i.hts221_hum_adc_point_0_get)
+    hts221_hum_adc_point_1_get               0x0800d621   Thumb Code    24  hts221_reg.o(i.hts221_hum_adc_point_1_get)
+    hts221_hum_rh_point_0_get                0x0800d639   Thumb Code    30  hts221_reg.o(i.hts221_hum_rh_point_0_get)
+    hts221_hum_rh_point_1_get                0x0800d657   Thumb Code    30  hts221_reg.o(i.hts221_hum_rh_point_1_get)
+    hts221_humidity_raw_get                  0x0800d675   Thumb Code    24  hts221_reg.o(i.hts221_humidity_raw_get)
+    hts221_power_on_set                      0x0800d68d   Thumb Code    50  hts221_reg.o(i.hts221_power_on_set)
+    hts221_read_reg                          0x0800d6bf   Thumb Code    32  hts221_reg.o(i.hts221_read_reg)
+    hts221_temp_adc_point_0_get              0x0800d6df   Thumb Code    24  hts221_reg.o(i.hts221_temp_adc_point_0_get)
+    hts221_temp_adc_point_1_get              0x0800d6f7   Thumb Code    24  hts221_reg.o(i.hts221_temp_adc_point_1_get)
+    hts221_temp_deg_point_0_get              0x0800d70f   Thumb Code    64  hts221_reg.o(i.hts221_temp_deg_point_0_get)
+    hts221_temp_deg_point_1_get              0x0800d74f   Thumb Code    64  hts221_reg.o(i.hts221_temp_deg_point_1_get)
+    hts221_temperature_raw_get               0x0800d78f   Thumb Code    24  hts221_reg.o(i.hts221_temperature_raw_get)
+    hts221_write_reg                         0x0800d7a7   Thumb Code    34  hts221_reg.o(i.hts221_write_reg)
+    init_LSM9DS1_I2C                         0x0800d7c9   Thumb Code   476  lsm9ds1.o(i.init_LSM9DS1_I2C)
+    lps22hb_auto_add_inc_set                 0x0800d9ad   Thumb Code    50  lps22hb_reg.o(i.lps22hb_auto_add_inc_set)
+    lps22hb_block_data_update_set            0x0800d9df   Thumb Code    50  lps22hb_reg.o(i.lps22hb_block_data_update_set)
+    lps22hb_data_rate_get                    0x0800da11   Thumb Code    90  lps22hb_reg.o(i.lps22hb_data_rate_get)
+    lps22hb_data_rate_set                    0x0800da6b   Thumb Code    50  lps22hb_reg.o(i.lps22hb_data_rate_set)
+    lps22hb_device_id_get                    0x0800da9d   Thumb Code    24  lps22hb_reg.o(i.lps22hb_device_id_get)
+    lps22hb_from_lsb_to_degc                 0x0800dab5   Thumb Code    18  lps22hb_reg.o(i.lps22hb_from_lsb_to_degc)
+    lps22hb_from_lsb_to_hpa                  0x0800dacd   Thumb Code    18  lps22hb_reg.o(i.lps22hb_from_lsb_to_hpa)
+    lps22hb_low_pass_filter_mode_set         0x0800dae5   Thumb Code    50  lps22hb_reg.o(i.lps22hb_low_pass_filter_mode_set)
+    lps22hb_low_power_set                    0x0800db17   Thumb Code    50  lps22hb_reg.o(i.lps22hb_low_power_set)
+    lps22hb_pressure_raw_get                 0x0800db49   Thumb Code    24  lps22hb_reg.o(i.lps22hb_pressure_raw_get)
+    lps22hb_read_reg                         0x0800db61   Thumb Code    32  lps22hb_reg.o(i.lps22hb_read_reg)
+    lps22hb_temperature_raw_get              0x0800db81   Thumb Code    24  lps22hb_reg.o(i.lps22hb_temperature_raw_get)
+    lps22hb_write_reg                        0x0800db99   Thumb Code    34  lps22hb_reg.o(i.lps22hb_write_reg)
+    lsm303agr_acceleration_raw_get           0x0800dbbb   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_acceleration_raw_get)
+    lsm303agr_mag_block_data_update_set      0x0800dbd3   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_block_data_update_set)
+    lsm303agr_mag_data_rate_get              0x0800dc05   Thumb Code    80  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_get)
+    lsm303agr_mag_data_rate_set              0x0800dc55   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_data_rate_set)
+    lsm303agr_mag_device_id_get              0x0800dc87   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_mag_device_id_get)
+    lsm303agr_mag_i2c_interface_set          0x0800dc9f   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_i2c_interface_set)
+    lsm303agr_mag_operating_mode_set         0x0800dcd1   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_operating_mode_set)
+    lsm303agr_mag_self_test_set              0x0800dd03   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_mag_self_test_set)
+    lsm303agr_magnetic_raw_get               0x0800dd35   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_magnetic_raw_get)
+    lsm303agr_read_reg                       0x0800dd4d   Thumb Code    32  lsm303agr_reg.o(i.lsm303agr_read_reg)
+    lsm303agr_write_reg                      0x0800dd6d   Thumb Code    34  lsm303agr_reg.o(i.lsm303agr_write_reg)
+    lsm303agr_xl_block_data_update_set       0x0800dd8f   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_block_data_update_set)
+    lsm303agr_xl_data_rate_get               0x0800ddc1   Thumb Code   116  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_get)
+    lsm303agr_xl_data_rate_set               0x0800de35   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_data_rate_set)
+    lsm303agr_xl_device_id_get               0x0800de67   Thumb Code    24  lsm303agr_reg.o(i.lsm303agr_xl_device_id_get)
+    lsm303agr_xl_fifo_mode_set               0x0800de7f   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_fifo_mode_set)
+    lsm303agr_xl_full_scale_get              0x0800deb1   Thumb Code    80  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_get)
+    lsm303agr_xl_full_scale_set              0x0800df01   Thumb Code    50  lsm303agr_reg.o(i.lsm303agr_xl_full_scale_set)
+    lsm303agr_xl_operating_mode_get          0x0800df33   Thumb Code    76  lsm303agr_reg.o(i.lsm303agr_xl_operating_mode_get)
+    lsm6dsl_acceleration_raw_get             0x0800df7f   Thumb Code    24  lsm6dsl_reg.o(i.lsm6dsl_acceleration_raw_get)
+    lsm6dsl_angular_rate_raw_get             0x0800df97   Thumb Code    24  lsm6dsl_reg.o(i.lsm6dsl_angular_rate_raw_get)
+    lsm6dsl_auto_increment_set               0x0800dfaf   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_auto_increment_set)
+    lsm6dsl_block_data_update_set            0x0800dfe1   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_block_data_update_set)
+    lsm6dsl_device_id_get                    0x0800e013   Thumb Code    24  lsm6dsl_reg.o(i.lsm6dsl_device_id_get)
+    lsm6dsl_fifo_mode_set                    0x0800e02b   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_fifo_mode_set)
+    lsm6dsl_gy_data_rate_get                 0x0800e05d   Thumb Code   124  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_get)
+    lsm6dsl_gy_data_rate_set                 0x0800e0d9   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_gy_data_rate_set)
+    lsm6dsl_gy_full_scale_get                0x0800e10b   Thumb Code    86  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_get)
+    lsm6dsl_gy_full_scale_set                0x0800e161   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_gy_full_scale_set)
+    lsm6dsl_read_reg                         0x0800e193   Thumb Code    32  lsm6dsl_reg.o(i.lsm6dsl_read_reg)
+    lsm6dsl_write_reg                        0x0800e1b3   Thumb Code    34  lsm6dsl_reg.o(i.lsm6dsl_write_reg)
+    lsm6dsl_xl_data_rate_get                 0x0800e1d5   Thumb Code   130  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_get)
+    lsm6dsl_xl_data_rate_set                 0x0800e257   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_xl_data_rate_set)
+    lsm6dsl_xl_full_scale_get                0x0800e289   Thumb Code    80  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_get)
+    lsm6dsl_xl_full_scale_set                0x0800e2d9   Thumb Code    50  lsm6dsl_reg.o(i.lsm6dsl_xl_full_scale_set)
+    main                                     0x0800e30d   Thumb Code   232  main.o(i.main)
+    roundf                                   0x0800e50d   Thumb Code    16  roundf.o(i.roundf)
+    sqrt                                     0x0800e51d   Thumb Code   110  sqrt.o(i.sqrt)
+    sqrtf                                    0x0800e58b   Thumb Code    62  sqrtf.o(i.sqrtf)
+    GPIO_PIN                                 0x0800e6d0   Data           2  stm32f4xx_nucleo.o(.constdata)
+    BUTTON_PIN                               0x0800e6d2   Data           2  stm32f4xx_nucleo.o(.constdata)
+    BUTTON_IRQn                              0x0800e6d4   Data           1  stm32f4xx_nucleo.o(.constdata)
+    AHBPrescTable                            0x0800e6d5   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x0800e6e5   Data           8  system_stm32f4xx.o(.constdata)
+    __mathlib_zero                           0x0800e7f0   Data           8  qnan.o(.constdata)
+    Region$$Table$$Base                      0x0800e83c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800e85c   Number         0  anon$$obj.o(Region$$Table)
     HTS221_COMMON_Driver                     0x20000000   Data          16  hts221.o(.data)
     HTS221_HUM_Driver                        0x20000010   Data          20  hts221.o(.data)
     HTS221_TEMP_Driver                       0x20000024   Data          20  hts221.o(.data)
@@ -5324,9 +5324,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000195
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000ea94, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x0000e9a8])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000eaa4, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x0000e9b8])
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000e84c, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000e85c, Max: 0x00100000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5626,194 +5626,194 @@ Memory Map of the image
     0x0800acb4   0x0800acb4   0x0000003c   Code   RO        10129    i.MX_I2C1_Init      nucleo_f401re_bus.o
     0x0800acf0   0x0800acf0   0x0000003c   Code   RO        10257    i.MX_I2C2_Init      i2c.o
     0x0800ad2c   0x0800ad2c   0x00000050   Code   RO         9561    i.MX_TIM_ALGO_Init  main.o
-    0x0800ad7c   0x0800ad7c   0x000000d0   Code   RO         9562    i.Magneto_Sensor_Handler  main.o
-    0x0800ae4c   0x0800ae4c   0x00000010   Code   RO         9959    i.MotionEC_manager_get_version  motionec_manager.o
-    0x0800ae5c   0x0800ae5c   0x00000026   Code   RO         9960    i.MotionEC_manager_init  motionec_manager.o
-    0x0800ae82   0x0800ae82   0x00000002   PAD
-    0x0800ae84   0x0800ae84   0x00000200   Code   RO         9961    i.MotionEC_manager_run  motionec_manager.o
-    0x0800b084   0x0800b084   0x00000006   Code   RO        10029    i.MotionMC_LoadCalFromNVM  motionmc_manager.o
-    0x0800b08a   0x0800b08a   0x00000006   Code   RO        10030    i.MotionMC_SaveCalInNVM  motionmc_manager.o
-    0x0800b090   0x0800b090   0x000000fc   Code   RO        10031    i.MotionMC_manager_compensate  motionmc_manager.o
-    0x0800b18c   0x0800b18c   0x0000000c   Code   RO        10032    i.MotionMC_manager_get_params  motionmc_manager.o
-    0x0800b198   0x0800b198   0x00000010   Code   RO        10034    i.MotionMC_manager_init  motionmc_manager.o
-    0x0800b1a8   0x0800b1a8   0x000000a0   Code   RO        10035    i.MotionMC_manager_run  motionmc_manager.o
-    0x0800b248   0x0800b248   0x0000000c   Code   RO        10036    i.MotionMC_manager_update  motionmc_manager.o
-    0x0800b254   0x0800b254   0x00000002   Code   RO         9827    i.NMI_Handler       stm32f4xx_it.o
-    0x0800b256   0x0800b256   0x00000002   PAD
-    0x0800b258   0x0800b258   0x00000010   Code   RO         5686    i.NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x0800b268   0x0800b268   0x00000028   Code   RO         5687    i.NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x0800b290   0x0800b290   0x00000028   Code   RO         9563    i.Pressure_Sensor_Handler  main.o
-    0x0800b2b8   0x0800b2b8   0x00000016   Code   RO         7178    i.RTC_Bcd2ToByte    stm32f4xx_hal_rtc.o
-    0x0800b2ce   0x0800b2ce   0x0000001a   Code   RO         7179    i.RTC_ByteToBcd2    stm32f4xx_hal_rtc.o
-    0x0800b2e8   0x0800b2e8   0x0000007c   Code   RO         9564    i.RTC_Config        main.o
-    0x0800b364   0x0800b364   0x00000030   Code   RO         9565    i.RTC_DateRegulate  main.o
-    0x0800b394   0x0800b394   0x0000003e   Code   RO         7180    i.RTC_EnterInitMode  stm32f4xx_hal_rtc.o
-    0x0800b3d2   0x0800b3d2   0x00000002   PAD
-    0x0800b3d4   0x0800b3d4   0x00000058   Code   RO         9566    i.RTC_Handler       main.o
-    0x0800b42c   0x0800b42c   0x0000003c   Code   RO         9567    i.RTC_TimeRegulate  main.o
-    0x0800b468   0x0800b468   0x00000054   Code   RO         9568    i.RTC_TimeStampConfig  main.o
-    0x0800b4bc   0x0800b4bc   0x00000038   Code   RO         3255    i.ReadAccRegWrap    lsm303agr.o
-    0x0800b4f4   0x0800b4f4   0x00000038   Code   RO         3256    i.ReadMagRegWrap    lsm303agr.o
-    0x0800b52c   0x0800b52c   0x00000038   Code   RO           28    i.ReadRegWrap       hts221.o
-    0x0800b564   0x0800b564   0x00000058   Code   RO          467    i.ReadRegWrap       lps22hb.o
-    0x0800b5bc   0x0800b5bc   0x00000020   Code   RO         1266    i.ReadRegWrap       lsm6dsl.o
-    0x0800b5dc   0x0800b5dc   0x00000026   Code   RO         9887    i.ReverseByteStuffCopyByte2  serial_protocol.o
-    0x0800b602   0x0800b602   0x0000001a   Code   RO         9889    i.Serialize_s32     serial_protocol.o
-    0x0800b61c   0x0800b61c   0x00000008   Code   RO         9828    i.SysTick_Handler   stm32f4xx_it.o
-    0x0800b624   0x0800b624   0x000000bc   Code   RO         9785    i.SystemClock_Config  cube_hal_f4.o
-    0x0800b6e0   0x0800b6e0   0x00000064   Code   RO         5449    i.SystemInit        system_stm32f4xx.o
-    0x0800b744   0x0800b744   0x00000010   Code   RO         9829    i.TIM3_IRQHandler   stm32f4xx_it.o
-    0x0800b754   0x0800b754   0x000000a4   Code   RO         7617    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
-    0x0800b7f8   0x0800b7f8   0x00000016   Code   RO         7628    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
-    0x0800b80e   0x0800b80e   0x00000012   Code   RO         7629    i.TIM_ITRx_SetConfig  stm32f4xx_hal_tim.o
-    0x0800b820   0x0800b820   0x00000026   Code   RO         7635    i.TIM_TI1_ConfigInputStage  stm32f4xx_hal_tim.o
-    0x0800b846   0x0800b846   0x00000028   Code   RO         7637    i.TIM_TI2_ConfigInputStage  stm32f4xx_hal_tim.o
-    0x0800b86e   0x0800b86e   0x00000002   PAD
-    0x0800b870   0x0800b870   0x00000028   Code   RO         9569    i.Temperature_Sensor_Handler  main.o
-    0x0800b898   0x0800b898   0x00000050   Code   RO         8505    i.UART_DMAError     stm32f4xx_hal_uart.o
-    0x0800b8e8   0x0800b8e8   0x00000046   Code   RO         8506    i.UART_DMAReceiveCplt  stm32f4xx_hal_uart.o
-    0x0800b92e   0x0800b92e   0x0000000e   Code   RO         8508    i.UART_DMARxHalfCplt  stm32f4xx_hal_uart.o
-    0x0800b93c   0x0800b93c   0x00000020   Code   RO         8514    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
-    0x0800b95c   0x0800b95c   0x00000014   Code   RO         8516    i.UART_EndTxTransfer  stm32f4xx_hal_uart.o
-    0x0800b970   0x0800b970   0x0000010c   Code   RO         9503    i.UART_ReceivedMSG  com.o
-    0x0800ba7c   0x0800ba7c   0x0000002c   Code   RO         9504    i.UART_SendMsg      com.o
-    0x0800baa8   0x0800baa8   0x00000368   Code   RO         8518    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x0800be10   0x0800be10   0x0000006c   Code   RO         8520    i.UART_WaitOnFlagUntilTimeout  stm32f4xx_hal_uart.o
-    0x0800be7c   0x0800be7c   0x00000114   Code   RO         9505    i.USARTConfig       com.o
-    0x0800bf90   0x0800bf90   0x00000028   Code   RO         9506    i.USART_DMA_Configuration  com.o
-    0x0800bfb8   0x0800bfb8   0x00000038   Code   RO         3257    i.WriteAccRegWrap   lsm303agr.o
-    0x0800bff0   0x0800bff0   0x00000038   Code   RO         3258    i.WriteMagRegWrap   lsm303agr.o
-    0x0800c028   0x0800c028   0x00000038   Code   RO           29    i.WriteRegWrap      hts221.o
-    0x0800c060   0x0800c060   0x00000058   Code   RO          468    i.WriteRegWrap      lps22hb.o
-    0x0800c0b8   0x0800c0b8   0x00000020   Code   RO         1267    i.WriteRegWrap      lsm6dsl.o
-    0x0800c0d8   0x0800c0d8   0x00000030   Code   RO        10467    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
-    0x0800c108   0x0800c108   0x00000026   Code   RO        10469    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
-    0x0800c12e   0x0800c12e   0x00000002   PAD
-    0x0800c130   0x0800c130   0x00000118   Code   RO        10312    i.__hardfp_acosf    m_wm.l(acosf.o)
-    0x0800c248   0x0800c248   0x00000360   Code   RO        10324    i.__hardfp_asin     m_wm.l(asin.o)
-    0x0800c5a8   0x0800c5a8   0x000002d8   Code   RO        10433    i.__hardfp_atan     m_wm.l(atan.o)
-    0x0800c880   0x0800c880   0x000001f0   Code   RO        10338    i.__hardfp_atan2    m_wm.l(atan2.o)
-    0x0800ca70   0x0800ca70   0x00000250   Code   RO        10350    i.__hardfp_atan2f   m_wm.l(atan2f.o)
-    0x0800ccc0   0x0800ccc0   0x00000150   Code   RO        10362    i.__hardfp_cosf     m_wm.l(cosf.o)
-    0x0800ce10   0x0800ce10   0x00000070   Code   RO        10374    i.__hardfp_floorf   m_wm.l(floorf.o)
-    0x0800ce80   0x0800ce80   0x0000009a   Code   RO        10404    i.__hardfp_roundf   m_wm.l(roundf.o)
-    0x0800cf1a   0x0800cf1a   0x00000002   PAD
-    0x0800cf1c   0x0800cf1c   0x00000190   Code   RO        10380    i.__hardfp_sinf     m_wm.l(sinf.o)
-    0x0800d0ac   0x0800d0ac   0x000000f8   Code   RO        10485    i.__kernel_poly     m_wm.l(poly.o)
-    0x0800d1a4   0x0800d1a4   0x00000014   Code   RO        10448    i.__mathlib_dbl_infnan  m_wm.l(dunder.o)
-    0x0800d1b8   0x0800d1b8   0x00000014   Code   RO        10449    i.__mathlib_dbl_infnan2  m_wm.l(dunder.o)
-    0x0800d1cc   0x0800d1cc   0x00000004   PAD
-    0x0800d1d0   0x0800d1d0   0x00000020   Code   RO        10450    i.__mathlib_dbl_invalid  m_wm.l(dunder.o)
-    0x0800d1f0   0x0800d1f0   0x00000020   Code   RO        10453    i.__mathlib_dbl_underflow  m_wm.l(dunder.o)
-    0x0800d210   0x0800d210   0x00000006   Code   RO        10472    i.__mathlib_flt_infnan  m_wm.l(funder.o)
-    0x0800d216   0x0800d216   0x00000006   Code   RO        10473    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
-    0x0800d21c   0x0800d21c   0x00000010   Code   RO        10474    i.__mathlib_flt_invalid  m_wm.l(funder.o)
-    0x0800d22c   0x0800d22c   0x00000010   Code   RO        10477    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x0800d23c   0x0800d23c   0x00000154   Code   RO        10488    i.__mathlib_rredf2  m_wm.l(rredf.o)
-    0x0800d390   0x0800d390   0x0000000e   Code   RO        10550    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800d39e   0x0800d39e   0x00000002   Code   RO        10551    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800d3a0   0x0800d3a0   0x0000000e   Code   RO        10552    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x0800d3ae   0x0800d3ae   0x00000002   PAD
-    0x0800d3b0   0x0800d3b0   0x0000000c   Code   RO        10523    i.__set_errno       mc_w.l(errno.o)
-    0x0800d3bc   0x0800d3bc   0x00000010   Code   RO        10314    i.acosf             m_wm.l(acosf.o)
-    0x0800d3cc   0x0800d3cc   0x00000010   Code   RO        10326    i.asin              m_wm.l(asin.o)
-    0x0800d3dc   0x0800d3dc   0x00000010   Code   RO        10435    i.atan              m_wm.l(atan.o)
-    0x0800d3ec   0x0800d3ec   0x00000014   Code   RO        10340    i.atan2             m_wm.l(atan2.o)
-    0x0800d400   0x0800d400   0x00000104   Code   RO         9962    i.calc_heading      motionec_manager.o
-    0x0800d504   0x0800d504   0x00000010   Code   RO        10364    i.cosf              m_wm.l(cosf.o)
-    0x0800d514   0x0800d514   0x00000018   Code   RO        10463    i.fabs              m_wm.l(fabs.o)
-    0x0800d52c   0x0800d52c   0x00000032   Code   RO          197    i.hts221_block_data_update_set  hts221_reg.o
-    0x0800d55e   0x0800d55e   0x00000050   Code   RO          200    i.hts221_data_rate_get  hts221_reg.o
-    0x0800d5ae   0x0800d5ae   0x00000032   Code   RO          201    i.hts221_data_rate_set  hts221_reg.o
-    0x0800d5e0   0x0800d5e0   0x00000018   Code   RO          202    i.hts221_device_id_get  hts221_reg.o
-    0x0800d5f8   0x0800d5f8   0x00000018   Code   RO          207    i.hts221_hum_adc_point_0_get  hts221_reg.o
-    0x0800d610   0x0800d610   0x00000018   Code   RO          208    i.hts221_hum_adc_point_1_get  hts221_reg.o
-    0x0800d628   0x0800d628   0x0000001e   Code   RO          210    i.hts221_hum_rh_point_0_get  hts221_reg.o
-    0x0800d646   0x0800d646   0x0000001e   Code   RO          211    i.hts221_hum_rh_point_1_get  hts221_reg.o
-    0x0800d664   0x0800d664   0x00000018   Code   RO          214    i.hts221_humidity_raw_get  hts221_reg.o
-    0x0800d67c   0x0800d67c   0x00000032   Code   RO          222    i.hts221_power_on_set  hts221_reg.o
-    0x0800d6ae   0x0800d6ae   0x00000020   Code   RO          223    i.hts221_read_reg   hts221_reg.o
-    0x0800d6ce   0x0800d6ce   0x00000018   Code   RO          225    i.hts221_temp_adc_point_0_get  hts221_reg.o
-    0x0800d6e6   0x0800d6e6   0x00000018   Code   RO          226    i.hts221_temp_adc_point_1_get  hts221_reg.o
-    0x0800d6fe   0x0800d6fe   0x00000040   Code   RO          228    i.hts221_temp_deg_point_0_get  hts221_reg.o
-    0x0800d73e   0x0800d73e   0x00000040   Code   RO          229    i.hts221_temp_deg_point_1_get  hts221_reg.o
-    0x0800d77e   0x0800d77e   0x00000018   Code   RO          232    i.hts221_temperature_raw_get  hts221_reg.o
-    0x0800d796   0x0800d796   0x00000022   Code   RO          233    i.hts221_write_reg  hts221_reg.o
-    0x0800d7b8   0x0800d7b8   0x000001e4   Code   RO        10225    i.init_LSM9DS1_I2C  lsm9ds1.o
-    0x0800d99c   0x0800d99c   0x00000032   Code   RO          674    i.lps22hb_auto_add_inc_set  lps22hb_reg.o
-    0x0800d9ce   0x0800d9ce   0x00000032   Code   RO          680    i.lps22hb_block_data_update_set  lps22hb_reg.o
-    0x0800da00   0x0800da00   0x0000005a   Code   RO          684    i.lps22hb_data_rate_get  lps22hb_reg.o
-    0x0800da5a   0x0800da5a   0x00000032   Code   RO          685    i.lps22hb_data_rate_set  lps22hb_reg.o
-    0x0800da8c   0x0800da8c   0x00000018   Code   RO          687    i.lps22hb_device_id_get  lps22hb_reg.o
-    0x0800daa4   0x0800daa4   0x00000018   Code   RO          705    i.lps22hb_from_lsb_to_degc  lps22hb_reg.o
-    0x0800dabc   0x0800dabc   0x00000018   Code   RO          706    i.lps22hb_from_lsb_to_hpa  lps22hb_reg.o
-    0x0800dad4   0x0800dad4   0x00000032   Code   RO          724    i.lps22hb_low_pass_filter_mode_set  lps22hb_reg.o
-    0x0800db06   0x0800db06   0x00000032   Code   RO          727    i.lps22hb_low_power_set  lps22hb_reg.o
-    0x0800db38   0x0800db38   0x00000018   Code   RO          736    i.lps22hb_pressure_raw_get  lps22hb_reg.o
-    0x0800db50   0x0800db50   0x00000020   Code   RO          743    i.lps22hb_read_reg  lps22hb_reg.o
-    0x0800db70   0x0800db70   0x00000018   Code   RO          754    i.lps22hb_temperature_raw_get  lps22hb_reg.o
-    0x0800db88   0x0800db88   0x00000022   Code   RO          755    i.lps22hb_write_reg  lps22hb_reg.o
-    0x0800dbaa   0x0800dbaa   0x00000018   Code   RO         3490    i.lsm303agr_acceleration_raw_get  lsm303agr_reg.o
-    0x0800dbc2   0x0800dbc2   0x00000032   Code   RO         3514    i.lsm303agr_mag_block_data_update_set  lsm303agr_reg.o
-    0x0800dbf4   0x0800dbf4   0x00000050   Code   RO         3520    i.lsm303agr_mag_data_rate_get  lsm303agr_reg.o
-    0x0800dc44   0x0800dc44   0x00000032   Code   RO         3521    i.lsm303agr_mag_data_rate_set  lsm303agr_reg.o
-    0x0800dc76   0x0800dc76   0x00000018   Code   RO         3523    i.lsm303agr_mag_device_id_get  lsm303agr_reg.o
-    0x0800dc8e   0x0800dc8e   0x00000032   Code   RO         3527    i.lsm303agr_mag_i2c_interface_set  lsm303agr_reg.o
-    0x0800dcc0   0x0800dcc0   0x00000032   Code   RO         3542    i.lsm303agr_mag_operating_mode_set  lsm303agr_reg.o
-    0x0800dcf2   0x0800dcf2   0x00000032   Code   RO         3548    i.lsm303agr_mag_self_test_set  lsm303agr_reg.o
-    0x0800dd24   0x0800dd24   0x00000018   Code   RO         3556    i.lsm303agr_magnetic_raw_get  lsm303agr_reg.o
-    0x0800dd3c   0x0800dd3c   0x00000020   Code   RO         3559    i.lsm303agr_read_reg  lsm303agr_reg.o
-    0x0800dd5c   0x0800dd5c   0x00000022   Code   RO         3573    i.lsm303agr_write_reg  lsm303agr_reg.o
-    0x0800dd7e   0x0800dd7e   0x00000032   Code   RO         3575    i.lsm303agr_xl_block_data_update_set  lsm303agr_reg.o
-    0x0800ddb0   0x0800ddb0   0x00000074   Code   RO         3581    i.lsm303agr_xl_data_rate_get  lsm303agr_reg.o
-    0x0800de24   0x0800de24   0x00000032   Code   RO         3582    i.lsm303agr_xl_data_rate_set  lsm303agr_reg.o
-    0x0800de56   0x0800de56   0x00000018   Code   RO         3584    i.lsm303agr_xl_device_id_get  lsm303agr_reg.o
-    0x0800de6e   0x0800de6e   0x00000032   Code   RO         3590    i.lsm303agr_xl_fifo_mode_set  lsm303agr_reg.o
-    0x0800dea0   0x0800dea0   0x00000050   Code   RO         3600    i.lsm303agr_xl_full_scale_get  lsm303agr_reg.o
-    0x0800def0   0x0800def0   0x00000032   Code   RO         3601    i.lsm303agr_xl_full_scale_set  lsm303agr_reg.o
-    0x0800df22   0x0800df22   0x0000004c   Code   RO         3632    i.lsm303agr_xl_operating_mode_get  lsm303agr_reg.o
-    0x0800df6e   0x0800df6e   0x00000018   Code   RO         1738    i.lsm6dsl_acceleration_raw_get  lsm6dsl_reg.o
-    0x0800df86   0x0800df86   0x00000018   Code   RO         1746    i.lsm6dsl_angular_rate_raw_get  lsm6dsl_reg.o
-    0x0800df9e   0x0800df9e   0x00000032   Code   RO         1748    i.lsm6dsl_auto_increment_set  lsm6dsl_reg.o
-    0x0800dfd0   0x0800dfd0   0x00000032   Code   RO         1750    i.lsm6dsl_block_data_update_set  lsm6dsl_reg.o
-    0x0800e002   0x0800e002   0x00000018   Code   RO         1769    i.lsm6dsl_device_id_get  lsm6dsl_reg.o
-    0x0800e01a   0x0800e01a   0x00000032   Code   RO         1784    i.lsm6dsl_fifo_mode_set  lsm6dsl_reg.o
-    0x0800e04c   0x0800e04c   0x0000007c   Code   RO         1817    i.lsm6dsl_gy_data_rate_get  lsm6dsl_reg.o
-    0x0800e0c8   0x0800e0c8   0x00000032   Code   RO         1818    i.lsm6dsl_gy_data_rate_set  lsm6dsl_reg.o
-    0x0800e0fa   0x0800e0fa   0x00000056   Code   RO         1820    i.lsm6dsl_gy_full_scale_get  lsm6dsl_reg.o
-    0x0800e150   0x0800e150   0x00000032   Code   RO         1821    i.lsm6dsl_gy_full_scale_set  lsm6dsl_reg.o
-    0x0800e182   0x0800e182   0x00000020   Code   RO         1869    i.lsm6dsl_read_reg  lsm6dsl_reg.o
-    0x0800e1a2   0x0800e1a2   0x00000022   Code   RO         1952    i.lsm6dsl_write_reg  lsm6dsl_reg.o
-    0x0800e1c4   0x0800e1c4   0x00000082   Code   RO         1953    i.lsm6dsl_xl_data_rate_get  lsm6dsl_reg.o
-    0x0800e246   0x0800e246   0x00000032   Code   RO         1954    i.lsm6dsl_xl_data_rate_set  lsm6dsl_reg.o
-    0x0800e278   0x0800e278   0x00000050   Code   RO         1958    i.lsm6dsl_xl_full_scale_get  lsm6dsl_reg.o
-    0x0800e2c8   0x0800e2c8   0x00000032   Code   RO         1959    i.lsm6dsl_xl_full_scale_set  lsm6dsl_reg.o
-    0x0800e2fa   0x0800e2fa   0x00000002   PAD
-    0x0800e2fc   0x0800e2fc   0x000000f4   Code   RO         9570    i.main              main.o
-    0x0800e3f0   0x0800e3f0   0x0000003a   Code   RO         9963    i.q_conjug          motionec_manager.o
-    0x0800e42a   0x0800e42a   0x000000d2   Code   RO         9964    i.q_multiply        motionec_manager.o
-    0x0800e4fc   0x0800e4fc   0x00000010   Code   RO        10405    i.roundf            m_wm.l(roundf.o)
-    0x0800e50c   0x0800e50c   0x0000006e   Code   RO        10394    i.sqrt              m_wm.l(sqrt.o)
-    0x0800e57a   0x0800e57a   0x0000003e   Code   RO        10493    i.sqrtf             m_wm.l(sqrtf.o)
-    0x0800e5b8   0x0800e5b8   0x0000009e   Code   RO         9965    i.transform_xyz_to_enu  motionec_manager.o
-    0x0800e656   0x0800e656   0x00000002   PAD
-    0x0800e658   0x0800e658   0x00000068   Code   RO         9966    i.v_rotate          motionec_manager.o
-    0x0800e6c0   0x0800e6c0   0x00000005   Data   RO         4448    .constdata          stm32f4xx_nucleo.o
-    0x0800e6c5   0x0800e6c5   0x00000018   Data   RO         5450    .constdata          system_stm32f4xx.o
-    0x0800e6dd   0x0800e6dd   0x00000008   Data   RO         5883    .constdata          stm32f4xx_hal_dma.o
-    0x0800e6e5   0x0800e6e5   0x00000003   PAD
-    0x0800e6e8   0x0800e6e8   0x0000000c   Data   RO         9967    .constdata          motionec_manager.o
-    0x0800e6f4   0x0800e6f4   0x00000004   PAD
-    0x0800e6f8   0x0800e6f8   0x00000050   Data   RO        10327    .constdata          m_wm.l(asin.o)
-    0x0800e748   0x0800e748   0x00000098   Data   RO        10436    .constdata          m_wm.l(atan.o)
-    0x0800e7e0   0x0800e7e0   0x00000008   Data   RO        10487    .constdata          m_wm.l(qnan.o)
-    0x0800e7e8   0x0800e7e8   0x00000020   Data   RO        10489    .constdata          m_wm.l(rredf.o)
-    0x0800e808   0x0800e808   0x00000023   Data   RO        10297    .rodata             MotionEC_CM4F_wc16_ot.a(motion_ec.o)
-    0x0800e82b   0x0800e82b   0x00000001   PAD
-    0x0800e82c   0x0800e82c   0x00000020   Data   RO        10548    Region$$Table       anon$$obj.o
+    0x0800ad7c   0x0800ad7c   0x000000e0   Code   RO         9562    i.Magneto_Sensor_Handler  main.o
+    0x0800ae5c   0x0800ae5c   0x00000010   Code   RO         9959    i.MotionEC_manager_get_version  motionec_manager.o
+    0x0800ae6c   0x0800ae6c   0x00000026   Code   RO         9960    i.MotionEC_manager_init  motionec_manager.o
+    0x0800ae92   0x0800ae92   0x00000002   PAD
+    0x0800ae94   0x0800ae94   0x00000200   Code   RO         9961    i.MotionEC_manager_run  motionec_manager.o
+    0x0800b094   0x0800b094   0x00000006   Code   RO        10029    i.MotionMC_LoadCalFromNVM  motionmc_manager.o
+    0x0800b09a   0x0800b09a   0x00000006   Code   RO        10030    i.MotionMC_SaveCalInNVM  motionmc_manager.o
+    0x0800b0a0   0x0800b0a0   0x000000fc   Code   RO        10031    i.MotionMC_manager_compensate  motionmc_manager.o
+    0x0800b19c   0x0800b19c   0x0000000c   Code   RO        10032    i.MotionMC_manager_get_params  motionmc_manager.o
+    0x0800b1a8   0x0800b1a8   0x00000010   Code   RO        10034    i.MotionMC_manager_init  motionmc_manager.o
+    0x0800b1b8   0x0800b1b8   0x000000a0   Code   RO        10035    i.MotionMC_manager_run  motionmc_manager.o
+    0x0800b258   0x0800b258   0x0000000c   Code   RO        10036    i.MotionMC_manager_update  motionmc_manager.o
+    0x0800b264   0x0800b264   0x00000002   Code   RO         9827    i.NMI_Handler       stm32f4xx_it.o
+    0x0800b266   0x0800b266   0x00000002   PAD
+    0x0800b268   0x0800b268   0x00000010   Code   RO         5686    i.NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x0800b278   0x0800b278   0x00000028   Code   RO         5687    i.NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x0800b2a0   0x0800b2a0   0x00000028   Code   RO         9563    i.Pressure_Sensor_Handler  main.o
+    0x0800b2c8   0x0800b2c8   0x00000016   Code   RO         7178    i.RTC_Bcd2ToByte    stm32f4xx_hal_rtc.o
+    0x0800b2de   0x0800b2de   0x0000001a   Code   RO         7179    i.RTC_ByteToBcd2    stm32f4xx_hal_rtc.o
+    0x0800b2f8   0x0800b2f8   0x0000007c   Code   RO         9564    i.RTC_Config        main.o
+    0x0800b374   0x0800b374   0x00000030   Code   RO         9565    i.RTC_DateRegulate  main.o
+    0x0800b3a4   0x0800b3a4   0x0000003e   Code   RO         7180    i.RTC_EnterInitMode  stm32f4xx_hal_rtc.o
+    0x0800b3e2   0x0800b3e2   0x00000002   PAD
+    0x0800b3e4   0x0800b3e4   0x00000058   Code   RO         9566    i.RTC_Handler       main.o
+    0x0800b43c   0x0800b43c   0x0000003c   Code   RO         9567    i.RTC_TimeRegulate  main.o
+    0x0800b478   0x0800b478   0x00000054   Code   RO         9568    i.RTC_TimeStampConfig  main.o
+    0x0800b4cc   0x0800b4cc   0x00000038   Code   RO         3255    i.ReadAccRegWrap    lsm303agr.o
+    0x0800b504   0x0800b504   0x00000038   Code   RO         3256    i.ReadMagRegWrap    lsm303agr.o
+    0x0800b53c   0x0800b53c   0x00000038   Code   RO           28    i.ReadRegWrap       hts221.o
+    0x0800b574   0x0800b574   0x00000058   Code   RO          467    i.ReadRegWrap       lps22hb.o
+    0x0800b5cc   0x0800b5cc   0x00000020   Code   RO         1266    i.ReadRegWrap       lsm6dsl.o
+    0x0800b5ec   0x0800b5ec   0x00000026   Code   RO         9887    i.ReverseByteStuffCopyByte2  serial_protocol.o
+    0x0800b612   0x0800b612   0x0000001a   Code   RO         9889    i.Serialize_s32     serial_protocol.o
+    0x0800b62c   0x0800b62c   0x00000008   Code   RO         9828    i.SysTick_Handler   stm32f4xx_it.o
+    0x0800b634   0x0800b634   0x000000bc   Code   RO         9785    i.SystemClock_Config  cube_hal_f4.o
+    0x0800b6f0   0x0800b6f0   0x00000064   Code   RO         5449    i.SystemInit        system_stm32f4xx.o
+    0x0800b754   0x0800b754   0x00000010   Code   RO         9829    i.TIM3_IRQHandler   stm32f4xx_it.o
+    0x0800b764   0x0800b764   0x000000a4   Code   RO         7617    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
+    0x0800b808   0x0800b808   0x00000016   Code   RO         7628    i.TIM_ETR_SetConfig  stm32f4xx_hal_tim.o
+    0x0800b81e   0x0800b81e   0x00000012   Code   RO         7629    i.TIM_ITRx_SetConfig  stm32f4xx_hal_tim.o
+    0x0800b830   0x0800b830   0x00000026   Code   RO         7635    i.TIM_TI1_ConfigInputStage  stm32f4xx_hal_tim.o
+    0x0800b856   0x0800b856   0x00000028   Code   RO         7637    i.TIM_TI2_ConfigInputStage  stm32f4xx_hal_tim.o
+    0x0800b87e   0x0800b87e   0x00000002   PAD
+    0x0800b880   0x0800b880   0x00000028   Code   RO         9569    i.Temperature_Sensor_Handler  main.o
+    0x0800b8a8   0x0800b8a8   0x00000050   Code   RO         8505    i.UART_DMAError     stm32f4xx_hal_uart.o
+    0x0800b8f8   0x0800b8f8   0x00000046   Code   RO         8506    i.UART_DMAReceiveCplt  stm32f4xx_hal_uart.o
+    0x0800b93e   0x0800b93e   0x0000000e   Code   RO         8508    i.UART_DMARxHalfCplt  stm32f4xx_hal_uart.o
+    0x0800b94c   0x0800b94c   0x00000020   Code   RO         8514    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
+    0x0800b96c   0x0800b96c   0x00000014   Code   RO         8516    i.UART_EndTxTransfer  stm32f4xx_hal_uart.o
+    0x0800b980   0x0800b980   0x0000010c   Code   RO         9503    i.UART_ReceivedMSG  com.o
+    0x0800ba8c   0x0800ba8c   0x0000002c   Code   RO         9504    i.UART_SendMsg      com.o
+    0x0800bab8   0x0800bab8   0x00000368   Code   RO         8518    i.UART_SetConfig    stm32f4xx_hal_uart.o
+    0x0800be20   0x0800be20   0x0000006c   Code   RO         8520    i.UART_WaitOnFlagUntilTimeout  stm32f4xx_hal_uart.o
+    0x0800be8c   0x0800be8c   0x00000114   Code   RO         9505    i.USARTConfig       com.o
+    0x0800bfa0   0x0800bfa0   0x00000028   Code   RO         9506    i.USART_DMA_Configuration  com.o
+    0x0800bfc8   0x0800bfc8   0x00000038   Code   RO         3257    i.WriteAccRegWrap   lsm303agr.o
+    0x0800c000   0x0800c000   0x00000038   Code   RO         3258    i.WriteMagRegWrap   lsm303agr.o
+    0x0800c038   0x0800c038   0x00000038   Code   RO           29    i.WriteRegWrap      hts221.o
+    0x0800c070   0x0800c070   0x00000058   Code   RO          468    i.WriteRegWrap      lps22hb.o
+    0x0800c0c8   0x0800c0c8   0x00000020   Code   RO         1267    i.WriteRegWrap      lsm6dsl.o
+    0x0800c0e8   0x0800c0e8   0x00000030   Code   RO        10467    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
+    0x0800c118   0x0800c118   0x00000026   Code   RO        10469    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x0800c13e   0x0800c13e   0x00000002   PAD
+    0x0800c140   0x0800c140   0x00000118   Code   RO        10312    i.__hardfp_acosf    m_wm.l(acosf.o)
+    0x0800c258   0x0800c258   0x00000360   Code   RO        10324    i.__hardfp_asin     m_wm.l(asin.o)
+    0x0800c5b8   0x0800c5b8   0x000002d8   Code   RO        10433    i.__hardfp_atan     m_wm.l(atan.o)
+    0x0800c890   0x0800c890   0x000001f0   Code   RO        10338    i.__hardfp_atan2    m_wm.l(atan2.o)
+    0x0800ca80   0x0800ca80   0x00000250   Code   RO        10350    i.__hardfp_atan2f   m_wm.l(atan2f.o)
+    0x0800ccd0   0x0800ccd0   0x00000150   Code   RO        10362    i.__hardfp_cosf     m_wm.l(cosf.o)
+    0x0800ce20   0x0800ce20   0x00000070   Code   RO        10374    i.__hardfp_floorf   m_wm.l(floorf.o)
+    0x0800ce90   0x0800ce90   0x0000009a   Code   RO        10404    i.__hardfp_roundf   m_wm.l(roundf.o)
+    0x0800cf2a   0x0800cf2a   0x00000002   PAD
+    0x0800cf2c   0x0800cf2c   0x00000190   Code   RO        10380    i.__hardfp_sinf     m_wm.l(sinf.o)
+    0x0800d0bc   0x0800d0bc   0x000000f8   Code   RO        10485    i.__kernel_poly     m_wm.l(poly.o)
+    0x0800d1b4   0x0800d1b4   0x00000014   Code   RO        10448    i.__mathlib_dbl_infnan  m_wm.l(dunder.o)
+    0x0800d1c8   0x0800d1c8   0x00000014   Code   RO        10449    i.__mathlib_dbl_infnan2  m_wm.l(dunder.o)
+    0x0800d1dc   0x0800d1dc   0x00000004   PAD
+    0x0800d1e0   0x0800d1e0   0x00000020   Code   RO        10450    i.__mathlib_dbl_invalid  m_wm.l(dunder.o)
+    0x0800d200   0x0800d200   0x00000020   Code   RO        10453    i.__mathlib_dbl_underflow  m_wm.l(dunder.o)
+    0x0800d220   0x0800d220   0x00000006   Code   RO        10472    i.__mathlib_flt_infnan  m_wm.l(funder.o)
+    0x0800d226   0x0800d226   0x00000006   Code   RO        10473    i.__mathlib_flt_infnan2  m_wm.l(funder.o)
+    0x0800d22c   0x0800d22c   0x00000010   Code   RO        10474    i.__mathlib_flt_invalid  m_wm.l(funder.o)
+    0x0800d23c   0x0800d23c   0x00000010   Code   RO        10477    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x0800d24c   0x0800d24c   0x00000154   Code   RO        10488    i.__mathlib_rredf2  m_wm.l(rredf.o)
+    0x0800d3a0   0x0800d3a0   0x0000000e   Code   RO        10550    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800d3ae   0x0800d3ae   0x00000002   Code   RO        10551    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800d3b0   0x0800d3b0   0x0000000e   Code   RO        10552    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800d3be   0x0800d3be   0x00000002   PAD
+    0x0800d3c0   0x0800d3c0   0x0000000c   Code   RO        10523    i.__set_errno       mc_w.l(errno.o)
+    0x0800d3cc   0x0800d3cc   0x00000010   Code   RO        10314    i.acosf             m_wm.l(acosf.o)
+    0x0800d3dc   0x0800d3dc   0x00000010   Code   RO        10326    i.asin              m_wm.l(asin.o)
+    0x0800d3ec   0x0800d3ec   0x00000010   Code   RO        10435    i.atan              m_wm.l(atan.o)
+    0x0800d3fc   0x0800d3fc   0x00000014   Code   RO        10340    i.atan2             m_wm.l(atan2.o)
+    0x0800d410   0x0800d410   0x00000104   Code   RO         9962    i.calc_heading      motionec_manager.o
+    0x0800d514   0x0800d514   0x00000010   Code   RO        10364    i.cosf              m_wm.l(cosf.o)
+    0x0800d524   0x0800d524   0x00000018   Code   RO        10463    i.fabs              m_wm.l(fabs.o)
+    0x0800d53c   0x0800d53c   0x00000032   Code   RO          197    i.hts221_block_data_update_set  hts221_reg.o
+    0x0800d56e   0x0800d56e   0x00000050   Code   RO          200    i.hts221_data_rate_get  hts221_reg.o
+    0x0800d5be   0x0800d5be   0x00000032   Code   RO          201    i.hts221_data_rate_set  hts221_reg.o
+    0x0800d5f0   0x0800d5f0   0x00000018   Code   RO          202    i.hts221_device_id_get  hts221_reg.o
+    0x0800d608   0x0800d608   0x00000018   Code   RO          207    i.hts221_hum_adc_point_0_get  hts221_reg.o
+    0x0800d620   0x0800d620   0x00000018   Code   RO          208    i.hts221_hum_adc_point_1_get  hts221_reg.o
+    0x0800d638   0x0800d638   0x0000001e   Code   RO          210    i.hts221_hum_rh_point_0_get  hts221_reg.o
+    0x0800d656   0x0800d656   0x0000001e   Code   RO          211    i.hts221_hum_rh_point_1_get  hts221_reg.o
+    0x0800d674   0x0800d674   0x00000018   Code   RO          214    i.hts221_humidity_raw_get  hts221_reg.o
+    0x0800d68c   0x0800d68c   0x00000032   Code   RO          222    i.hts221_power_on_set  hts221_reg.o
+    0x0800d6be   0x0800d6be   0x00000020   Code   RO          223    i.hts221_read_reg   hts221_reg.o
+    0x0800d6de   0x0800d6de   0x00000018   Code   RO          225    i.hts221_temp_adc_point_0_get  hts221_reg.o
+    0x0800d6f6   0x0800d6f6   0x00000018   Code   RO          226    i.hts221_temp_adc_point_1_get  hts221_reg.o
+    0x0800d70e   0x0800d70e   0x00000040   Code   RO          228    i.hts221_temp_deg_point_0_get  hts221_reg.o
+    0x0800d74e   0x0800d74e   0x00000040   Code   RO          229    i.hts221_temp_deg_point_1_get  hts221_reg.o
+    0x0800d78e   0x0800d78e   0x00000018   Code   RO          232    i.hts221_temperature_raw_get  hts221_reg.o
+    0x0800d7a6   0x0800d7a6   0x00000022   Code   RO          233    i.hts221_write_reg  hts221_reg.o
+    0x0800d7c8   0x0800d7c8   0x000001e4   Code   RO        10225    i.init_LSM9DS1_I2C  lsm9ds1.o
+    0x0800d9ac   0x0800d9ac   0x00000032   Code   RO          674    i.lps22hb_auto_add_inc_set  lps22hb_reg.o
+    0x0800d9de   0x0800d9de   0x00000032   Code   RO          680    i.lps22hb_block_data_update_set  lps22hb_reg.o
+    0x0800da10   0x0800da10   0x0000005a   Code   RO          684    i.lps22hb_data_rate_get  lps22hb_reg.o
+    0x0800da6a   0x0800da6a   0x00000032   Code   RO          685    i.lps22hb_data_rate_set  lps22hb_reg.o
+    0x0800da9c   0x0800da9c   0x00000018   Code   RO          687    i.lps22hb_device_id_get  lps22hb_reg.o
+    0x0800dab4   0x0800dab4   0x00000018   Code   RO          705    i.lps22hb_from_lsb_to_degc  lps22hb_reg.o
+    0x0800dacc   0x0800dacc   0x00000018   Code   RO          706    i.lps22hb_from_lsb_to_hpa  lps22hb_reg.o
+    0x0800dae4   0x0800dae4   0x00000032   Code   RO          724    i.lps22hb_low_pass_filter_mode_set  lps22hb_reg.o
+    0x0800db16   0x0800db16   0x00000032   Code   RO          727    i.lps22hb_low_power_set  lps22hb_reg.o
+    0x0800db48   0x0800db48   0x00000018   Code   RO          736    i.lps22hb_pressure_raw_get  lps22hb_reg.o
+    0x0800db60   0x0800db60   0x00000020   Code   RO          743    i.lps22hb_read_reg  lps22hb_reg.o
+    0x0800db80   0x0800db80   0x00000018   Code   RO          754    i.lps22hb_temperature_raw_get  lps22hb_reg.o
+    0x0800db98   0x0800db98   0x00000022   Code   RO          755    i.lps22hb_write_reg  lps22hb_reg.o
+    0x0800dbba   0x0800dbba   0x00000018   Code   RO         3490    i.lsm303agr_acceleration_raw_get  lsm303agr_reg.o
+    0x0800dbd2   0x0800dbd2   0x00000032   Code   RO         3514    i.lsm303agr_mag_block_data_update_set  lsm303agr_reg.o
+    0x0800dc04   0x0800dc04   0x00000050   Code   RO         3520    i.lsm303agr_mag_data_rate_get  lsm303agr_reg.o
+    0x0800dc54   0x0800dc54   0x00000032   Code   RO         3521    i.lsm303agr_mag_data_rate_set  lsm303agr_reg.o
+    0x0800dc86   0x0800dc86   0x00000018   Code   RO         3523    i.lsm303agr_mag_device_id_get  lsm303agr_reg.o
+    0x0800dc9e   0x0800dc9e   0x00000032   Code   RO         3527    i.lsm303agr_mag_i2c_interface_set  lsm303agr_reg.o
+    0x0800dcd0   0x0800dcd0   0x00000032   Code   RO         3542    i.lsm303agr_mag_operating_mode_set  lsm303agr_reg.o
+    0x0800dd02   0x0800dd02   0x00000032   Code   RO         3548    i.lsm303agr_mag_self_test_set  lsm303agr_reg.o
+    0x0800dd34   0x0800dd34   0x00000018   Code   RO         3556    i.lsm303agr_magnetic_raw_get  lsm303agr_reg.o
+    0x0800dd4c   0x0800dd4c   0x00000020   Code   RO         3559    i.lsm303agr_read_reg  lsm303agr_reg.o
+    0x0800dd6c   0x0800dd6c   0x00000022   Code   RO         3573    i.lsm303agr_write_reg  lsm303agr_reg.o
+    0x0800dd8e   0x0800dd8e   0x00000032   Code   RO         3575    i.lsm303agr_xl_block_data_update_set  lsm303agr_reg.o
+    0x0800ddc0   0x0800ddc0   0x00000074   Code   RO         3581    i.lsm303agr_xl_data_rate_get  lsm303agr_reg.o
+    0x0800de34   0x0800de34   0x00000032   Code   RO         3582    i.lsm303agr_xl_data_rate_set  lsm303agr_reg.o
+    0x0800de66   0x0800de66   0x00000018   Code   RO         3584    i.lsm303agr_xl_device_id_get  lsm303agr_reg.o
+    0x0800de7e   0x0800de7e   0x00000032   Code   RO         3590    i.lsm303agr_xl_fifo_mode_set  lsm303agr_reg.o
+    0x0800deb0   0x0800deb0   0x00000050   Code   RO         3600    i.lsm303agr_xl_full_scale_get  lsm303agr_reg.o
+    0x0800df00   0x0800df00   0x00000032   Code   RO         3601    i.lsm303agr_xl_full_scale_set  lsm303agr_reg.o
+    0x0800df32   0x0800df32   0x0000004c   Code   RO         3632    i.lsm303agr_xl_operating_mode_get  lsm303agr_reg.o
+    0x0800df7e   0x0800df7e   0x00000018   Code   RO         1738    i.lsm6dsl_acceleration_raw_get  lsm6dsl_reg.o
+    0x0800df96   0x0800df96   0x00000018   Code   RO         1746    i.lsm6dsl_angular_rate_raw_get  lsm6dsl_reg.o
+    0x0800dfae   0x0800dfae   0x00000032   Code   RO         1748    i.lsm6dsl_auto_increment_set  lsm6dsl_reg.o
+    0x0800dfe0   0x0800dfe0   0x00000032   Code   RO         1750    i.lsm6dsl_block_data_update_set  lsm6dsl_reg.o
+    0x0800e012   0x0800e012   0x00000018   Code   RO         1769    i.lsm6dsl_device_id_get  lsm6dsl_reg.o
+    0x0800e02a   0x0800e02a   0x00000032   Code   RO         1784    i.lsm6dsl_fifo_mode_set  lsm6dsl_reg.o
+    0x0800e05c   0x0800e05c   0x0000007c   Code   RO         1817    i.lsm6dsl_gy_data_rate_get  lsm6dsl_reg.o
+    0x0800e0d8   0x0800e0d8   0x00000032   Code   RO         1818    i.lsm6dsl_gy_data_rate_set  lsm6dsl_reg.o
+    0x0800e10a   0x0800e10a   0x00000056   Code   RO         1820    i.lsm6dsl_gy_full_scale_get  lsm6dsl_reg.o
+    0x0800e160   0x0800e160   0x00000032   Code   RO         1821    i.lsm6dsl_gy_full_scale_set  lsm6dsl_reg.o
+    0x0800e192   0x0800e192   0x00000020   Code   RO         1869    i.lsm6dsl_read_reg  lsm6dsl_reg.o
+    0x0800e1b2   0x0800e1b2   0x00000022   Code   RO         1952    i.lsm6dsl_write_reg  lsm6dsl_reg.o
+    0x0800e1d4   0x0800e1d4   0x00000082   Code   RO         1953    i.lsm6dsl_xl_data_rate_get  lsm6dsl_reg.o
+    0x0800e256   0x0800e256   0x00000032   Code   RO         1954    i.lsm6dsl_xl_data_rate_set  lsm6dsl_reg.o
+    0x0800e288   0x0800e288   0x00000050   Code   RO         1958    i.lsm6dsl_xl_full_scale_get  lsm6dsl_reg.o
+    0x0800e2d8   0x0800e2d8   0x00000032   Code   RO         1959    i.lsm6dsl_xl_full_scale_set  lsm6dsl_reg.o
+    0x0800e30a   0x0800e30a   0x00000002   PAD
+    0x0800e30c   0x0800e30c   0x000000f4   Code   RO         9570    i.main              main.o
+    0x0800e400   0x0800e400   0x0000003a   Code   RO         9963    i.q_conjug          motionec_manager.o
+    0x0800e43a   0x0800e43a   0x000000d2   Code   RO         9964    i.q_multiply        motionec_manager.o
+    0x0800e50c   0x0800e50c   0x00000010   Code   RO        10405    i.roundf            m_wm.l(roundf.o)
+    0x0800e51c   0x0800e51c   0x0000006e   Code   RO        10394    i.sqrt              m_wm.l(sqrt.o)
+    0x0800e58a   0x0800e58a   0x0000003e   Code   RO        10493    i.sqrtf             m_wm.l(sqrtf.o)
+    0x0800e5c8   0x0800e5c8   0x0000009e   Code   RO         9965    i.transform_xyz_to_enu  motionec_manager.o
+    0x0800e666   0x0800e666   0x00000002   PAD
+    0x0800e668   0x0800e668   0x00000068   Code   RO         9966    i.v_rotate          motionec_manager.o
+    0x0800e6d0   0x0800e6d0   0x00000005   Data   RO         4448    .constdata          stm32f4xx_nucleo.o
+    0x0800e6d5   0x0800e6d5   0x00000018   Data   RO         5450    .constdata          system_stm32f4xx.o
+    0x0800e6ed   0x0800e6ed   0x00000008   Data   RO         5883    .constdata          stm32f4xx_hal_dma.o
+    0x0800e6f5   0x0800e6f5   0x00000003   PAD
+    0x0800e6f8   0x0800e6f8   0x0000000c   Data   RO         9967    .constdata          motionec_manager.o
+    0x0800e704   0x0800e704   0x00000004   PAD
+    0x0800e708   0x0800e708   0x00000050   Data   RO        10327    .constdata          m_wm.l(asin.o)
+    0x0800e758   0x0800e758   0x00000098   Data   RO        10436    .constdata          m_wm.l(atan.o)
+    0x0800e7f0   0x0800e7f0   0x00000008   Data   RO        10487    .constdata          m_wm.l(qnan.o)
+    0x0800e7f8   0x0800e7f8   0x00000020   Data   RO        10489    .constdata          m_wm.l(rredf.o)
+    0x0800e818   0x0800e818   0x00000023   Data   RO        10297    .rodata             MotionEC_CM4F_wc16_ot.a(motion_ec.o)
+    0x0800e83b   0x0800e83b   0x00000001   PAD
+    0x0800e83c   0x0800e83c   0x00000020   Data   RO        10548    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800e84c, Size: 0x00009308, Max: 0x00018000, ABSOLUTE, COMPRESSED[0x0000015c])
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800e85c, Size: 0x00009308, Max: 0x00018000, ABSOLUTE, COMPRESSED[0x0000015c])
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -5871,7 +5871,7 @@ Image component sizes
       3020        296          0         88          0      57181   lsm6dsl.o
        908         32          0          0          0      14302   lsm6dsl_reg.o
        484          8          0          0          0        735   lsm9ds1.o
-      1420        128          0         17        132      14302   main.o
+      1436        126          0         17        132      14306   main.o
       1356         60         12         36          0       7570   motionec_manager.o
        464         16          0          4          0       5891   motionmc_manager.o
        448         66          0          0         84       6341   nucleo_f401re_bus.o
@@ -5896,7 +5896,7 @@ Image component sizes
        100         18         24          4          0       1715   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-     34024       1980        492        508      35612     897712   Object Totals
+     34040       1978        492        508      35612     897716   Object Totals
          0          0         32          0       1040          0   (incl. Generated)
         56          0          7          4          0          0   (incl. Padding)
 
@@ -5980,15 +5980,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     58668       3020        800        584      37056     865984   Grand Totals
-     58668       3020        800        348      37056     865984   ELF Image Totals (compressed)
-     58668       3020        800        348          0          0   ROM Totals
+     58684       3018        800        584      37056     865988   Grand Totals
+     58684       3018        800        348      37056     865988   ELF Image Totals (compressed)
+     58684       3018        800        348          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                59468 (  58.07kB)
+    Total RO  Size (Code + RO Data)                59484 (  58.09kB)
     Total RW  Size (RW Data + ZI Data)             37640 (  36.76kB)
-    Total ROM Size (Code + RO Data + RW Data)      59816 (  58.41kB)
+    Total ROM Size (Code + RO Data + RW Data)      59832 (  58.43kB)
 
 ==============================================================================
 

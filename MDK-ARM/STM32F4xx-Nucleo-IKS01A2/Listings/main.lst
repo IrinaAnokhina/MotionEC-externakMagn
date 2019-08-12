@@ -52336,11 +52336,32 @@ N * @retval None
 N */
 Nstatic void Accelero_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 N{
-N  if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
-X  if ((SensorsEnabled & 0x00000010U) == 0x00000010U)
-N  {
-N    (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_ACCELERO, &AccValue);
-X    (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, 2U, &AccValue);
+N if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
+X if ((SensorsEnabled & 0x00000010U) == 0x00000010U)
+N {
+N	(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_ACCELERO, &AccValue);
+X	(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, 2U, &AccValue);
+N/*	uint8_t data[2] = {0};
+N	 status = HAL_I2C_Mem_Read(&hi2c3, 0xD6, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
+N	
+N	int16_t a;
+N	a=(data[1] << 8)|data[0];
+N		AccValue.x = a;//(int16_t)data[1] << 8 | data[0];							
+N		HAL_Delay(10);
+N		data[0] = 0; data[1] = 0;
+N	
+N	
+N		 status = HAL_I2C_Mem_Read(&hi2c3, 0xD6, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100);
+Na=(data[1] << 8)|data[0];	
+N		AccValue.y = a;//(int16_t)data[1] << 8 | data[0];	
+N		data[0] = 0; data[1] = 0;
+N		HAL_Delay(10);
+N		status = HAL_I2C_Mem_Read(&hi2c3, 0xD6, 0x2C, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
+N		a=(data[1] << 8)|data[0];
+N		AccValue.z = a;//(int16_t)data[1] << 8 | data[0];	
+N		HAL_Delay(10);*/
+N	
+N    
 N    Serialize_s32(&Msg->Data[19], (int32_t)AccValue.x, 4);
 N    Serialize_s32(&Msg->Data[23], (int32_t)AccValue.y, 4);
 N    Serialize_s32(&Msg->Data[27], (int32_t)AccValue.z, 4);
@@ -52379,16 +52400,14 @@ N{
 N	uint8_t data[2] = {0};
 N  //if ((SensorsEnabled & MAGNETIC_SENSOR) == MAGNETIC_SENSOR)
 N  //{
-N    //(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_MAGNETO, &MagValue);
+N   // (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_MAGNETO, &MagValue);
 N		
-N     status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-X     status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x28, 0x00000001U , data, 0x02, 100); 
+N   status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
+X   status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x28, 0x00000001U , data, 0x02, 100); 
 N	
 N	int16_t a;
-N	//a= data[0];
-N	//a= a |(data[1] << 8);
 N	a=(data[1] << 8)|data[0];
-N		MagValue.x = a;//(int16_t)data[1] << 8 | data[0];							
+N		MagValue.x =  a/10;					
 N		HAL_Delay(10);
 N		data[0] = 0; data[1] = 0;
 N	
@@ -52396,17 +52415,17 @@ N
 N		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100);
 X		 status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2A, 0x00000001U , data, 0x02, 100);
 Na=(data[1] << 8)|data[0];	
-N		MagValue.y = a;//(int16_t)data[1] << 8 | data[0];	
+N		MagValue.y = a/10;
 N		data[0] = 0; data[1] = 0;
 N		HAL_Delay(10);
 N		status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2C, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
 X		status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2C, 0x00000001U , data, 0x02, 100); 
 N		a=(data[1] << 8)|data[0];
-N		MagValue.z = a;//(int16_t)data[1] << 8 | data[0];	
+N		MagValue.z =  a/10;  	
 N		HAL_Delay(10);
 N    /* Magnetometer calibration */
 N    MotionMC_manager_run(Msg);
-N //}
+N	//}
 N}
 N
 N/**

@@ -34,7 +34,7 @@ void init_LSM9DS1_I2C ()
   HAL_Delay(1);
 	//Magn
 	data[0] = 0x04;
-	status = HAL_I2C_Mem_Write(&hi2c3, ADDR, 0x20, I2C_MEMADD_SIZE_8BIT, data, 0x01, 100);//CTRL_REG2_M RESET 
+	status = HAL_I2C_Mem_Write(&hi2c3, ADDR, 0x21, I2C_MEMADD_SIZE_8BIT, data, 0x01, 100);//CTRL_REG2_M RESET 
 	HAL_Delay(10);
 	data[0] = 0x04;
 	status = HAL_I2C_Mem_Write(&hi2c3, ADDR, 0x21,I2C_MEMADD_SIZE_8BIT, data, 0x01, 100);//CTRL_REG2_M RESET 

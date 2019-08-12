@@ -29774,9 +29774,30 @@ static void RTC_Handler(TMsg *Msg)
  
 static void Accelero_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 {
-  if ((SensorsEnabled & 0x00000010U) == 0x00000010U)
-  {
-    (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, 2U, &AccValue);
+ if ((SensorsEnabled & 0x00000010U) == 0x00000010U)
+ {
+	(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, 2U, &AccValue);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+    
     Serialize_s32(&Msg->Data[19], (int32_t)AccValue.x, 4);
     Serialize_s32(&Msg->Data[23], (int32_t)AccValue.y, 4);
     Serialize_s32(&Msg->Data[27], (int32_t)AccValue.z, 4);
@@ -29813,31 +29834,29 @@ static void Magneto_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 	uint8_t data[2] = {0};
   
   
-    
+   
 		
-     status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x28, 0x00000001U , data, 0x02, 100); 
+   status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x28, 0x00000001U , data, 0x02, 100); 
 	
 	int16_t a;
-	
-	
 	a=(data[1] << 8)|data[0];
-		MagValue.x = a;
+		MagValue.x =  a/10;					
 		HAL_Delay(10);
 		data[0] = 0; data[1] = 0;
 	
 	
 		 status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2A, 0x00000001U , data, 0x02, 100);
 a=(data[1] << 8)|data[0];	
-		MagValue.y = a;
+		MagValue.y = a/10;
 		data[0] = 0; data[1] = 0;
 		HAL_Delay(10);
 		status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2C, 0x00000001U , data, 0x02, 100); 
 		a=(data[1] << 8)|data[0];
-		MagValue.z = a;
+		MagValue.z =  a/10;  	
 		HAL_Delay(10);
      
     MotionMC_manager_run(Msg);
- 
+	
 }
 
 
@@ -30113,7 +30132,7 @@ void sensors_enable()
       (void)HAL_TIM_Base_Start_IT(&AlgoTimHandle);
       DataLoggerActive = 1;
 		}
-#line 726 "..\\Src\\main.c"
+#line 745 "..\\Src\\main.c"
 
 
 

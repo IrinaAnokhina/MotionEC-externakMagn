@@ -27950,7 +27950,7 @@ void init_LSM9DS1_I2C ()
   HAL_Delay(1);
 	
 	data[0] = 0x04;
-	status = HAL_I2C_Mem_Write(&hi2c3, 0x3D, 0x20, 0x00000001U, data, 0x01, 100);
+	status = HAL_I2C_Mem_Write(&hi2c3, 0x3D, 0x21, 0x00000001U, data, 0x01, 100);
 	HAL_Delay(10);
 	data[0] = 0x04;
 	status = HAL_I2C_Mem_Write(&hi2c3, 0x3D, 0x21,0x00000001U, data, 0x01, 100);
