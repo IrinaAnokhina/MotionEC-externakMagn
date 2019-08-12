@@ -29564,18 +29564,25 @@ int main(void)
 
    
 	 MX_I2C2_Init();
-	  while(1)
- {
-	 status = HAL_I2C_IsDeviceReady(&hi2c3, 0x3D, (uint32_t)3, (uint32_t)1000);
-	 HAL_Delay(10);
-	 }
+	 
+ 
+	 init_LSM9DS1_I2C ();
+	 
+
+
+
+
+
+ 
+	
+ 
   Init_Sensors();
 
    
 
   MotionMC_manager_init((int)(1000U / 50U), 1);
 
-#line 162 "..\\Src\\main.c"
+#line 169 "..\\Src\\main.c"
 
    
   MotionEC_manager_init((float)50U);
@@ -29704,7 +29711,7 @@ static void MX_TIM_ALGO_Init(void)
 
 
 
-#line 302 "..\\Src\\main.c"
+#line 309 "..\\Src\\main.c"
 
 
 
@@ -29809,15 +29816,24 @@ static void Magneto_Sensor_Handler(TMsg *Msg, uint32_t Instance)
     
 		
      status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x28, 0x00000001U , data, 0x02, 100); 
-		MagValue.x = (uint32_t)data[1] << 8 | data[0];							
+	
+	int16_t a;
+	
+	
+	a=(data[1] << 8)|data[0];
+		MagValue.x = a;
 		HAL_Delay(10);
 		data[0] = 0; data[1] = 0;
-		 status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2A, 0x00000001U , data, 0x02, 100); 
-		MagValue.y = (uint32_t)data[1] << 8 | data[0];
+	
+	
+		 status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2A, 0x00000001U , data, 0x02, 100);
+a=(data[1] << 8)|data[0];	
+		MagValue.y = a;
 		data[0] = 0; data[1] = 0;
 		HAL_Delay(10);
 		status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2C, 0x00000001U , data, 0x02, 100); 
-		MagValue.z = (uint32_t)data[1] << 8 | data[0];
+		a=(data[1] << 8)|data[0];
+		MagValue.z = a;
 		HAL_Delay(10);
      
     MotionMC_manager_run(Msg);
@@ -30097,7 +30113,7 @@ void sensors_enable()
       (void)HAL_TIM_Base_Start_IT(&AlgoTimHandle);
       DataLoggerActive = 1;
 		}
-#line 710 "..\\Src\\main.c"
+#line 726 "..\\Src\\main.c"
 
 
 

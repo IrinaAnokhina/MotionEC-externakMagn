@@ -5,47 +5,47 @@
                           AREA ||i.Accelero_Sensor_Handler||, CODE, READONLY, ALIGN=2
 
                   Accelero_Sensor_Handler PROC
-;;;361     */
-;;;362    static void Accelero_Sensor_Handler(TMsg *Msg, uint32_t Instance)
+;;;368     */
+;;;369    static void Accelero_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 000000  b570              PUSH     {r4-r6,lr}
-;;;363    {
+;;;370    {
 000002  4604              MOV      r4,r0
 000004  460d              MOV      r5,r1
-;;;364      if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
+;;;371      if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
 000006  4810              LDR      r0,|L1.72|
 000008  7800              LDRB     r0,[r0,#0]  ; SensorsEnabled
 00000a  f0000010          AND      r0,r0,#0x10
 00000e  2810              CMP      r0,#0x10
 000010  d119              BNE      |L1.70|
-;;;365      {
-;;;366        (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_ACCELERO, &AccValue);
+;;;372      {
+;;;373        (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_ACCELERO, &AccValue);
 000012  4a0e              LDR      r2,|L1.76|
 000014  2102              MOVS     r1,#2
 000016  4628              MOV      r0,r5
 000018  f7fffffe          BL       IKS01A2_MOTION_SENSOR_GetAxes
-;;;367        Serialize_s32(&Msg->Data[19], (int32_t)AccValue.x, 4);
+;;;374        Serialize_s32(&Msg->Data[19], (int32_t)AccValue.x, 4);
 00001c  480b              LDR      r0,|L1.76|
 00001e  2204              MOVS     r2,#4
 000020  6801              LDR      r1,[r0,#0]  ; AccValue
 000022  f1040017          ADD      r0,r4,#0x17
 000026  f7fffffe          BL       Serialize_s32
-;;;368        Serialize_s32(&Msg->Data[23], (int32_t)AccValue.y, 4);
+;;;375        Serialize_s32(&Msg->Data[23], (int32_t)AccValue.y, 4);
 00002a  4808              LDR      r0,|L1.76|
 00002c  2204              MOVS     r2,#4
 00002e  6841              LDR      r1,[r0,#4]  ; AccValue
 000030  f104001b          ADD      r0,r4,#0x1b
 000034  f7fffffe          BL       Serialize_s32
-;;;369        Serialize_s32(&Msg->Data[27], (int32_t)AccValue.z, 4);
+;;;376        Serialize_s32(&Msg->Data[27], (int32_t)AccValue.z, 4);
 000038  4804              LDR      r0,|L1.76|
 00003a  2204              MOVS     r2,#4
 00003c  6881              LDR      r1,[r0,#8]  ; AccValue
 00003e  f104001f          ADD      r0,r4,#0x1f
 000042  f7fffffe          BL       Serialize_s32
                   |L1.70|
-;;;370      }
-;;;371    }
+;;;377      }
+;;;378    }
 000046  bd70              POP      {r4-r6,pc}
-;;;372    
+;;;379    
                           ENDP
 
                   |L1.72|
@@ -56,75 +56,75 @@
                           AREA ||i.Error_Handler||, CODE, READONLY, ALIGN=1
 
                   Error_Handler PROC
-;;;622     */
-;;;623    void Error_Handler(void)
+;;;638     */
+;;;639    void Error_Handler(void)
 000000  bf00              NOP      
                   |L2.2|
-;;;624    {
-;;;625      for (;;)
-;;;626      {
-;;;627        BSP_LED_On(LED2);
+;;;640    {
+;;;641      for (;;)
+;;;642      {
+;;;643        BSP_LED_On(LED2);
 000002  2000              MOVS     r0,#0
 000004  f7fffffe          BL       BSP_LED_On
-;;;628        HAL_Delay(100);
+;;;644        HAL_Delay(100);
 000008  2064              MOVS     r0,#0x64
 00000a  f7fffffe          BL       HAL_Delay
-;;;629        BSP_LED_Off(LED2);
+;;;645        BSP_LED_Off(LED2);
 00000e  2000              MOVS     r0,#0
 000010  f7fffffe          BL       BSP_LED_Off
-;;;630        HAL_Delay(100);
+;;;646        HAL_Delay(100);
 000014  2064              MOVS     r0,#0x64
 000016  f7fffffe          BL       HAL_Delay
 00001a  e7f2              B        |L2.2|
-;;;631      }
-;;;632    }
-;;;633    
+;;;647      }
+;;;648    }
+;;;649    
                           ENDP
 
 
                           AREA ||i.Gyro_Sensor_Handler||, CODE, READONLY, ALIGN=2
 
                   Gyro_Sensor_Handler PROC
-;;;378     */
-;;;379    static void Gyro_Sensor_Handler(TMsg *Msg, uint32_t Instance)
+;;;385     */
+;;;386    static void Gyro_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 000000  b53e              PUSH     {r1-r5,lr}
-;;;380    {
+;;;387    {
 000002  4604              MOV      r4,r0
 000004  460d              MOV      r5,r1
-;;;381      IKS01A2_MOTION_SENSOR_Axes_t gyr_value;
-;;;382    
-;;;383      if ((SensorsEnabled & GYROSCOPE_SENSOR) == GYROSCOPE_SENSOR)
+;;;388      IKS01A2_MOTION_SENSOR_Axes_t gyr_value;
+;;;389    
+;;;390      if ((SensorsEnabled & GYROSCOPE_SENSOR) == GYROSCOPE_SENSOR)
 000006  480f              LDR      r0,|L3.68|
 000008  7800              LDRB     r0,[r0,#0]  ; SensorsEnabled
 00000a  f0000020          AND      r0,r0,#0x20
 00000e  2820              CMP      r0,#0x20
 000010  d116              BNE      |L3.64|
-;;;384      {
-;;;385        (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_GYRO, &gyr_value);
+;;;391      {
+;;;392        (void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_GYRO, &gyr_value);
 000012  466a              MOV      r2,sp
 000014  2101              MOVS     r1,#1
 000016  4628              MOV      r0,r5
 000018  f7fffffe          BL       IKS01A2_MOTION_SENSOR_GetAxes
-;;;386        Serialize_s32(&Msg->Data[31], gyr_value.x, 4);
+;;;393        Serialize_s32(&Msg->Data[31], gyr_value.x, 4);
 00001c  2204              MOVS     r2,#4
 00001e  f1040023          ADD      r0,r4,#0x23
 000022  9900              LDR      r1,[sp,#0]
 000024  f7fffffe          BL       Serialize_s32
-;;;387        Serialize_s32(&Msg->Data[35], gyr_value.y, 4);
+;;;394        Serialize_s32(&Msg->Data[35], gyr_value.y, 4);
 000028  2204              MOVS     r2,#4
 00002a  f1040027          ADD      r0,r4,#0x27
 00002e  9901              LDR      r1,[sp,#4]
 000030  f7fffffe          BL       Serialize_s32
-;;;388        Serialize_s32(&Msg->Data[39], gyr_value.z, 4);
+;;;395        Serialize_s32(&Msg->Data[39], gyr_value.z, 4);
 000034  2204              MOVS     r2,#4
 000036  f104002b          ADD      r0,r4,#0x2b
 00003a  9902              LDR      r1,[sp,#8]
 00003c  f7fffffe          BL       Serialize_s32
                   |L3.64|
-;;;389      }
-;;;390    }
+;;;396      }
+;;;397    }
 000040  bd3e              POP      {r1-r5,pc}
-;;;391    
+;;;398    
                           ENDP
 
 000042  0000              DCW      0x0000
@@ -134,42 +134,42 @@
                           AREA ||i.HAL_GPIO_EXTI_Callback||, CODE, READONLY, ALIGN=1
 
                   HAL_GPIO_EXTI_Callback PROC
-;;;638     */
-;;;639    void HAL_GPIO_EXTI_Callback(uint16_t GpioPin)
+;;;654     */
+;;;655    void HAL_GPIO_EXTI_Callback(uint16_t GpioPin)
 000000  4770              BX       lr
-;;;640    {
-;;;641    }
-;;;642    
+;;;656    {
+;;;657    }
+;;;658    
                           ENDP
 
 
                           AREA ||i.HAL_TIM_PeriodElapsedCallback||, CODE, READONLY, ALIGN=2
 
                   HAL_TIM_PeriodElapsedCallback PROC
-;;;648     */
-;;;649    void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+;;;664     */
+;;;665    void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 000000  4a06              LDR      r2,|L5.28|
-;;;650    {
-;;;651      if (htim->Instance == TIM_ALGO)
+;;;666    {
+;;;667      if (htim->Instance == TIM_ALGO)
 000002  6801              LDR      r1,[r0,#0]
 000004  4291              CMP      r1,r2
 000006  d107              BNE      |L5.24|
-;;;652      {
-;;;653        SensorReadRequest = 1;
+;;;668      {
+;;;669        SensorReadRequest = 1;
 000008  2101              MOVS     r1,#1
 00000a  4a05              LDR      r2,|L5.32|
 00000c  7011              STRB     r1,[r2,#0]
-;;;654        TimeStamp += ALGO_PERIOD;
+;;;670        TimeStamp += ALGO_PERIOD;
 00000e  4905              LDR      r1,|L5.36|
 000010  6809              LDR      r1,[r1,#0]  ; TimeStamp
 000012  3114              ADDS     r1,r1,#0x14
 000014  4a03              LDR      r2,|L5.36|
 000016  6011              STR      r1,[r2,#0]  ; TimeStamp
                   |L5.24|
-;;;655      }
-;;;656    }
+;;;671      }
+;;;672    }
 000018  4770              BX       lr
-;;;657    
+;;;673    
                           ENDP
 
 00001a  0000              DCW      0x0000
@@ -183,34 +183,34 @@
                           AREA ||i.Humidity_Sensor_Handler||, CODE, READONLY, ALIGN=2
 
                   Humidity_Sensor_Handler PROC
-;;;460     */
-;;;461    static void Humidity_Sensor_Handler(TMsg *Msg, uint32_t Instance)
+;;;476     */
+;;;477    static void Humidity_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 000000  b538              PUSH     {r3-r5,lr}
-;;;462    {
+;;;478    {
 000002  4605              MOV      r5,r0
 000004  460c              MOV      r4,r1
-;;;463      float hum_value;
-;;;464    
-;;;465      if ((SensorsEnabled & HUMIDITY_SENSOR) == HUMIDITY_SENSOR)
+;;;479      float hum_value;
+;;;480    
+;;;481      if ((SensorsEnabled & HUMIDITY_SENSOR) == HUMIDITY_SENSOR)
 000006  4807              LDR      r0,|L6.36|
 000008  7800              LDRB     r0,[r0,#0]  ; SensorsEnabled
 00000a  f0000004          AND      r0,r0,#4
 00000e  2804              CMP      r0,#4
 000010  d107              BNE      |L6.34|
-;;;466      {
-;;;467        (void)IKS01A2_ENV_SENSOR_GetValue(Instance, ENV_HUMIDITY, &hum_value);
+;;;482      {
+;;;483        (void)IKS01A2_ENV_SENSOR_GetValue(Instance, ENV_HUMIDITY, &hum_value);
 000012  466a              MOV      r2,sp
 000014  2104              MOVS     r1,#4
 000016  4620              MOV      r0,r4
 000018  f7fffffe          BL       IKS01A2_ENV_SENSOR_GetValue
-;;;468        (void)memcpy(&Msg->Data[15], (void *)&hum_value, sizeof(float));;
+;;;484        (void)memcpy(&Msg->Data[15], (void *)&hum_value, sizeof(float));;
 00001c  9900              LDR      r1,[sp,#0]
 00001e  f8c51013          STR      r1,[r5,#0x13]
                   |L6.34|
-;;;469      }
-;;;470    }
+;;;485      }
+;;;486    }
 000022  bd38              POP      {r3-r5,pc}
-;;;471    
+;;;487    
                           ENDP
 
                   |L6.36|
@@ -219,58 +219,58 @@
                           AREA ||i.Init_Sensors||, CODE, READONLY, ALIGN=2
 
                   Init_Sensors PROC
-;;;231     */
-;;;232    static void Init_Sensors(void)
+;;;238     */
+;;;239    static void Init_Sensors(void)
 000000  b510              PUSH     {r4,lr}
-;;;233    {
-;;;234      (void)IKS01A2_MOTION_SENSOR_Init(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO);
+;;;240    {
+;;;241      (void)IKS01A2_MOTION_SENSOR_Init(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO);
 000002  2102              MOVS     r1,#2
 000004  2001              MOVS     r0,#1
 000006  f7fffffe          BL       IKS01A2_MOTION_SENSOR_Init
-;;;235      (void)IKS01A2_MOTION_SENSOR_Init(IKS01A2_LSM6DSL_0, MOTION_GYRO);
+;;;242      (void)IKS01A2_MOTION_SENSOR_Init(IKS01A2_LSM6DSL_0, MOTION_GYRO);
 00000a  2101              MOVS     r1,#1
 00000c  2000              MOVS     r0,#0
 00000e  f7fffffe          BL       IKS01A2_MOTION_SENSOR_Init
-;;;236      (void)IKS01A2_MOTION_SENSOR_Init(IKS01A2_LSM303AGR_MAG_0, MOTION_MAGNETO);
+;;;243      (void)IKS01A2_MOTION_SENSOR_Init(IKS01A2_LSM303AGR_MAG_0, MOTION_MAGNETO);
 000012  2104              MOVS     r1,#4
 000014  2002              MOVS     r0,#2
 000016  f7fffffe          BL       IKS01A2_MOTION_SENSOR_Init
-;;;237      (void)IKS01A2_ENV_SENSOR_Init(IKS01A2_HTS221_0, ENV_TEMPERATURE | ENV_HUMIDITY);
+;;;244      (void)IKS01A2_ENV_SENSOR_Init(IKS01A2_HTS221_0, ENV_TEMPERATURE | ENV_HUMIDITY);
 00001a  2105              MOVS     r1,#5
 00001c  2000              MOVS     r0,#0
 00001e  f7fffffe          BL       IKS01A2_ENV_SENSOR_Init
-;;;238      (void)IKS01A2_ENV_SENSOR_Init(IKS01A2_LPS22HB_0, ENV_PRESSURE);
+;;;245      (void)IKS01A2_ENV_SENSOR_Init(IKS01A2_LPS22HB_0, ENV_PRESSURE);
 000022  2102              MOVS     r1,#2
 000024  2001              MOVS     r0,#1
 000026  f7fffffe          BL       IKS01A2_ENV_SENSOR_Init
-;;;239    
-;;;240      /* Set accelerometer:
-;;;241       *   - ODR >= 100Hz
-;;;242       *   - FS   = <-2g, 2g>
-;;;243       */
-;;;244      (void)IKS01A2_MOTION_SENSOR_SetOutputDataRate(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO, 100.0f);
+;;;246    
+;;;247      /* Set accelerometer:
+;;;248       *   - ODR >= 100Hz
+;;;249       *   - FS   = <-2g, 2g>
+;;;250       */
+;;;251      (void)IKS01A2_MOTION_SENSOR_SetOutputDataRate(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO, 100.0f);
 00002a  ed9f0a09          VLDR     s0,|L7.80|
 00002e  2102              MOVS     r1,#2
 000030  2001              MOVS     r0,#1
 000032  f7fffffe          BL       IKS01A2_MOTION_SENSOR_SetOutputDataRate
-;;;245      (void)IKS01A2_MOTION_SENSOR_SetFullScale(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO, 2);
+;;;252      (void)IKS01A2_MOTION_SENSOR_SetFullScale(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO, 2);
 000036  2202              MOVS     r2,#2
 000038  4611              MOV      r1,r2
 00003a  2001              MOVS     r0,#1
 00003c  f7fffffe          BL       IKS01A2_MOTION_SENSOR_SetFullScale
-;;;246    
-;;;247      /* Set magnetometer:
-;;;248       *   - ODR >= 100Hz
-;;;249       *   - FS   = 50Gauss (always)
-;;;250       */
-;;;251      (void)IKS01A2_MOTION_SENSOR_SetOutputDataRate(IKS01A2_LSM303AGR_MAG_0, MOTION_MAGNETO, 100.0f);
+;;;253    
+;;;254      /* Set magnetometer:
+;;;255       *   - ODR >= 100Hz
+;;;256       *   - FS   = 50Gauss (always)
+;;;257       */
+;;;258      (void)IKS01A2_MOTION_SENSOR_SetOutputDataRate(IKS01A2_LSM303AGR_MAG_0, MOTION_MAGNETO, 100.0f);
 000040  ed9f0a03          VLDR     s0,|L7.80|
 000044  2104              MOVS     r1,#4
 000046  2002              MOVS     r0,#2
 000048  f7fffffe          BL       IKS01A2_MOTION_SENSOR_SetOutputDataRate
-;;;252    }
+;;;259    }
 00004c  bd10              POP      {r4,pc}
-;;;253    
+;;;260    
                           ENDP
 
 00004e  0000              DCW      0x0000
@@ -280,11 +280,11 @@
                           AREA ||i.MX_CRC_Init||, CODE, READONLY, ALIGN=2
 
                   MX_CRC_Init PROC
-;;;273     */
-;;;274    static void MX_CRC_Init(void)
+;;;280     */
+;;;281    static void MX_CRC_Init(void)
 000000  b508              PUSH     {r3,lr}
-;;;275    {
-;;;276      __CRC_CLK_ENABLE();
+;;;282    {
+;;;283      __CRC_CLK_ENABLE();
 000002  bf00              NOP      
 000004  2000              MOVS     r0,#0
 000006  9000              STR      r0,[sp,#0]
@@ -299,9 +299,9 @@
 00001c  9000              STR      r0,[sp,#0]
 00001e  bf00              NOP      
 000020  bf00              NOP      
-;;;277    }
+;;;284    }
 000022  bd08              POP      {r3,pc}
-;;;278    
+;;;285    
                           ENDP
 
                   |L8.36|
@@ -310,101 +310,101 @@
                           AREA ||i.MX_GPIO_Init||, CODE, READONLY, ALIGN=1
 
                   MX_GPIO_Init PROC
-;;;259     */
-;;;260    static void MX_GPIO_Init(void)
+;;;266     */
+;;;267    static void MX_GPIO_Init(void)
 000000  b510              PUSH     {r4,lr}
-;;;261    {
-;;;262      /* Initialize LED */
-;;;263      BSP_LED_Init(LED2);
+;;;268    {
+;;;269      /* Initialize LED */
+;;;270      BSP_LED_Init(LED2);
 000002  2000              MOVS     r0,#0
 000004  f7fffffe          BL       BSP_LED_Init
-;;;264    
-;;;265      /* Initialize push button */
-;;;266      BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
+;;;271    
+;;;272      /* Initialize push button */
+;;;273      BSP_PB_Init(BUTTON_KEY, BUTTON_MODE_EXTI);
 000008  2101              MOVS     r1,#1
 00000a  2000              MOVS     r0,#0
 00000c  f7fffffe          BL       BSP_PB_Init
-;;;267    }
+;;;274    }
 000010  bd10              POP      {r4,pc}
-;;;268    
+;;;275    
                           ENDP
 
 
                           AREA ||i.MX_TIM_ALGO_Init||, CODE, READONLY, ALIGN=2
 
                   MX_TIM_ALGO_Init PROC
-;;;284     */
-;;;285    static void MX_TIM_ALGO_Init(void)
+;;;291     */
+;;;292    static void MX_TIM_ALGO_Init(void)
 000000  b530              PUSH     {r4,r5,lr}
-;;;286    {
+;;;293    {
 000002  b087              SUB      sp,sp,#0x1c
-;;;287    #if (defined (USE_STM32F4XX_NUCLEO))
-;;;288    #define CPU_CLOCK  84000000U
-;;;289    
-;;;290    #elif (defined (USE_STM32L0XX_NUCLEO))
-;;;291    #define CPU_CLOCK  32000000U
-;;;292    
-;;;293    #elif (defined (USE_STM32L1XX_NUCLEO))
-;;;294    #define CPU_CLOCK  32000000U
-;;;295    
-;;;296    #elif (defined (USE_STM32L4XX_NUCLEO))
-;;;297    #define CPU_CLOCK  80000000U
-;;;298    
-;;;299    #else
-;;;300    #error Not supported platform
-;;;301    #endif
+;;;294    #if (defined (USE_STM32F4XX_NUCLEO))
+;;;295    #define CPU_CLOCK  84000000U
+;;;296    
+;;;297    #elif (defined (USE_STM32L0XX_NUCLEO))
+;;;298    #define CPU_CLOCK  32000000U
+;;;299    
+;;;300    #elif (defined (USE_STM32L1XX_NUCLEO))
+;;;301    #define CPU_CLOCK  32000000U
 ;;;302    
-;;;303    #define TIM_CLOCK  2000U
-;;;304    
-;;;305      const uint32_t prescaler = CPU_CLOCK / TIM_CLOCK - 1U;
+;;;303    #elif (defined (USE_STM32L4XX_NUCLEO))
+;;;304    #define CPU_CLOCK  80000000U
+;;;305    
+;;;306    #else
+;;;307    #error Not supported platform
+;;;308    #endif
+;;;309    
+;;;310    #define TIM_CLOCK  2000U
+;;;311    
+;;;312      const uint32_t prescaler = CPU_CLOCK / TIM_CLOCK - 1U;
 000004  f24a440f          MOV      r4,#0xa40f
-;;;306      const uint32_t tim_period = TIM_CLOCK / ALGO_FREQ - 1U;
+;;;313      const uint32_t tim_period = TIM_CLOCK / ALGO_FREQ - 1U;
 000008  2527              MOVS     r5,#0x27
-;;;307    
-;;;308      TIM_ClockConfigTypeDef s_clock_source_config;
-;;;309      TIM_MasterConfigTypeDef s_master_config;
-;;;310    
-;;;311      AlgoTimHandle.Instance           = TIM_ALGO;
+;;;314    
+;;;315      TIM_ClockConfigTypeDef s_clock_source_config;
+;;;316      TIM_MasterConfigTypeDef s_master_config;
+;;;317    
+;;;318      AlgoTimHandle.Instance           = TIM_ALGO;
 00000a  480f              LDR      r0,|L10.72|
 00000c  490f              LDR      r1,|L10.76|
 00000e  6008              STR      r0,[r1,#0]  ; AlgoTimHandle
-;;;312      AlgoTimHandle.Init.Prescaler     = prescaler;
+;;;319      AlgoTimHandle.Init.Prescaler     = prescaler;
 000010  4620              MOV      r0,r4
 000012  6048              STR      r0,[r1,#4]  ; AlgoTimHandle
-;;;313      AlgoTimHandle.Init.CounterMode   = TIM_COUNTERMODE_UP;
+;;;320      AlgoTimHandle.Init.CounterMode   = TIM_COUNTERMODE_UP;
 000014  2100              MOVS     r1,#0
 000016  480d              LDR      r0,|L10.76|
 000018  6081              STR      r1,[r0,#8]
-;;;314      AlgoTimHandle.Init.Period        = tim_period;
+;;;321      AlgoTimHandle.Init.Period        = tim_period;
 00001a  2127              MOVS     r1,#0x27
 00001c  60c1              STR      r1,[r0,#0xc]
-;;;315      AlgoTimHandle.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+;;;322      AlgoTimHandle.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 00001e  2100              MOVS     r1,#0
 000020  6101              STR      r1,[r0,#0x10]
-;;;316      (void)HAL_TIM_Base_Init(&AlgoTimHandle);
+;;;323      (void)HAL_TIM_Base_Init(&AlgoTimHandle);
 000022  f7fffffe          BL       HAL_TIM_Base_Init
-;;;317    
-;;;318      s_clock_source_config.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+;;;324    
+;;;325      s_clock_source_config.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
 000026  f44f5080          MOV      r0,#0x1000
 00002a  9003              STR      r0,[sp,#0xc]
-;;;319      (void)HAL_TIM_ConfigClockSource(&AlgoTimHandle, &s_clock_source_config);
+;;;326      (void)HAL_TIM_ConfigClockSource(&AlgoTimHandle, &s_clock_source_config);
 00002c  a903              ADD      r1,sp,#0xc
 00002e  4807              LDR      r0,|L10.76|
 000030  f7fffffe          BL       HAL_TIM_ConfigClockSource
-;;;320    
-;;;321      s_master_config.MasterOutputTrigger = TIM_TRGO_RESET;
+;;;327    
+;;;328      s_master_config.MasterOutputTrigger = TIM_TRGO_RESET;
 000034  2000              MOVS     r0,#0
 000036  9001              STR      r0,[sp,#4]
-;;;322      s_master_config.MasterSlaveMode     = TIM_MASTERSLAVEMODE_DISABLE;
+;;;329      s_master_config.MasterSlaveMode     = TIM_MASTERSLAVEMODE_DISABLE;
 000038  9002              STR      r0,[sp,#8]
-;;;323      (void)HAL_TIMEx_MasterConfigSynchronization(&AlgoTimHandle, &s_master_config);
+;;;330      (void)HAL_TIMEx_MasterConfigSynchronization(&AlgoTimHandle, &s_master_config);
 00003a  a901              ADD      r1,sp,#4
 00003c  4803              LDR      r0,|L10.76|
 00003e  f7fffffe          BL       HAL_TIMEx_MasterConfigSynchronization
-;;;324    }
+;;;331    }
 000042  b007              ADD      sp,sp,#0x1c
 000044  bd30              POP      {r4,r5,pc}
-;;;325    
+;;;332    
                           ENDP
 
 000046  0000              DCW      0x0000
@@ -416,20 +416,20 @@
                           AREA ||i.Magneto_Sensor_Handler||, CODE, READONLY, ALIGN=2
 
                   Magneto_Sensor_Handler PROC
-;;;397     */
-;;;398    static void Magneto_Sensor_Handler(TMsg *Msg, uint32_t Instance)
+;;;404     */
+;;;405    static void Magneto_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 000000  b57f              PUSH     {r0-r6,lr}
-;;;399    {
-000002  4604              MOV      r4,r0
-000004  460d              MOV      r5,r1
-;;;400    	uint8_t data[2] = {0};
+;;;406    {
+000002  4605              MOV      r5,r0
+000004  460e              MOV      r6,r1
+;;;407    	uint8_t data[2] = {0};
 000006  2000              MOVS     r0,#0
 000008  9003              STR      r0,[sp,#0xc]
-;;;401      //if ((SensorsEnabled & MAGNETIC_SENSOR) == MAGNETIC_SENSOR)
-;;;402      //{
-;;;403        //(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_MAGNETO, &MagValue);
-;;;404    		
-;;;405         status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
+;;;408      //if ((SensorsEnabled & MAGNETIC_SENSOR) == MAGNETIC_SENSOR)
+;;;409      //{
+;;;410        //(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_MAGNETO, &MagValue);
+;;;411    		
+;;;412         status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
 00000a  2064              MOVS     r0,#0x64
 00000c  2102              MOVS     r1,#2
 00000e  aa03              ADD      r2,sp,#0xc
@@ -438,118 +438,131 @@
 000016  9002              STR      r0,[sp,#8]
 000018  2228              MOVS     r2,#0x28
 00001a  213d              MOVS     r1,#0x3d
-00001c  4827              LDR      r0,|L11.188|
+00001c  4829              LDR      r0,|L11.196|
 00001e  f7fffffe          BL       HAL_I2C_Mem_Read
-000022  4927              LDR      r1,|L11.192|
+000022  4929              LDR      r1,|L11.200|
 000024  7008              STRB     r0,[r1,#0]
-;;;406    		MagValue.x = (uint32_t)data[1] << 8 | data[0];							
+;;;413    	
+;;;414    	int16_t a;
+;;;415    	//a= data[0];
+;;;416    	//a= a |(data[1] << 8);
+;;;417    	a=(data[1] << 8)|data[0];
 000026  f89d000c          LDRB     r0,[sp,#0xc]
 00002a  f89d100d          LDRB     r1,[sp,#0xd]
 00002e  ea402001          ORR      r0,r0,r1,LSL #8
-000032  4924              LDR      r1,|L11.196|
-000034  6008              STR      r0,[r1,#0]  ; MagValue
-;;;407    		HAL_Delay(10);
-000036  200a              MOVS     r0,#0xa
-000038  f7fffffe          BL       HAL_Delay
-;;;408    		data[0] = 0; data[1] = 0;
-00003c  2000              MOVS     r0,#0
-00003e  f88d000c          STRB     r0,[sp,#0xc]
-000042  f88d000d          STRB     r0,[sp,#0xd]
-;;;409    		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-000046  2064              MOVS     r0,#0x64
-000048  2102              MOVS     r1,#2
-00004a  aa03              ADD      r2,sp,#0xc
-00004c  2301              MOVS     r3,#1
-00004e  e9cd2100          STRD     r2,r1,[sp,#0]
-000052  9002              STR      r0,[sp,#8]
-000054  222a              MOVS     r2,#0x2a
-000056  213d              MOVS     r1,#0x3d
-000058  4818              LDR      r0,|L11.188|
-00005a  f7fffffe          BL       HAL_I2C_Mem_Read
-00005e  4918              LDR      r1,|L11.192|
-000060  7008              STRB     r0,[r1,#0]
-;;;410    		MagValue.y = (uint32_t)data[1] << 8 | data[0];
-000062  f89d000c          LDRB     r0,[sp,#0xc]
-000066  f89d100d          LDRB     r1,[sp,#0xd]
-00006a  ea402001          ORR      r0,r0,r1,LSL #8
-00006e  4915              LDR      r1,|L11.196|
-000070  6048              STR      r0,[r1,#4]  ; MagValue
-;;;411    		data[0] = 0; data[1] = 0;
-000072  2000              MOVS     r0,#0
-000074  f88d000c          STRB     r0,[sp,#0xc]
-000078  f88d000d          STRB     r0,[sp,#0xd]
-;;;412    		HAL_Delay(10);
-00007c  200a              MOVS     r0,#0xa
-00007e  f7fffffe          BL       HAL_Delay
-;;;413    		status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2C, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-000082  2064              MOVS     r0,#0x64
-000084  2102              MOVS     r1,#2
-000086  aa03              ADD      r2,sp,#0xc
-000088  2301              MOVS     r3,#1
-00008a  e9cd2100          STRD     r2,r1,[sp,#0]
-00008e  9002              STR      r0,[sp,#8]
-000090  222c              MOVS     r2,#0x2c
-000092  213d              MOVS     r1,#0x3d
-000094  4809              LDR      r0,|L11.188|
-000096  f7fffffe          BL       HAL_I2C_Mem_Read
-00009a  4909              LDR      r1,|L11.192|
-00009c  7008              STRB     r0,[r1,#0]
-;;;414    		MagValue.z = (uint32_t)data[1] << 8 | data[0];
-00009e  f89d000c          LDRB     r0,[sp,#0xc]
-0000a2  f89d100d          LDRB     r1,[sp,#0xd]
-0000a6  ea402001          ORR      r0,r0,r1,LSL #8
-0000aa  4906              LDR      r1,|L11.196|
-0000ac  6088              STR      r0,[r1,#8]  ; MagValue
-;;;415    		HAL_Delay(10);
-0000ae  200a              MOVS     r0,#0xa
-0000b0  f7fffffe          BL       HAL_Delay
-;;;416        /* Magnetometer calibration */
-;;;417        MotionMC_manager_run(Msg);
-0000b4  4620              MOV      r0,r4
-0000b6  f7fffffe          BL       MotionMC_manager_run
-;;;418     //}
-;;;419    }
-0000ba  bd7f              POP      {r0-r6,pc}
-;;;420    
+000032  b204              SXTH     r4,r0
+;;;418    		MagValue.x = a;//(int16_t)data[1] << 8 | data[0];							
+000034  4825              LDR      r0,|L11.204|
+000036  6004              STR      r4,[r0,#0]  ; MagValue
+;;;419    		HAL_Delay(10);
+000038  200a              MOVS     r0,#0xa
+00003a  f7fffffe          BL       HAL_Delay
+;;;420    		data[0] = 0; data[1] = 0;
+00003e  2000              MOVS     r0,#0
+000040  f88d000c          STRB     r0,[sp,#0xc]
+000044  f88d000d          STRB     r0,[sp,#0xd]
+;;;421    	
+;;;422    	
+;;;423    		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100);
+000048  2064              MOVS     r0,#0x64
+00004a  2102              MOVS     r1,#2
+00004c  aa03              ADD      r2,sp,#0xc
+00004e  2301              MOVS     r3,#1
+000050  e9cd2100          STRD     r2,r1,[sp,#0]
+000054  9002              STR      r0,[sp,#8]
+000056  222a              MOVS     r2,#0x2a
+000058  213d              MOVS     r1,#0x3d
+00005a  481a              LDR      r0,|L11.196|
+00005c  f7fffffe          BL       HAL_I2C_Mem_Read
+000060  4919              LDR      r1,|L11.200|
+000062  7008              STRB     r0,[r1,#0]
+;;;424    a=(data[1] << 8)|data[0];	
+000064  f89d000c          LDRB     r0,[sp,#0xc]
+000068  f89d100d          LDRB     r1,[sp,#0xd]
+00006c  ea402001          ORR      r0,r0,r1,LSL #8
+000070  b204              SXTH     r4,r0
+;;;425    		MagValue.y = a;//(int16_t)data[1] << 8 | data[0];	
+000072  4816              LDR      r0,|L11.204|
+000074  6044              STR      r4,[r0,#4]  ; MagValue
+;;;426    		data[0] = 0; data[1] = 0;
+000076  2000              MOVS     r0,#0
+000078  f88d000c          STRB     r0,[sp,#0xc]
+00007c  f88d000d          STRB     r0,[sp,#0xd]
+;;;427    		HAL_Delay(10);
+000080  200a              MOVS     r0,#0xa
+000082  f7fffffe          BL       HAL_Delay
+;;;428    		status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2C, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
+000086  2064              MOVS     r0,#0x64
+000088  2102              MOVS     r1,#2
+00008a  aa03              ADD      r2,sp,#0xc
+00008c  2301              MOVS     r3,#1
+00008e  e9cd2100          STRD     r2,r1,[sp,#0]
+000092  9002              STR      r0,[sp,#8]
+000094  222c              MOVS     r2,#0x2c
+000096  213d              MOVS     r1,#0x3d
+000098  480a              LDR      r0,|L11.196|
+00009a  f7fffffe          BL       HAL_I2C_Mem_Read
+00009e  490a              LDR      r1,|L11.200|
+0000a0  7008              STRB     r0,[r1,#0]
+;;;429    		a=(data[1] << 8)|data[0];
+0000a2  f89d000c          LDRB     r0,[sp,#0xc]
+0000a6  f89d100d          LDRB     r1,[sp,#0xd]
+0000aa  ea402001          ORR      r0,r0,r1,LSL #8
+0000ae  b204              SXTH     r4,r0
+;;;430    		MagValue.z = a;//(int16_t)data[1] << 8 | data[0];	
+0000b0  4806              LDR      r0,|L11.204|
+0000b2  6084              STR      r4,[r0,#8]  ; MagValue
+;;;431    		HAL_Delay(10);
+0000b4  200a              MOVS     r0,#0xa
+0000b6  f7fffffe          BL       HAL_Delay
+;;;432        /* Magnetometer calibration */
+;;;433        MotionMC_manager_run(Msg);
+0000ba  4628              MOV      r0,r5
+0000bc  f7fffffe          BL       MotionMC_manager_run
+;;;434     //}
+;;;435    }
+0000c0  bd7f              POP      {r0-r6,pc}
+;;;436    
                           ENDP
 
-                  |L11.188|
-                          DCD      hi2c3
-                  |L11.192|
-                          DCD      status
+0000c2  0000              DCW      0x0000
                   |L11.196|
+                          DCD      hi2c3
+                  |L11.200|
+                          DCD      status
+                  |L11.204|
                           DCD      MagValue
 
                           AREA ||i.Pressure_Sensor_Handler||, CODE, READONLY, ALIGN=2
 
                   Pressure_Sensor_Handler PROC
-;;;426     */
-;;;427    static void Pressure_Sensor_Handler(TMsg *Msg, uint32_t Instance)
+;;;442     */
+;;;443    static void Pressure_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 000000  b538              PUSH     {r3-r5,lr}
-;;;428    {
+;;;444    {
 000002  4605              MOV      r5,r0
 000004  460c              MOV      r4,r1
-;;;429      float pres_value;
-;;;430    
-;;;431      if ((SensorsEnabled & PRESSURE_SENSOR) == PRESSURE_SENSOR)
+;;;445      float pres_value;
+;;;446    
+;;;447      if ((SensorsEnabled & PRESSURE_SENSOR) == PRESSURE_SENSOR)
 000006  4807              LDR      r0,|L12.36|
 000008  7800              LDRB     r0,[r0,#0]  ; SensorsEnabled
 00000a  f0000001          AND      r0,r0,#1
 00000e  b138              CBZ      r0,|L12.32|
-;;;432      {
-;;;433        (void)IKS01A2_ENV_SENSOR_GetValue(Instance, ENV_PRESSURE, &pres_value);
+;;;448      {
+;;;449        (void)IKS01A2_ENV_SENSOR_GetValue(Instance, ENV_PRESSURE, &pres_value);
 000010  466a              MOV      r2,sp
 000012  2102              MOVS     r1,#2
 000014  4620              MOV      r0,r4
 000016  f7fffffe          BL       IKS01A2_ENV_SENSOR_GetValue
-;;;434        (void)memcpy(&Msg->Data[7], (void *)&pres_value, sizeof(float));
+;;;450        (void)memcpy(&Msg->Data[7], (void *)&pres_value, sizeof(float));
 00001a  9900              LDR      r1,[sp,#0]
 00001c  f8c5100b          STR      r1,[r5,#0xb]
                   |L12.32|
-;;;435      }
-;;;436    }
+;;;451      }
+;;;452    }
 000020  bd38              POP      {r3-r5,pc}
-;;;437    
+;;;453    
                           ENDP
 
 000022  0000              DCW      0x0000
@@ -559,113 +572,113 @@
                           AREA ||i.RTC_Config||, CODE, READONLY, ALIGN=2
 
                   RTC_Config PROC
-;;;476     */
-;;;477    static void RTC_Config(void)
+;;;492     */
+;;;493    static void RTC_Config(void)
 000000  b500              PUSH     {lr}
-;;;478    {
+;;;494    {
 000002  b08d              SUB      sp,sp,#0x34
-;;;479      /*##-1- Configure the RTC peripheral #######################################*/
-;;;480      /* Check if LSE can be used */
-;;;481      RCC_OscInitTypeDef rcc_osc_init_struct;
-;;;482    
-;;;483      /*##-2- Configure LSE as RTC clock soucre ###################################*/
-;;;484      rcc_osc_init_struct.OscillatorType = RCC_OSCILLATORTYPE_LSI | RCC_OSCILLATORTYPE_LSE;
+;;;495      /*##-1- Configure the RTC peripheral #######################################*/
+;;;496      /* Check if LSE can be used */
+;;;497      RCC_OscInitTypeDef rcc_osc_init_struct;
+;;;498    
+;;;499      /*##-2- Configure LSE as RTC clock soucre ###################################*/
+;;;500      rcc_osc_init_struct.OscillatorType = RCC_OSCILLATORTYPE_LSI | RCC_OSCILLATORTYPE_LSE;
 000004  200c              MOVS     r0,#0xc
 000006  9001              STR      r0,[sp,#4]
-;;;485      rcc_osc_init_struct.PLL.PLLState   = RCC_PLL_NONE;
+;;;501      rcc_osc_init_struct.PLL.PLLState   = RCC_PLL_NONE;
 000008  2000              MOVS     r0,#0
 00000a  9007              STR      r0,[sp,#0x1c]
-;;;486      rcc_osc_init_struct.LSEState       = RCC_LSE_ON;
+;;;502      rcc_osc_init_struct.LSEState       = RCC_LSE_ON;
 00000c  2001              MOVS     r0,#1
 00000e  9003              STR      r0,[sp,#0xc]
-;;;487      rcc_osc_init_struct.LSIState       = RCC_LSI_OFF;
+;;;503      rcc_osc_init_struct.LSIState       = RCC_LSI_OFF;
 000010  2000              MOVS     r0,#0
 000012  9006              STR      r0,[sp,#0x18]
-;;;488    
-;;;489      if (HAL_RCC_OscConfig(&rcc_osc_init_struct) != HAL_OK)
+;;;504    
+;;;505      if (HAL_RCC_OscConfig(&rcc_osc_init_struct) != HAL_OK)
 000014  a801              ADD      r0,sp,#4
 000016  f7fffffe          BL       HAL_RCC_OscConfig
 00001a  b158              CBZ      r0,|L13.52|
-;;;490      {
-;;;491        /* LSE not available, we use LSI */
-;;;492        UseLSI = 1;
+;;;506      {
+;;;507        /* LSE not available, we use LSI */
+;;;508        UseLSI = 1;
 00001c  2001              MOVS     r0,#1
 00001e  4913              LDR      r1,|L13.108|
 000020  6008              STR      r0,[r1,#0]  ; UseLSI
-;;;493        RtcHandle.Init.AsynchPrediv = RTC_ASYNCH_PREDIV_LSI;
+;;;509        RtcHandle.Init.AsynchPrediv = RTC_ASYNCH_PREDIV_LSI;
 000022  217f              MOVS     r1,#0x7f
 000024  4812              LDR      r0,|L13.112|
 000026  6081              STR      r1,[r0,#8]
-;;;494        RtcHandle.Init.SynchPrediv  = RTC_SYNCH_PREDIV_LSI;
+;;;510        RtcHandle.Init.SynchPrediv  = RTC_SYNCH_PREDIV_LSI;
 000028  21f9              MOVS     r1,#0xf9
 00002a  60c1              STR      r1,[r0,#0xc]
-;;;495        RtcSynchPrediv = RTC_SYNCH_PREDIV_LSI;
+;;;511        RtcSynchPrediv = RTC_SYNCH_PREDIV_LSI;
 00002c  20f9              MOVS     r0,#0xf9
 00002e  4911              LDR      r1,|L13.116|
 000030  6008              STR      r0,[r1,#0]  ; RtcSynchPrediv
 000032  e00a              B        |L13.74|
                   |L13.52|
-;;;496      }
-;;;497      else
-;;;498      {
-;;;499        /* We use LSE */
-;;;500        UseLSI = 0;
+;;;512      }
+;;;513      else
+;;;514      {
+;;;515        /* We use LSE */
+;;;516        UseLSI = 0;
 000034  2000              MOVS     r0,#0
 000036  490d              LDR      r1,|L13.108|
 000038  6008              STR      r0,[r1,#0]  ; UseLSI
-;;;501        RtcHandle.Init.AsynchPrediv = RTC_ASYNCH_PREDIV_LSE;
+;;;517        RtcHandle.Init.AsynchPrediv = RTC_ASYNCH_PREDIV_LSE;
 00003a  217f              MOVS     r1,#0x7f
 00003c  480c              LDR      r0,|L13.112|
 00003e  6081              STR      r1,[r0,#8]
-;;;502        RtcHandle.Init.SynchPrediv  = RTC_SYNCH_PREDIV_LSE;
+;;;518        RtcHandle.Init.SynchPrediv  = RTC_SYNCH_PREDIV_LSE;
 000040  21ff              MOVS     r1,#0xff
 000042  60c1              STR      r1,[r0,#0xc]
-;;;503        RtcSynchPrediv = RTC_SYNCH_PREDIV_LSE;
+;;;519        RtcSynchPrediv = RTC_SYNCH_PREDIV_LSE;
 000044  20ff              MOVS     r0,#0xff
 000046  490b              LDR      r1,|L13.116|
 000048  6008              STR      r0,[r1,#0]  ; RtcSynchPrediv
                   |L13.74|
-;;;504      }
-;;;505    
-;;;506      RtcHandle.Instance = RTC;
+;;;520      }
+;;;521    
+;;;522      RtcHandle.Instance = RTC;
 00004a  480b              LDR      r0,|L13.120|
 00004c  4908              LDR      r1,|L13.112|
 00004e  6008              STR      r0,[r1,#0]  ; RtcHandle
-;;;507    
-;;;508      /* Configure RTC prescaler and RTC data registers */
-;;;509      /* RTC configured as follow:
-;;;510           - Hour Format    = Format 12
-;;;511           - Asynch Prediv  = Value according to source clock
-;;;512           - Synch Prediv   = Value according to source clock
-;;;513           - OutPut         = Output Disable
-;;;514           - OutPutPolarity = High Polarity
-;;;515           - OutPutType     = Open Drain
-;;;516       */
-;;;517      RtcHandle.Init.HourFormat     = RTC_HOURFORMAT_12;
+;;;523    
+;;;524      /* Configure RTC prescaler and RTC data registers */
+;;;525      /* RTC configured as follow:
+;;;526           - Hour Format    = Format 12
+;;;527           - Asynch Prediv  = Value according to source clock
+;;;528           - Synch Prediv   = Value according to source clock
+;;;529           - OutPut         = Output Disable
+;;;530           - OutPutPolarity = High Polarity
+;;;531           - OutPutType     = Open Drain
+;;;532       */
+;;;533      RtcHandle.Init.HourFormat     = RTC_HOURFORMAT_12;
 000050  2040              MOVS     r0,#0x40
 000052  6048              STR      r0,[r1,#4]  ; RtcHandle
-;;;518      RtcHandle.Init.OutPut         = RTC_OUTPUT_DISABLE;
+;;;534      RtcHandle.Init.OutPut         = RTC_OUTPUT_DISABLE;
 000054  2100              MOVS     r1,#0
 000056  4806              LDR      r0,|L13.112|
 000058  6101              STR      r1,[r0,#0x10]
-;;;519      RtcHandle.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
+;;;535      RtcHandle.Init.OutPutPolarity = RTC_OUTPUT_POLARITY_HIGH;
 00005a  6141              STR      r1,[r0,#0x14]
-;;;520      RtcHandle.Init.OutPutType     = RTC_OUTPUT_TYPE_OPENDRAIN;
+;;;536      RtcHandle.Init.OutPutType     = RTC_OUTPUT_TYPE_OPENDRAIN;
 00005c  6181              STR      r1,[r0,#0x18]
-;;;521    
-;;;522      if (HAL_RTC_Init(&RtcHandle) != HAL_OK)
+;;;537    
+;;;538      if (HAL_RTC_Init(&RtcHandle) != HAL_OK)
 00005e  f7fffffe          BL       HAL_RTC_Init
 000062  b108              CBZ      r0,|L13.104|
-;;;523      {
-;;;524        /* Initialization Error */
-;;;525        Error_Handler();
+;;;539      {
+;;;540        /* Initialization Error */
+;;;541        Error_Handler();
 000064  f7fffffe          BL       Error_Handler
                   |L13.104|
-;;;526      }
-;;;527    }
+;;;542      }
+;;;543    }
 000068  b00d              ADD      sp,sp,#0x34
 00006a  bd00              POP      {pc}
-;;;528    
+;;;544    
                           ENDP
 
                   |L13.108|
@@ -680,40 +693,40 @@
                           AREA ||i.RTC_DateRegulate||, CODE, READONLY, ALIGN=2
 
                   RTC_DateRegulate PROC
-;;;575     */
-;;;576    void RTC_DateRegulate(uint8_t y, uint8_t m, uint8_t d, uint8_t dw)
+;;;591     */
+;;;592    void RTC_DateRegulate(uint8_t y, uint8_t m, uint8_t d, uint8_t dw)
 000000  b5f8              PUSH     {r3-r7,lr}
-;;;577    {
+;;;593    {
 000002  4604              MOV      r4,r0
 000004  460d              MOV      r5,r1
 000006  4617              MOV      r7,r2
 000008  461e              MOV      r6,r3
-;;;578      RTC_DateTypeDef sdatestructure;
-;;;579    
-;;;580      sdatestructure.Year    = y;
+;;;594      RTC_DateTypeDef sdatestructure;
+;;;595    
+;;;596      sdatestructure.Year    = y;
 00000a  f88d4003          STRB     r4,[sp,#3]
-;;;581      sdatestructure.Month   = m;
+;;;597      sdatestructure.Month   = m;
 00000e  f88d5001          STRB     r5,[sp,#1]
-;;;582      sdatestructure.Date    = d;
+;;;598      sdatestructure.Date    = d;
 000012  f88d7002          STRB     r7,[sp,#2]
-;;;583      sdatestructure.WeekDay = dw;
+;;;599      sdatestructure.WeekDay = dw;
 000016  f88d6000          STRB     r6,[sp,#0]
-;;;584    
-;;;585      if (HAL_RTC_SetDate(&RtcHandle, &sdatestructure, FORMAT_BIN) != HAL_OK)
+;;;600    
+;;;601      if (HAL_RTC_SetDate(&RtcHandle, &sdatestructure, FORMAT_BIN) != HAL_OK)
 00001a  2200              MOVS     r2,#0
 00001c  4669              MOV      r1,sp
 00001e  4803              LDR      r0,|L14.44|
 000020  f7fffffe          BL       HAL_RTC_SetDate
 000024  b108              CBZ      r0,|L14.42|
-;;;586      {
-;;;587        /* Initialization Error */
-;;;588        Error_Handler();
+;;;602      {
+;;;603        /* Initialization Error */
+;;;604        Error_Handler();
 000026  f7fffffe          BL       Error_Handler
                   |L14.42|
-;;;589      }
-;;;590    }
+;;;605      }
+;;;606    }
 00002a  bdf8              POP      {r3-r7,pc}
-;;;591    
+;;;607    
                           ENDP
 
                   |L14.44|
@@ -722,64 +735,64 @@
                           AREA ||i.RTC_Handler||, CODE, READONLY, ALIGN=2
 
                   RTC_Handler PROC
-;;;330     */
-;;;331    static void RTC_Handler(TMsg *Msg)
+;;;337     */
+;;;338    static void RTC_Handler(TMsg *Msg)
 000000  b5f0              PUSH     {r4-r7,lr}
-;;;332    {
+;;;339    {
 000002  b087              SUB      sp,sp,#0x1c
 000004  4604              MOV      r4,r0
-;;;333      uint8_t sub_sec;
-;;;334      uint32_t ans_uint32;
-;;;335      int32_t ans_int32;
-;;;336      RTC_DateTypeDef sdatestructureget;
-;;;337      RTC_TimeTypeDef stimestructure;
-;;;338    
-;;;339      (void)HAL_RTC_GetTime(&RtcHandle, &stimestructure, FORMAT_BIN);
+;;;340      uint8_t sub_sec;
+;;;341      uint32_t ans_uint32;
+;;;342      int32_t ans_int32;
+;;;343      RTC_DateTypeDef sdatestructureget;
+;;;344      RTC_TimeTypeDef stimestructure;
+;;;345    
+;;;346      (void)HAL_RTC_GetTime(&RtcHandle, &stimestructure, FORMAT_BIN);
 000006  2200              MOVS     r2,#0
 000008  a901              ADD      r1,sp,#4
 00000a  4811              LDR      r0,|L15.80|
 00000c  f7fffffe          BL       HAL_RTC_GetTime
-;;;340      (void)HAL_RTC_GetDate(&RtcHandle, &sdatestructureget, FORMAT_BIN);
+;;;347      (void)HAL_RTC_GetDate(&RtcHandle, &sdatestructureget, FORMAT_BIN);
 000010  2200              MOVS     r2,#0
 000012  a906              ADD      r1,sp,#0x18
 000014  480e              LDR      r0,|L15.80|
 000016  f7fffffe          BL       HAL_RTC_GetDate
-;;;341    
-;;;342      /* To be MISRA C-2012 compliant the original calculation:
-;;;343         sub_sec = ((((((int)RtcSynchPrediv) - ((int)stimestructure.SubSeconds)) * 100) / (RtcSynchPrediv + 1)) & 0xFF);
-;;;344         has been split to separate expressions */
-;;;345      ans_int32 = (RtcSynchPrediv - (int32_t)stimestructure.SubSeconds) * 100;
+;;;348    
+;;;349      /* To be MISRA C-2012 compliant the original calculation:
+;;;350         sub_sec = ((((((int)RtcSynchPrediv) - ((int)stimestructure.SubSeconds)) * 100) / (RtcSynchPrediv + 1)) & 0xFF);
+;;;351         has been split to separate expressions */
+;;;352      ans_int32 = (RtcSynchPrediv - (int32_t)stimestructure.SubSeconds) * 100;
 00001a  490e              LDR      r1,|L15.84|
 00001c  9802              LDR      r0,[sp,#8]
 00001e  6809              LDR      r1,[r1,#0]  ; RtcSynchPrediv
 000020  1a08              SUBS     r0,r1,r0
 000022  2164              MOVS     r1,#0x64
 000024  fb00f501          MUL      r5,r0,r1
-;;;346      ans_int32 /= RtcSynchPrediv + 1;
+;;;353      ans_int32 /= RtcSynchPrediv + 1;
 000028  480a              LDR      r0,|L15.84|
 00002a  6800              LDR      r0,[r0,#0]  ; RtcSynchPrediv
 00002c  1c40              ADDS     r0,r0,#1
 00002e  fb95f5f0          SDIV     r5,r5,r0
-;;;347      ans_uint32 = (uint32_t)ans_int32 & 0xFFU;
+;;;354      ans_uint32 = (uint32_t)ans_int32 & 0xFFU;
 000032  b2ef              UXTB     r7,r5
-;;;348      sub_sec = (uint8_t)ans_uint32;
+;;;355      sub_sec = (uint8_t)ans_uint32;
 000034  463e              MOV      r6,r7
-;;;349    
-;;;350      Msg->Data[3] = (uint8_t)stimestructure.Hours;
+;;;356    
+;;;357      Msg->Data[3] = (uint8_t)stimestructure.Hours;
 000036  f89d1004          LDRB     r1,[sp,#4]
 00003a  71e1              STRB     r1,[r4,#7]
-;;;351      Msg->Data[4] = (uint8_t)stimestructure.Minutes;
+;;;358      Msg->Data[4] = (uint8_t)stimestructure.Minutes;
 00003c  f89d1005          LDRB     r1,[sp,#5]
 000040  7221              STRB     r1,[r4,#8]
-;;;352      Msg->Data[5] = (uint8_t)stimestructure.Seconds;
+;;;359      Msg->Data[5] = (uint8_t)stimestructure.Seconds;
 000042  f89d1006          LDRB     r1,[sp,#6]
 000046  7261              STRB     r1,[r4,#9]
-;;;353      Msg->Data[6] = sub_sec;
+;;;360      Msg->Data[6] = sub_sec;
 000048  72a6              STRB     r6,[r4,#0xa]
-;;;354    }
+;;;361    }
 00004a  b007              ADD      sp,sp,#0x1c
 00004c  bdf0              POP      {r4-r7,pc}
-;;;355    
+;;;362    
                           ENDP
 
 00004e  0000              DCW      0x0000
@@ -791,48 +804,48 @@
                           AREA ||i.RTC_TimeRegulate||, CODE, READONLY, ALIGN=2
 
                   RTC_TimeRegulate PROC
-;;;598     */
-;;;599    void RTC_TimeRegulate(uint8_t hh, uint8_t mm, uint8_t ss)
+;;;614     */
+;;;615    void RTC_TimeRegulate(uint8_t hh, uint8_t mm, uint8_t ss)
 000000  b570              PUSH     {r4-r6,lr}
-;;;600    {
+;;;616    {
 000002  b086              SUB      sp,sp,#0x18
 000004  4604              MOV      r4,r0
 000006  460d              MOV      r5,r1
 000008  4616              MOV      r6,r2
-;;;601      RTC_TimeTypeDef stimestructure;
-;;;602    
-;;;603      stimestructure.TimeFormat     = RTC_HOURFORMAT12_AM;
+;;;617      RTC_TimeTypeDef stimestructure;
+;;;618    
+;;;619      stimestructure.TimeFormat     = RTC_HOURFORMAT12_AM;
 00000a  2000              MOVS     r0,#0
 00000c  f88d0007          STRB     r0,[sp,#7]
-;;;604      stimestructure.Hours          = hh;
+;;;620      stimestructure.Hours          = hh;
 000010  f88d4004          STRB     r4,[sp,#4]
-;;;605      stimestructure.Minutes        = mm;
+;;;621      stimestructure.Minutes        = mm;
 000014  f88d5005          STRB     r5,[sp,#5]
-;;;606      stimestructure.Seconds        = ss;
+;;;622      stimestructure.Seconds        = ss;
 000018  f88d6006          STRB     r6,[sp,#6]
-;;;607      stimestructure.SubSeconds     = 0;
+;;;623      stimestructure.SubSeconds     = 0;
 00001c  9002              STR      r0,[sp,#8]
-;;;608      stimestructure.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+;;;624      stimestructure.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
 00001e  9004              STR      r0,[sp,#0x10]
-;;;609      stimestructure.StoreOperation = RTC_STOREOPERATION_RESET;
+;;;625      stimestructure.StoreOperation = RTC_STOREOPERATION_RESET;
 000020  9005              STR      r0,[sp,#0x14]
-;;;610    
-;;;611      if (HAL_RTC_SetTime(&RtcHandle, &stimestructure, FORMAT_BIN) != HAL_OK)
+;;;626    
+;;;627      if (HAL_RTC_SetTime(&RtcHandle, &stimestructure, FORMAT_BIN) != HAL_OK)
 000022  2200              MOVS     r2,#0
 000024  a901              ADD      r1,sp,#4
 000026  4804              LDR      r0,|L16.56|
 000028  f7fffffe          BL       HAL_RTC_SetTime
 00002c  b108              CBZ      r0,|L16.50|
-;;;612      {
-;;;613        /* Initialization Error */
-;;;614        Error_Handler();
+;;;628      {
+;;;629        /* Initialization Error */
+;;;630        Error_Handler();
 00002e  f7fffffe          BL       Error_Handler
                   |L16.50|
-;;;615      }
-;;;616    }
+;;;631      }
+;;;632    }
 000032  b006              ADD      sp,sp,#0x18
 000034  bd70              POP      {r4-r6,pc}
-;;;617    
+;;;633    
                           ENDP
 
 000036  0000              DCW      0x0000
@@ -842,71 +855,71 @@
                           AREA ||i.RTC_TimeStampConfig||, CODE, READONLY, ALIGN=2
 
                   RTC_TimeStampConfig PROC
-;;;533     */
-;;;534    static void RTC_TimeStampConfig(void)
+;;;549     */
+;;;550    static void RTC_TimeStampConfig(void)
 000000  b500              PUSH     {lr}
-;;;535    {
+;;;551    {
 000002  b087              SUB      sp,sp,#0x1c
-;;;536      RTC_DateTypeDef sdatestructure;
-;;;537      RTC_TimeTypeDef stimestructure;
-;;;538    
-;;;539      /* Configure the Date */
-;;;540      /* Set Date: Monday January 1st 2001 */
-;;;541      sdatestructure.Year    = 0x01;
+;;;552      RTC_DateTypeDef sdatestructure;
+;;;553      RTC_TimeTypeDef stimestructure;
+;;;554    
+;;;555      /* Configure the Date */
+;;;556      /* Set Date: Monday January 1st 2001 */
+;;;557      sdatestructure.Year    = 0x01;
 000004  2001              MOVS     r0,#1
 000006  f88d001b          STRB     r0,[sp,#0x1b]
-;;;542      sdatestructure.Month   = RTC_MONTH_JANUARY;
+;;;558      sdatestructure.Month   = RTC_MONTH_JANUARY;
 00000a  f88d0019          STRB     r0,[sp,#0x19]
-;;;543      sdatestructure.Date    = 0x01;
+;;;559      sdatestructure.Date    = 0x01;
 00000e  f88d001a          STRB     r0,[sp,#0x1a]
-;;;544      sdatestructure.WeekDay = RTC_WEEKDAY_MONDAY;
+;;;560      sdatestructure.WeekDay = RTC_WEEKDAY_MONDAY;
 000012  f88d0018          STRB     r0,[sp,#0x18]
-;;;545    
-;;;546      if (HAL_RTC_SetDate(&RtcHandle, &sdatestructure, FORMAT_BCD) != HAL_OK)
+;;;561    
+;;;562      if (HAL_RTC_SetDate(&RtcHandle, &sdatestructure, FORMAT_BCD) != HAL_OK)
 000016  2201              MOVS     r2,#1
 000018  a906              ADD      r1,sp,#0x18
 00001a  480d              LDR      r0,|L17.80|
 00001c  f7fffffe          BL       HAL_RTC_SetDate
 000020  b108              CBZ      r0,|L17.38|
-;;;547      {
-;;;548        /* Initialization Error */
-;;;549        Error_Handler();
+;;;563      {
+;;;564        /* Initialization Error */
+;;;565        Error_Handler();
 000022  f7fffffe          BL       Error_Handler
                   |L17.38|
-;;;550      }
-;;;551    
-;;;552      /* Configure the Time */
-;;;553      /* Set Time: 00:00:00 */
-;;;554      stimestructure.Hours          = 0x00;
+;;;566      }
+;;;567    
+;;;568      /* Configure the Time */
+;;;569      /* Set Time: 00:00:00 */
+;;;570      stimestructure.Hours          = 0x00;
 000026  2000              MOVS     r0,#0
 000028  f88d0004          STRB     r0,[sp,#4]
-;;;555      stimestructure.Minutes        = 0x00;
+;;;571      stimestructure.Minutes        = 0x00;
 00002c  f88d0005          STRB     r0,[sp,#5]
-;;;556      stimestructure.Seconds        = 0x00;
+;;;572      stimestructure.Seconds        = 0x00;
 000030  f88d0006          STRB     r0,[sp,#6]
-;;;557      stimestructure.TimeFormat     = RTC_HOURFORMAT12_AM;
+;;;573      stimestructure.TimeFormat     = RTC_HOURFORMAT12_AM;
 000034  f88d0007          STRB     r0,[sp,#7]
-;;;558      stimestructure.DayLightSaving = RTC_DAYLIGHTSAVING_NONE ;
+;;;574      stimestructure.DayLightSaving = RTC_DAYLIGHTSAVING_NONE ;
 000038  9004              STR      r0,[sp,#0x10]
-;;;559      stimestructure.StoreOperation = RTC_STOREOPERATION_RESET;
+;;;575      stimestructure.StoreOperation = RTC_STOREOPERATION_RESET;
 00003a  9005              STR      r0,[sp,#0x14]
-;;;560    
-;;;561      if (HAL_RTC_SetTime(&RtcHandle, &stimestructure, FORMAT_BCD) != HAL_OK)
+;;;576    
+;;;577      if (HAL_RTC_SetTime(&RtcHandle, &stimestructure, FORMAT_BCD) != HAL_OK)
 00003c  2201              MOVS     r2,#1
 00003e  a901              ADD      r1,sp,#4
 000040  4803              LDR      r0,|L17.80|
 000042  f7fffffe          BL       HAL_RTC_SetTime
 000046  b108              CBZ      r0,|L17.76|
-;;;562      {
-;;;563        /* Initialization Error */
-;;;564        Error_Handler();
+;;;578      {
+;;;579        /* Initialization Error */
+;;;580        Error_Handler();
 000048  f7fffffe          BL       Error_Handler
                   |L17.76|
-;;;565      }
-;;;566    }
+;;;581      }
+;;;582    }
 00004c  b007              ADD      sp,sp,#0x1c
 00004e  bd00              POP      {pc}
-;;;567    
+;;;583    
                           ENDP
 
                   |L17.80|
@@ -915,34 +928,34 @@
                           AREA ||i.Temperature_Sensor_Handler||, CODE, READONLY, ALIGN=2
 
                   Temperature_Sensor_Handler PROC
-;;;443     */
-;;;444    static void Temperature_Sensor_Handler(TMsg *Msg, uint32_t Instance)
+;;;459     */
+;;;460    static void Temperature_Sensor_Handler(TMsg *Msg, uint32_t Instance)
 000000  b538              PUSH     {r3-r5,lr}
-;;;445    {
+;;;461    {
 000002  4605              MOV      r5,r0
 000004  460c              MOV      r4,r1
-;;;446      float temp_value;
-;;;447    
-;;;448      if ((SensorsEnabled & TEMPERATURE_SENSOR) == TEMPERATURE_SENSOR)
+;;;462      float temp_value;
+;;;463    
+;;;464      if ((SensorsEnabled & TEMPERATURE_SENSOR) == TEMPERATURE_SENSOR)
 000006  4807              LDR      r0,|L18.36|
 000008  7800              LDRB     r0,[r0,#0]  ; SensorsEnabled
 00000a  f0000002          AND      r0,r0,#2
 00000e  2802              CMP      r0,#2
 000010  d107              BNE      |L18.34|
-;;;449      {
-;;;450        (void)IKS01A2_ENV_SENSOR_GetValue(Instance, ENV_TEMPERATURE, &temp_value);
+;;;465      {
+;;;466        (void)IKS01A2_ENV_SENSOR_GetValue(Instance, ENV_TEMPERATURE, &temp_value);
 000012  466a              MOV      r2,sp
 000014  2101              MOVS     r1,#1
 000016  4620              MOV      r0,r4
 000018  f7fffffe          BL       IKS01A2_ENV_SENSOR_GetValue
-;;;451        (void)memcpy(&Msg->Data[11], (void *)&temp_value, sizeof(float));
+;;;467        (void)memcpy(&Msg->Data[11], (void *)&temp_value, sizeof(float));
 00001c  9900              LDR      r1,[sp,#0]
 00001e  f8c5100f          STR      r1,[r5,#0xf]
                   |L18.34|
-;;;452      }
-;;;453    }
+;;;468      }
+;;;469    }
 000022  bd38              POP      {r3-r5,pc}
-;;;454    
+;;;470    
                           ENDP
 
                   |L18.36|
@@ -953,7 +966,7 @@
                   main PROC
 ;;;115    int main(void); /* This "redundant" line is here to fulfil MISRA C-2012 rule 8.4 */
 ;;;116    int main(void)
-000000  f7fffffe          BL       HAL_Init
+000000  f5ad7d0c          SUB      sp,sp,#0x230
 ;;;117    {
 ;;;118      char lib_version[35];
 ;;;119      int lib_version_len;
@@ -967,197 +980,266 @@
 ;;;127       *   - Global MSP (MCU Support Package) initialization
 ;;;128       */
 ;;;129      (void)HAL_Init();
+000004  f7fffffe          BL       HAL_Init
 ;;;130    
 ;;;131      /* Configure the system clock */
 ;;;132      SystemClock_Config();
-000004  f7fffffe          BL       SystemClock_Config
+000008  f7fffffe          BL       SystemClock_Config
 ;;;133    
 ;;;134      /* Configure the SysTick IRQ priority - set the second lowest priority */
 ;;;135      HAL_NVIC_SetPriority(SysTick_IRQn, 0x0E, 0);
-000008  2200              MOVS     r2,#0
-00000a  210e              MOVS     r1,#0xe
-00000c  1e50              SUBS     r0,r2,#1
-00000e  f7fffffe          BL       HAL_NVIC_SetPriority
+00000c  2200              MOVS     r2,#0
+00000e  210e              MOVS     r1,#0xe
+000010  1e50              SUBS     r0,r2,#1
+000012  f7fffffe          BL       HAL_NVIC_SetPriority
 ;;;136    
 ;;;137      /* Initialize GPIOs */
 ;;;138      MX_GPIO_Init();
-000012  f7fffffe          BL       MX_GPIO_Init
+000016  f7fffffe          BL       MX_GPIO_Init
 ;;;139    
 ;;;140      /* Initialize CRC */
 ;;;141      MX_CRC_Init();
-000016  f7fffffe          BL       MX_CRC_Init
+00001a  f7fffffe          BL       MX_CRC_Init
 ;;;142    
 ;;;143      /* Initialize (disabled) Sensors */
 ;;;144    	 MX_I2C2_Init();
-00001a  f7fffffe          BL       MX_I2C2_Init
-;;;145    	  while(1)
-00001e  e00b              B        |L19.56|
-                  |L19.32|
-;;;146     {
-;;;147    	 status = HAL_I2C_IsDeviceReady(&hi2c3, ADDR, (uint32_t)3, (uint32_t)1000);
-000020  f44f737a          MOV      r3,#0x3e8
-000024  2203              MOVS     r2,#3
-000026  213d              MOVS     r1,#0x3d
-000028  4804              LDR      r0,|L19.60|
-00002a  f7fffffe          BL       HAL_I2C_IsDeviceReady
-00002e  4904              LDR      r1,|L19.64|
-000030  7008              STRB     r0,[r1,#0]
-;;;148    	 HAL_Delay(10);
-000032  200a              MOVS     r0,#0xa
-000034  f7fffffe          BL       HAL_Delay
-                  |L19.56|
-000038  e7f2              B        |L19.32|
-;;;149    	 }
-;;;150      Init_Sensors();
-;;;151    
-;;;152      /* Magnetometer Calibration API initialization function */
-;;;153    #if ((defined (USE_STM32F4XX_NUCLEO)) || (defined (USE_STM32L1XX_NUCLEO)) || (defined (USE_STM32L4XX_NUCLEO)))
-;;;154      MotionMC_manager_init((int)ALGO_PERIOD, 1);
-;;;155    
-;;;156    #elif (defined (USE_STM32L0XX_NUCLEO))
-;;;157      MotionMC_manager_init((int)ALGO_PERIOD, MMC_CM0P_HI_AND_SI, 1);
+00001e  f7fffffe          BL       MX_I2C2_Init
+;;;145    	 // while(1)
+;;;146     //{
+;;;147    	 init_LSM9DS1_I2C ();
+000022  f7fffffe          BL       init_LSM9DS1_I2C
+;;;148    	 //status = HAL_I2C_IsDeviceReady(&hi2c3, ADDR, (uint32_t)3, (uint32_t)1000);
+;;;149    /*	 if(status != HAL_OK)
+;;;150    	 {
+;;;151    		 I2C3->CR1 |= I2C_CR1_SWRST;
+;;;152    		 MX_I2C2_Init();
+;;;153    	 HAL_Delay(10);
+;;;154    	 }*/
+;;;155    	// HAL_Delay(10);
+;;;156     //}
+;;;157      Init_Sensors();
+000026  f7fffffe          BL       Init_Sensors
 ;;;158    
-;;;159    #else
-;;;160    #error Not supported platform
-;;;161    #endif
+;;;159      /* Magnetometer Calibration API initialization function */
+;;;160    #if ((defined (USE_STM32F4XX_NUCLEO)) || (defined (USE_STM32L1XX_NUCLEO)) || (defined (USE_STM32L4XX_NUCLEO)))
+;;;161      MotionMC_manager_init((int)ALGO_PERIOD, 1);
+00002a  2101              MOVS     r1,#1
+00002c  2014              MOVS     r0,#0x14
+00002e  f7fffffe          BL       MotionMC_manager_init
 ;;;162    
-;;;163      /* E-Compass API initialization function */
-;;;164      MotionEC_manager_init((float)ALGO_FREQ);
+;;;163    #elif (defined (USE_STM32L0XX_NUCLEO))
+;;;164      MotionMC_manager_init((int)ALGO_PERIOD, MMC_CM0P_HI_AND_SI, 1);
 ;;;165    
-;;;166      /* OPTIONAL */
-;;;167      /* Get library version */
-;;;168      MotionEC_manager_get_version(lib_version, &lib_version_len);
+;;;166    #else
+;;;167    #error Not supported platform
+;;;168    #endif
 ;;;169    
-;;;170      /* Initialize Communication Peripheral for data log */
-;;;171      USARTConfig();
+;;;170      /* E-Compass API initialization function */
+;;;171      MotionEC_manager_init((float)ALGO_FREQ);
+000032  ed9f0a2d          VLDR     s0,|L19.232|
+000036  f7fffffe          BL       MotionEC_manager_init
 ;;;172    
-;;;173      /* RTC Initialization */
-;;;174      RTC_Config();
-;;;175      RTC_TimeStampConfig();
+;;;173      /* OPTIONAL */
+;;;174      /* Get library version */
+;;;175      MotionEC_manager_get_version(lib_version, &lib_version_len);
+00003a  a982              ADD      r1,sp,#0x208
+00003c  a883              ADD      r0,sp,#0x20c
+00003e  f7fffffe          BL       MotionEC_manager_get_version
 ;;;176    
-;;;177      /* Timer for algorithm synchronization initialization */
-;;;178      MX_TIM_ALGO_Init();
+;;;177      /* Initialize Communication Peripheral for data log */
+;;;178      USARTConfig();
+000042  f7fffffe          BL       USARTConfig
 ;;;179    
-;;;180      /* LED Blink */
-;;;181      BSP_LED_On(LED2);
-;;;182      HAL_Delay(500);
-;;;183      BSP_LED_Off(LED2);
-;;;184    	
-;;;185     
+;;;180      /* RTC Initialization */
+;;;181      RTC_Config();
+000046  f7fffffe          BL       RTC_Config
+;;;182      RTC_TimeStampConfig();
+00004a  f7fffffe          BL       RTC_TimeStampConfig
+;;;183    
+;;;184      /* Timer for algorithm synchronization initialization */
+;;;185      MX_TIM_ALGO_Init();
+00004e  f7fffffe          BL       MX_TIM_ALGO_Init
 ;;;186    
-;;;187     init_LSM9DS1_I2C ();
-;;;188     //sensors_enable();
-;;;189      for (;;)
-;;;190      {
-;;;191        if (UART_ReceivedMSG((TMsg *)&msg_cmd) != 1)
-;;;192        {
-;;;193          if (msg_cmd.Data[0] == DEV_ADDR)
-;;;194          {
-;;;195            (void)HandleMSG((TMsg *)&msg_cmd);
-;;;196          }
-;;;197        }
-;;;198    
-;;;199        if (SensorReadRequest == 1U)
-;;;200        {
-;;;201          if (DataLoggerActive == 1U)
-;;;202          {
-;;;203            SensorReadRequest = 0;
-;;;204    
-;;;205            /* Acquire data from enabled sensors and fill Msg stream */
-;;;206            RTC_Handler(&msg_dat);
-;;;207            Accelero_Sensor_Handler(&msg_dat, IKS01A2_LSM303AGR_ACC_0);
-;;;208            Gyro_Sensor_Handler(&msg_dat, IKS01A2_LSM6DSL_0);
-;;;209            Magneto_Sensor_Handler(&msg_dat, IKS01A2_LSM303AGR_MAG_0);
-;;;210            Humidity_Sensor_Handler(&msg_dat, IKS01A2_HTS221_0);
-;;;211            Temperature_Sensor_Handler(&msg_dat, IKS01A2_HTS221_0);
-;;;212            Pressure_Sensor_Handler(&msg_dat, IKS01A2_LPS22HB_0);
-;;;213    
-;;;214            /* E-Compass specific part */
-;;;215            MotionEC_manager_run(&msg_dat);
-;;;216    
-;;;217            /* Send data stream */
-;;;218            INIT_STREAMING_HEADER(&msg_dat);
-;;;219            msg_dat.Len = STREAMING_MSG_LENGTH;
-;;;220            UART_SendMsg(&msg_dat);
-;;;221          }
-;;;222        }
-;;;223      }
-;;;224    }
-;;;225    
+;;;187      /* LED Blink */
+;;;188      BSP_LED_On(LED2);
+000052  2000              MOVS     r0,#0
+000054  f7fffffe          BL       BSP_LED_On
+;;;189      HAL_Delay(500);
+000058  f44f70fa          MOV      r0,#0x1f4
+00005c  f7fffffe          BL       HAL_Delay
+;;;190      BSP_LED_Off(LED2);
+000060  2000              MOVS     r0,#0
+000062  f7fffffe          BL       BSP_LED_Off
+;;;191    	
+;;;192     
+;;;193    
+;;;194     init_LSM9DS1_I2C ();
+000066  f7fffffe          BL       init_LSM9DS1_I2C
+;;;195     //sensors_enable();
+;;;196      for (;;)
+00006a  bf00              NOP      
+                  |L19.108|
+;;;197      {
+;;;198        if (UART_ReceivedMSG((TMsg *)&msg_cmd) != 1)
+00006c  4668              MOV      r0,sp
+00006e  f7fffffe          BL       UART_ReceivedMSG
+000072  2801              CMP      r0,#1
+000074  d006              BEQ      |L19.132|
+;;;199        {
+;;;200          if (msg_cmd.Data[0] == DEV_ADDR)
+000076  f89d0004          LDRB     r0,[sp,#4]
+00007a  2832              CMP      r0,#0x32
+00007c  d102              BNE      |L19.132|
+;;;201          {
+;;;202            (void)HandleMSG((TMsg *)&msg_cmd);
+00007e  4668              MOV      r0,sp
+000080  f7fffffe          BL       HandleMSG
+                  |L19.132|
+;;;203          }
+;;;204        }
+;;;205    
+;;;206        if (SensorReadRequest == 1U)
+000084  4819              LDR      r0,|L19.236|
+000086  7800              LDRB     r0,[r0,#0]  ; SensorReadRequest
+000088  2801              CMP      r0,#1
+00008a  d1ef              BNE      |L19.108|
+;;;207        {
+;;;208          if (DataLoggerActive == 1U)
+00008c  4818              LDR      r0,|L19.240|
+00008e  7800              LDRB     r0,[r0,#0]  ; DataLoggerActive
+000090  2801              CMP      r0,#1
+000092  d1eb              BNE      |L19.108|
+;;;209          {
+;;;210            SensorReadRequest = 0;
+000094  2000              MOVS     r0,#0
+000096  4915              LDR      r1,|L19.236|
+000098  7008              STRB     r0,[r1,#0]
+;;;211    
+;;;212            /* Acquire data from enabled sensors and fill Msg stream */
+;;;213            RTC_Handler(&msg_dat);
+00009a  a841              ADD      r0,sp,#0x104
+00009c  f7fffffe          BL       RTC_Handler
+;;;214            Accelero_Sensor_Handler(&msg_dat, IKS01A2_LSM303AGR_ACC_0);
+0000a0  2101              MOVS     r1,#1
+0000a2  a841              ADD      r0,sp,#0x104
+0000a4  f7fffffe          BL       Accelero_Sensor_Handler
+;;;215            Gyro_Sensor_Handler(&msg_dat, IKS01A2_LSM6DSL_0);
+0000a8  2100              MOVS     r1,#0
+0000aa  a841              ADD      r0,sp,#0x104
+0000ac  f7fffffe          BL       Gyro_Sensor_Handler
+;;;216            Magneto_Sensor_Handler(&msg_dat, IKS01A2_LSM303AGR_MAG_0);
+0000b0  2102              MOVS     r1,#2
+0000b2  a841              ADD      r0,sp,#0x104
+0000b4  f7fffffe          BL       Magneto_Sensor_Handler
+;;;217            Humidity_Sensor_Handler(&msg_dat, IKS01A2_HTS221_0);
+0000b8  2100              MOVS     r1,#0
+0000ba  a841              ADD      r0,sp,#0x104
+0000bc  f7fffffe          BL       Humidity_Sensor_Handler
+;;;218            Temperature_Sensor_Handler(&msg_dat, IKS01A2_HTS221_0);
+0000c0  2100              MOVS     r1,#0
+0000c2  a841              ADD      r0,sp,#0x104
+0000c4  f7fffffe          BL       Temperature_Sensor_Handler
+;;;219            Pressure_Sensor_Handler(&msg_dat, IKS01A2_LPS22HB_0);
+0000c8  2101              MOVS     r1,#1
+0000ca  a841              ADD      r0,sp,#0x104
+0000cc  f7fffffe          BL       Pressure_Sensor_Handler
+;;;220    
+;;;221            /* E-Compass specific part */
+;;;222            MotionEC_manager_run(&msg_dat);
+0000d0  a841              ADD      r0,sp,#0x104
+0000d2  f7fffffe          BL       MotionEC_manager_run
+;;;223    
+;;;224            /* Send data stream */
+;;;225            INIT_STREAMING_HEADER(&msg_dat);
+0000d6  a841              ADD      r0,sp,#0x104
+0000d8  f7fffffe          BL       INIT_STREAMING_HEADER
+;;;226            msg_dat.Len = STREAMING_MSG_LENGTH;
+0000dc  207d              MOVS     r0,#0x7d
+0000de  9041              STR      r0,[sp,#0x104]
+;;;227            UART_SendMsg(&msg_dat);
+0000e0  a841              ADD      r0,sp,#0x104
+0000e2  f7fffffe          BL       UART_SendMsg
+0000e6  e7c1              B        |L19.108|
+;;;228          }
+;;;229        }
+;;;230      }
+;;;231    }
+;;;232    
                           ENDP
 
-00003a  0000              DCW      0x0000
-                  |L19.60|
-                          DCD      hi2c3
-                  |L19.64|
-                          DCD      status
+                  |L19.232|
+0000e8  42480000          DCFS     0x42480000 ; 50
+                  |L19.236|
+                          DCD      SensorReadRequest
+                  |L19.240|
+                          DCD      DataLoggerActive
 
                           AREA ||i.sensors_enable||, CODE, READONLY, ALIGN=2
 
                   sensors_enable PROC
-;;;657    
-;;;658    void sensors_enable()
+;;;673    
+;;;674    void sensors_enable()
 000000  b510              PUSH     {r4,lr}
-;;;659    {
-;;;660    	  /* Start enabled sensors */
-;;;661         // if ((SensorsEnabled & PRESSURE_SENSOR) == PRESSURE_SENSOR)
-;;;662         // {
-;;;663            (void)IKS01A2_ENV_SENSOR_Enable(IKS01A2_LPS22HB_0, ENV_PRESSURE);
+;;;675    {
+;;;676    	  /* Start enabled sensors */
+;;;677         // if ((SensorsEnabled & PRESSURE_SENSOR) == PRESSURE_SENSOR)
+;;;678         // {
+;;;679            (void)IKS01A2_ENV_SENSOR_Enable(IKS01A2_LPS22HB_0, ENV_PRESSURE);
 000002  2102              MOVS     r1,#2
 000004  2001              MOVS     r0,#1
 000006  f7fffffe          BL       IKS01A2_ENV_SENSOR_Enable
-;;;664         // }
-;;;665    
-;;;666         // if ((SensorsEnabled & TEMPERATURE_SENSOR) == TEMPERATURE_SENSOR)
-;;;667         // {
-;;;668            (void)IKS01A2_ENV_SENSOR_Enable(IKS01A2_HTS221_0, ENV_TEMPERATURE);
+;;;680         // }
+;;;681    
+;;;682         // if ((SensorsEnabled & TEMPERATURE_SENSOR) == TEMPERATURE_SENSOR)
+;;;683         // {
+;;;684            (void)IKS01A2_ENV_SENSOR_Enable(IKS01A2_HTS221_0, ENV_TEMPERATURE);
 00000a  2101              MOVS     r1,#1
 00000c  2000              MOVS     r0,#0
 00000e  f7fffffe          BL       IKS01A2_ENV_SENSOR_Enable
-;;;669         // }
-;;;670    
-;;;671         // if ((SensorsEnabled & HUMIDITY_SENSOR) == HUMIDITY_SENSOR)
-;;;672         // {
-;;;673            (void)IKS01A2_ENV_SENSOR_Enable(IKS01A2_HTS221_0, ENV_HUMIDITY);
+;;;685         // }
+;;;686    
+;;;687         // if ((SensorsEnabled & HUMIDITY_SENSOR) == HUMIDITY_SENSOR)
+;;;688         // {
+;;;689            (void)IKS01A2_ENV_SENSOR_Enable(IKS01A2_HTS221_0, ENV_HUMIDITY);
 000012  2104              MOVS     r1,#4
 000014  2000              MOVS     r0,#0
 000016  f7fffffe          BL       IKS01A2_ENV_SENSOR_Enable
-;;;674         // }
-;;;675    
-;;;676         // if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
-;;;677          //{
-;;;678            (void)IKS01A2_MOTION_SENSOR_Enable(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO);
+;;;690         // }
+;;;691    
+;;;692         // if ((SensorsEnabled & ACCELEROMETER_SENSOR) == ACCELEROMETER_SENSOR)
+;;;693          //{
+;;;694            (void)IKS01A2_MOTION_SENSOR_Enable(IKS01A2_LSM303AGR_ACC_0, MOTION_ACCELERO);
 00001a  2102              MOVS     r1,#2
 00001c  2001              MOVS     r0,#1
 00001e  f7fffffe          BL       IKS01A2_MOTION_SENSOR_Enable
-;;;679         // }
-;;;680    
-;;;681         // if ((SensorsEnabled & GYROSCOPE_SENSOR) == GYROSCOPE_SENSOR)
-;;;682         // {
-;;;683            (void)IKS01A2_MOTION_SENSOR_Enable(IKS01A2_LSM6DSL_0, MOTION_GYRO);
+;;;695         // }
+;;;696    
+;;;697         // if ((SensorsEnabled & GYROSCOPE_SENSOR) == GYROSCOPE_SENSOR)
+;;;698         // {
+;;;699            (void)IKS01A2_MOTION_SENSOR_Enable(IKS01A2_LSM6DSL_0, MOTION_GYRO);
 000022  2101              MOVS     r1,#1
 000024  2000              MOVS     r0,#0
 000026  f7fffffe          BL       IKS01A2_MOTION_SENSOR_Enable
-;;;684         // }
-;;;685    
-;;;686         // if ((SensorsEnabled & MAGNETIC_SENSOR) == MAGNETIC_SENSOR)
-;;;687         // {
-;;;688            (void)IKS01A2_MOTION_SENSOR_Enable(IKS01A2_LSM303AGR_MAG_0, MOTION_MAGNETO);
+;;;700         // }
+;;;701    
+;;;702         // if ((SensorsEnabled & MAGNETIC_SENSOR) == MAGNETIC_SENSOR)
+;;;703         // {
+;;;704            (void)IKS01A2_MOTION_SENSOR_Enable(IKS01A2_LSM303AGR_MAG_0, MOTION_MAGNETO);
 00002a  2104              MOVS     r1,#4
 00002c  2002              MOVS     r0,#2
 00002e  f7fffffe          BL       IKS01A2_MOTION_SENSOR_Enable
-;;;689         // }
-;;;690    
-;;;691          (void)HAL_TIM_Base_Start_IT(&AlgoTimHandle);
+;;;705         // }
+;;;706    
+;;;707          (void)HAL_TIM_Base_Start_IT(&AlgoTimHandle);
 000032  4803              LDR      r0,|L20.64|
 000034  f7fffffe          BL       HAL_TIM_Base_Start_IT
-;;;692          DataLoggerActive = 1;
+;;;708          DataLoggerActive = 1;
 000038  2001              MOVS     r0,#1
 00003a  4902              LDR      r1,|L20.68|
 00003c  7008              STRB     r0,[r1,#0]
-;;;693    		}
+;;;709    		}
 00003e  bd10              POP      {r4,pc}
-;;;694    #ifdef  USE_FULL_ASSERT
+;;;710    #ifdef  USE_FULL_ASSERT
                           ENDP
 
                   |L20.64|

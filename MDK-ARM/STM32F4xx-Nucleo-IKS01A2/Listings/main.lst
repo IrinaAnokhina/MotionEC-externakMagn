@@ -52079,13 +52079,18 @@ N  MX_CRC_Init();
 N
 N  /* Initialize (disabled) Sensors */
 N	 MX_I2C2_Init();
-N	  while(1)
-N {
-N	 status = HAL_I2C_IsDeviceReady(&hi2c3, ADDR, (uint32_t)3, (uint32_t)1000);
-X	 status = HAL_I2C_IsDeviceReady(&hi2c3, 0x3D, (uint32_t)3, (uint32_t)1000);
+N	 // while(1)
+N //{
+N	 init_LSM9DS1_I2C ();
+N	 //status = HAL_I2C_IsDeviceReady(&hi2c3, ADDR, (uint32_t)3, (uint32_t)1000);
+N/*	 if(status != HAL_OK)
+N	 {
+N		 I2C3->CR1 |= I2C_CR1_SWRST;
+N		 MX_I2C2_Init();
 N	 HAL_Delay(10);
-N	 }
-W "..\Src\main.c" 150 3 statement is unreachable
+N	 }*/
+N	// HAL_Delay(10);
+N //}
 N  Init_Sensors();
 N
 N  /* Magnetometer Calibration API initialization function */
@@ -52378,17 +52383,26 @@ N    //(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_MAGNETO, &MagValue);
 N		
 N     status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
 X     status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x28, 0x00000001U , data, 0x02, 100); 
-N		MagValue.x = (uint32_t)data[1] << 8 | data[0];							
+N	
+N	int16_t a;
+N	//a= data[0];
+N	//a= a |(data[1] << 8);
+N	a=(data[1] << 8)|data[0];
+N		MagValue.x = a;//(int16_t)data[1] << 8 | data[0];							
 N		HAL_Delay(10);
 N		data[0] = 0; data[1] = 0;
-N		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-X		 status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2A, 0x00000001U , data, 0x02, 100); 
-N		MagValue.y = (uint32_t)data[1] << 8 | data[0];
+N	
+N	
+N		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100);
+X		 status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2A, 0x00000001U , data, 0x02, 100);
+Na=(data[1] << 8)|data[0];	
+N		MagValue.y = a;//(int16_t)data[1] << 8 | data[0];	
 N		data[0] = 0; data[1] = 0;
 N		HAL_Delay(10);
 N		status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2C, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
 X		status = HAL_I2C_Mem_Read(&hi2c3, 0x3D, 0x2C, 0x00000001U , data, 0x02, 100); 
-N		MagValue.z = (uint32_t)data[1] << 8 | data[0];
+N		a=(data[1] << 8)|data[0];
+N		MagValue.z = a;//(int16_t)data[1] << 8 | data[0];	
 N		HAL_Delay(10);
 N    /* Magnetometer calibration */
 N    MotionMC_manager_run(Msg);

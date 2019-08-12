@@ -142,11 +142,18 @@ int main(void)
 
   /* Initialize (disabled) Sensors */
 	 MX_I2C2_Init();
-	  while(1)
- {
-	 status = HAL_I2C_IsDeviceReady(&hi2c3, ADDR, (uint32_t)3, (uint32_t)1000);
+	 // while(1)
+ //{
+	 init_LSM9DS1_I2C ();
+	 //status = HAL_I2C_IsDeviceReady(&hi2c3, ADDR, (uint32_t)3, (uint32_t)1000);
+/*	 if(status != HAL_OK)
+	 {
+		 I2C3->CR1 |= I2C_CR1_SWRST;
+		 MX_I2C2_Init();
 	 HAL_Delay(10);
-	 }
+	 }*/
+	// HAL_Delay(10);
+ //}
   Init_Sensors();
 
   /* Magnetometer Calibration API initialization function */
@@ -403,15 +410,24 @@ static void Magneto_Sensor_Handler(TMsg *Msg, uint32_t Instance)
     //(void)IKS01A2_MOTION_SENSOR_GetAxes(Instance, MOTION_MAGNETO, &MagValue);
 		
      status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x28, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-		MagValue.x = (uint32_t)data[1] << 8 | data[0];							
+	
+	int16_t a;
+	//a= data[0];
+	//a= a |(data[1] << 8);
+	a=(data[1] << 8)|data[0];
+		MagValue.x = a;//(int16_t)data[1] << 8 | data[0];							
 		HAL_Delay(10);
 		data[0] = 0; data[1] = 0;
-		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-		MagValue.y = (uint32_t)data[1] << 8 | data[0];
+	
+	
+		 status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2A, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100);
+a=(data[1] << 8)|data[0];	
+		MagValue.y = a;//(int16_t)data[1] << 8 | data[0];	
 		data[0] = 0; data[1] = 0;
 		HAL_Delay(10);
 		status = HAL_I2C_Mem_Read(&hi2c3, ADDR, 0x2C, I2C_MEMADD_SIZE_8BIT , data, 0x02, 100); 
-		MagValue.z = (uint32_t)data[1] << 8 | data[0];
+		a=(data[1] << 8)|data[0];
+		MagValue.z = a;//(int16_t)data[1] << 8 | data[0];	
 		HAL_Delay(10);
     /* Magnetometer calibration */
     MotionMC_manager_run(Msg);
